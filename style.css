@@ -21,6 +21,11 @@ body {
 
 .column {
     flex: 33.33%;
-    padding: 1%;
+    padding: 2.66%;
 }
 
+url 
+{
+    color: ivory;
+    font-style: italic;
+}
