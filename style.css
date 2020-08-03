@@ -1,37 +1,37 @@
 body {
-    font-family: Palatino;
-    color: rgb(255, 255, 255);
-    background-color: rgb(5,  85, 190);
-    font-size: 26px;
-    padding: 8px;
-}
-
-.etc {
-    background-color: rgb(5,  85, 190);
+  font-family: Palatino;
+  color: rgb(255, 255, 255);
+  background-color: rgb(5,  85, 190);
+  font-size: 28px;
+  padding: 28px;
 }
 
 .hi {
-    font-size:54px;
-    margin-left: 20px;
-    margin-top: 20px;
+  font-size: 54px;
 }
 
 .para{
-    margin-left: 40px;
-    margin-right: 40px;
+  margin-left: 30px;
 }
 
 .row {
-    display: flex;
+  display: flex;
 }
 
 .column {
-    flex: 33.33%;
-    padding: 2.66%;
+  padding: 2.66%;
 }
 
-.url 
-{
-    color: white;
-    font-style: italics;
+td {
+  vertical-align: baseline;
+}
+
+.resume {
+  font-size: 26px;
+  margin-left: 30px;
+}
+
+.signature {
+  text-align: right;
+  margin-bottom: -20px;
 }
