@@ -2,12 +2,14 @@ body {
     font-family: Palatino;
     color: rgb(255, 255, 255);
     background-color: rgb(5,  85, 190);
-    font-size: 26px;
+    font-size: 28px;
     padding: 8px;
 }
 
 .hi {
     font-size:50px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .para{
@@ -24,8 +26,3 @@ body {
     padding: 2.66%;
 }
 
-.url 
-{
-    color: white;
-    font-style: italics;
-}
