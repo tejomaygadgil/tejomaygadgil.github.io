@@ -6,20 +6,3 @@ body {
     padding: 8px;
 }
 
-.hi {
-    font-size:50px;
-}
-
-.para{
-    margin-left: 40px;
-}
-
-.row {
-    display: flex;
-}
-
-.column {
-    flex: 33.33%;
-    padding: 1%;
-}
-
