@@ -1,8 +1,6 @@
 body {
     font-family: Palatino;
     color: rgb(255, 255, 255);
-    background-color: black;
-    font-size: 28px;
     background-color: rgb(5,  85, 190);
     font-size: 26px;
     padding: 8px;
@@ -13,7 +11,9 @@ body {
 }
 
 .hi {
-    font-size:50px;
+    font-size:54px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .para{
