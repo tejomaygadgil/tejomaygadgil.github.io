@@ -1,8 +1,8 @@
 @font-face {
     font-family: DanteMTStd-Regular;
-    src: url('./DanteMTStd-Regular.otf') format('opentype')
-         url('./DanteMTStd-Regular.ttf') format('truetype')
-         url('./DanteMTStd-Regular.woff') format('woff');
+    src: url('./fonts/DanteMTStd-Regular.otf') format('opentype'),
+         url('./fonts/DanteMTStd-Regular.ttf') format('truetype'),
+         url('./fonts/DanteMTStd-Regular.woff') format('woff');
 }
 
 body {
