@@ -1,5 +1,10 @@
+@font-face {
+    font-family: DanteMTStd-Regular;
+    src: url('./DanteMTStd-Regular.otf') format('opentype');
+}
+
 body {
-  font-family: Palatino;
+  font-family: 'DanteMTStd-Regular';
   color: white;
   background: rgb(5,  85, 190);
   font-size: 28px;
@@ -7,10 +12,12 @@ body {
 }
 
 .hi {
+  font-family: 'Palatino';
   font-size: 54px;
 }
 
 .para{
+  font-family: 'Palatino';
   margin-left: 30px;
   margin-right: 30px;
 }
