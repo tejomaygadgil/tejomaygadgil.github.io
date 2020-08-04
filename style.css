@@ -8,7 +8,7 @@
 body {
   font-family: 'DanteMTStd-Regular';
   color: white;
-  background: linear-gradient(to bottom, rgb(5,  85, 190), rgb(125, 75, 130));
+  background: linear-gradient(to bottom, rgb(155,  85, 190), rgb(5, 65, 190));
   font-size: 28px;
   padding: 28px;
 }
