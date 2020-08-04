@@ -22,12 +22,16 @@ body {
   padding: 2.66%;
 }
 
-td {
-  vertical-align: baseline;
+.bio {
+  margin-left:30px;
 }
 
 .resume {
   margin-left: 30px;
+}
+
+td {
+  vertical-align: baseline;
 }
 
 .signature {
