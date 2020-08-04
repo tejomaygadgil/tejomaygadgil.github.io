@@ -12,6 +12,7 @@ body {
 
 .para{
   margin-left: 30px;
+  margin-right: 30px;
 }
 
 .row {
@@ -24,10 +25,12 @@ body {
 
 .bio {
   margin-left:30px;
+  margin-right: 30px;
 }
 
 .resume {
   margin-left: 30px;
+  margin-right: 30px;
 }
 
 td {
