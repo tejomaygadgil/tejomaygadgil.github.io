@@ -1,8 +1,8 @@
 body {
-    font-family: Palatino;
-    color: rgb(0, 0, 40);
-    background-color: rgb(255, 255, 0);
-    font-size: 26px;
-    padding: 8px;
+  font-family: Palatino;
+  color: rgb(0, 0, 40);
+  background: linear-gradient(to bottom, rgb(255, 255, 0), rgb(253, 94, 83));
+  font-size: 26px;
+  padding: 8px;
 }
 
