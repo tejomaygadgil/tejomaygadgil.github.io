@@ -1,0 +1,13 @@
+@font-face {
+    font-family: DanteMTStd-Regular;
+    src: url('./DanteMTStd-Regular.otf') format('opentype');
+}
+
+body {
+  font-family: 'Palatino';
+  color: rgb(0, 70, 255);
+  background: black;
+  font-size: 26px;
+  padding: 8px;
+}
+
