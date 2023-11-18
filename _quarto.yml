@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Tejomay's blog"
+  site-url: https://tejomaygadgil.github.io/
   navbar:
     right:
       - about.qmd

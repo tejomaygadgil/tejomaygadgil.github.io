@@ -2,19 +2,20 @@
 title: "Introduction to Aristotle's *Categories*"
 author: "Tejomay Gadgil"
 date: "2023-11-07"
+number-sections: true
 ---
 
 Few essays in the history of philosophy are as important, less as inscrutable, and none as important for *being* inscrutable as Aristotle's *Categories*.
 
 The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Is it language? Logic? Metaphysics? Something else entirely?
 
-Introducing such an evasive text is therefore impossible: a full account of its meaning and history would not fit into the space of an introduction, while a few factual "hors d'oeuvres," no matter how well sourced, would fail to introduce the actual *work* in question. Abstraction will not introduce us to the *Categories*. Instead we must interpret it.
+Introducing such an evasive text is therefore impossible: a full account of its meaning and history would not fit into the space of an introduction, while a few factual "hors d'oeuvres," no matter how well sourced, would fail to introduce the actual *work* in question. Abstract summary, no matter how well rendered, will never introduce us to the *Categories*. Our only option is interpretation.
 
 To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpreting begins to sway. This softening of the offset between ourselves and what we are trying to understand is what we call being introduced. Interpretation is always difficult, not just because it is "hard," but because it is fundamentally *productive*.
 
 This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made, and points have been rendered in order to practically engage the reader with the material ordering, as it always does, the words on the page.
 
-## 1. Things can have a common name for different reasons
+## Things can have a common name for different reasons
 
 **Synonyms** have a common name for the same reason: a cat and a bird are both "animals" because they are both living entities.
 
@@ -22,7 +23,7 @@ This introduction, therefore, is nothing other than a plain English interpretati
 
 **Paronyms** share a common root: to preach and preacher, for instance.
 
-## 2. Beings can be predicates, and they can be properties
+## Beings can be predicates, and they can be properties
 
 Utterances (τὰ λεγόμενα) can be interwoven in speech, or not: the former produces propositions such as "The man runs," the latter simple terms such as "man," and "runs." This will become relevant later.
 
@@ -62,7 +63,7 @@ Here everything interlaces in a complex crossing:
 
 From this a certain *ordering* has been implanted about the nature of the world: there is a sense in which ideas, concepts, descriptions, generic terms, and possibly language itself *come second* to the particular things we encounter in around us.
 
-## 3. Genera describe descriptions
+## Genera also describe things
 
 Predicates of predicates also apply to particular things. So if a particular man is a human, and humans are animals, then the particular man is also an animal.
 
@@ -74,18 +75,22 @@ Differentiae of a genus have no bearing on an unrelated genus: the genus of know
 
 But differentiae of a higher genus *can* apply to lower genera: under animal is the genus of bird, which itself contains species that may be footed (flightless), winged (flighted), and so on. This may not always hold but it is possible.
 
-## 4. The categories
+## Every utterance signifies one of ten things
 
 Every uncombined utterance signifies one of the following:
 
--   *Substance (οὐσία)* \[5.\]
--   Quantity (πόσος) \[6.\]
--   Quality (ποιός) \<-- Affection (πάσχειν) \[8.\]
--   Relation (πρός τι) \<-- Posture (κεῖσθαι) \[7.\]
--   Place (ποῦ)
--   Time (ποτὲ)
--   State (ἔχειν)
--   Action (ποιεῖν)
+| English   | Greek   | Chapter        |
+|-----------|---------|----------------|
+| Substance | οὐσία   | @sec-substance |
+| Quantity  | πόσος   | @sec-quantity  |
+| Quality   | ποιός   | @sec-quality   |
+| Relation  | πρός τι | @sec-relation  |
+| Place     | ποῦ     | Not discussed  |
+| Time      | ποτὲ    | Not discussed  |
+| Posture   | κεῖσθαι | @sec-relation  |
+| State     | ἔχειν   | Not discussed  |
+| Action    | ποιεῖν  | Not discussed  |
+| Affection | πάσχειν | @sec-quality   |
 
 These are the categories. Somehow, every uncombined utterance refers to one of them.
 
@@ -95,7 +100,7 @@ The remainder of Aristotle's text will discuss six of these categories in detail
 
 Only utterances combined into a statement can, strictly speaking, be true or false.
 
-## 5. Substance
+## Substance {#sec-substance}
 
 Substance (ἡ οὐσία) has two senses, first and second.
 
@@ -122,3 +127,9 @@ Let us define first and secondary substance a bit more carefully.
 This is why Aristotle defines first substance as τόδε τι, something with the basic character of being *pointed out*. All speech fundamentally points to substance, and substance cannot be understood in any other capacity than this basic ability to be referred to and remarked.
 
 Accordingly, second substance clarifies substance by its *kind*. By pointing to an actual thing as a human or a dog,
+
+## Quantity {#sec-quantity}
+
+## Quality  {#sec-quality}
+
+## Relation {#sec-relation}

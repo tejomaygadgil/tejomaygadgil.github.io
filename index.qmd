@@ -1,9 +1,11 @@
 ---
 title: "Posts"
 listing:
+  feed: true
+  type: table
   contents: posts
+  fields: [date, title, author, reading-time]
   sort: "date desc"
-  type: default
   categories: false
   sort-ui: false
   filter-ui: false
