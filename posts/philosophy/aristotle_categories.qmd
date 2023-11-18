@@ -2,6 +2,8 @@
 title: "Introduction to Aristotle's *Categories*"
 author: "Tejomay Gadgil"
 date: "2023-11-07"
+categories: 
+  - Philosophy
 number-sections: true
 ---
 
