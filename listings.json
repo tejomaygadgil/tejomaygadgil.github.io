@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/notes/fastai.html",
       "/posts/data_science/test_post.html",
       "/posts/philosophy/aristotle_categories.html"
     ]
