@@ -40,9 +40,7 @@ Predicates describe a subject (καθ' ὑποκειμένου λέγεται). 
 
 Particular things are the opposite of a predicate. You cannot describe anything using a particular. Particulars cannot complete a sentence of the type "X is \_\_\_."
 
-Consider your phone. It is a particular entity. *Your phone could never describe another entity*; rather it can only *be* described by generic predicates such as model number, color, size, shape, and so on.
-
-Even the seeming counter-example "My favorite thing is this phone," is actually the [anastrophe](https://en.wikipedia.org/wiki/Anastrophe) of the proper statement "This phone is my favorite thing", where "favorite thing" is a predicate.
+Consider your phone. It is a particular entity. *Your phone could never describe another entity*; rather it can only *be* described by generic predicates such as model number, color, size, shape, and so on. Even the seeming counter-example "My favorite thing is this phone," is actually the anastrophe of the proper statement "This phone is my favorite thing", where "favorite thing" is a predicate.
 
 Properties belong to a subject (ἐν ὑποκειμένῳ ἐστιν). Examples include colors, height, length, location, and so on: you will never encounter "blue" or "tall" on its own, but only as an attribute of a pre-existing thing.
 
@@ -50,7 +48,7 @@ Substance (ἡ οὐσία) opposes property. And what is that, substance? Indee
 
 But what about the subject? If predicates describe a subject, and properties belong in a subject, shouldn't the subject oppose them instead of particulars and substance?
 
-Not exactly, for the fact that predicates and properties can themselves be subjects! For the human that this man is *is itself* an animal, and for this man who wears a jacket that is green, that green *is itself* a color. Then a subject can either be a particular thing, or predicates describing that thing, properties belonging in that thing, or predicates describing those properties.
+Not exactly, because predicates and properties can themselves be subjects! For the human that this man is *is itself* an animal, and for this man who wears a jacket that is green, that green *is itself* a color. Then a subject can either be a particular thing, or predicates describing that thing, properties belonging in that thing, or predicates describing those properties.
 
 Draw it out: according to what we have discussed so far, everything we say about anything, *speech itself*, appears to spiral out of what we call particulars, and particularly what we call substance.
 
