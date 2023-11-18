@@ -2,7 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/aristotle_categories.html"
+      "/posts/data_science/test_post.html",
+      "/posts/philosophy/aristotle_categories.html"
     ]
   }
 ]
