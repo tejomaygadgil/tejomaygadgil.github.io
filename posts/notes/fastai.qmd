@@ -1,11 +1,18 @@
 ---
-title: "Notes to Fastai Practical Deep Learning for Coders"
+title: "Notes for fast.ai's Practical Deep Learning for Coders"
 author: "Tejomay Gadgil"
 date: "2023-11-18"
 categories: 
   - Notes
+format:
+  html:
+    comments:
+      utterances:
+        repo: tejomaygadgil/tejomaygadgil.github.io
 number-sections: true
 ---
+
+[https://course.fast.ai/](https://course.fast.ai/)
 
 ## Getting started
 
@@ -122,3 +129,4 @@ Protip: start with very simple models (i.e. ResNet18 or 34). You'll be able to i
 Neural networks are ultimately a linear combination of very simple non-linear building blocks. This allows the network to learn any shape whatsoever by slowly piecing it together like a jigsaw puzzle. Think of the ReLU unit as a simple angular shape that can be moved around, stretched, and rotated. The network can use many of these at once to represent a complex silhouette.
 
 What's more is that each of these building blocks can itself be the outcome of this jigsaw process. This allows the network to fashion *its own pieces* based on what seems most useful for approximating the final curve.
+

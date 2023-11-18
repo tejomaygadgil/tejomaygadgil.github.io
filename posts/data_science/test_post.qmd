@@ -7,6 +7,9 @@ categories:
 format:
   html:
     code-fold: true
+    comments:
+      utterances:
+        repo: tejomaygadgil/tejomaygadgil.github.io
 jupyter: python3
 ---
 

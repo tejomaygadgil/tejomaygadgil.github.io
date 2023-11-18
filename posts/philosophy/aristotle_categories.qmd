@@ -4,6 +4,11 @@ author: "Tejomay Gadgil"
 date: "2023-11-07"
 categories: 
   - Philosophy
+format:
+  html:
+    comments:
+      utterances:
+        repo: tejomaygadgil/tejomaygadgil.github.io
 number-sections: true
 ---
 
