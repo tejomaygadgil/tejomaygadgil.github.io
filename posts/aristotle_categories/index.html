@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tejomay Gadgil">
+<meta name="dcterms.date" content="2023-11-07">
+
+<title>Tejomay’s blog - Introduction to Aristotle’s Categories</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Tejomay’s blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tejomaygadgil/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/tejomaygadgil/" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Introduction to Aristotle’s <em>Categories</em></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Tejomay Gadgil </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 7, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Few essays in the history of philosophy are as important, less as inscrutable, and none as important for <em>being</em> inscrutable as Aristotle’s <em>Categories</em>.</p>
+<p>The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Is it language? Logic? Metaphysics? Something else entirely?</p>
+<p>Introducing such an evasive text is therefore impossible: a full account of its meaning and history would not fit into the space of an introduction, while a few factual “hors d’oeuvres,” no matter how well sourced, would fail to introduce the actual <em>work</em> in question.</p>
+<p>Abstract summary will never introduce us to the <em>Categories</em>. Instead our only option is to interpret it.</p>
+<p>To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpreting it is loosened. This softening of the offset between ourselves and what we are trying to understand is what we call being <em>introduced</em>. Interpretation is always <em>difficult</em>, not just because it is “hard,” but because it is fundamentally <em>productive</em>.</p>
+<p>This “introduction,” therefore, is nothing other than a plain English interpretation of the <em>Categories</em>, where “plain” hardly means easy or simple. Decisions have been made, and points have been rendered in order to practically engage the reader with the material <em>ordering</em> the words on the page.</p>
+<section id="things-can-have-a-common-name-for-different-reasons" class="level2">
+<h2 class="anchored" data-anchor-id="things-can-have-a-common-name-for-different-reasons">1. Things can have a common name for different reasons</h2>
+<p><strong>Synonyms</strong> have a common name for the same reason: a cat and a bird are both “animals” because they are both living entities.</p>
+<p><strong>Homonyms</strong> have a common name for different reasons: a cello and a microscope are both “instruments,” the former because it produces music, and the latter because it is a tool for science.</p>
+<p><strong>Paronyms</strong> share a common root: to preach and preacher, for instance.</p>
+</section>
+<section id="beings-can-be-predicates-and-they-can-be-properties" class="level2">
+<h2 class="anchored" data-anchor-id="beings-can-be-predicates-and-they-can-be-properties">2. Beings can be predicates, and they can be properties</h2>
+<p>Utterances (τὰ λεγόμενα) can be interwoven in speech, or not: the former produces propositions such as “The man runs,” the latter simple terms such as “man,” and “runs.” This will become relevant later.</p>
+<p>Beings (τὰ ὄντα) can distinguished in two ways: as predicates, or as properties.</p>
+<p>Predicates are beings that describe a subject (καθ’ ὑποκειμένου λέγεται). Man, for instance, is the entity that characterizes a person, and tall is something that describes a redwood tree. Predicates, therefore, are in every case generic objects.</p>
+<p>Particular things, then, are not predicates: that is, they can never complete a sentence of the type “X is ___.”</p>
+<p>To see why, pick something around you: let’s say your phone. Look at it while considering this: <em>your phone could never describe another entity</em>. To the contrary, it can only in every case <em>be</em> described, by either by its model, color, size, shape, and so on (in other words, by predicates).</p>
+<p>Even the seeming counter-example “My favorite thing is my phone,” is actually the <a href="https://en.wikipedia.org/wiki/Anastrophe">anastrophe</a> of the proper statement “My phone is my favorite thing”, where “favorite thing” is another predicate. This point is worth digesting before proceeding.</p>
+<p>Properties are beings that belong to a subject (ἐν ὑποκειμένῳ ἐστιν): colors, height, length, location, and so on never appear on their own, but only as attributes of pre-existing things.</p>
+<p><em>Substance</em> (ἡ οὐσία) opposes properties. And what is that, substance? Indeed, the rest of this work – and the overall movement of philosophy itself – will radically address the question. But for the time being, you can think of substance as what makes something <em>itself</em>: that by which you can single <em>that thing</em> out the individual thing that it is. The rest of the work will dramatically fill out this concept, so let us keep with that for now.</p>
+<p>But what about the subject? If predicates describe a subject, and properties belong in a subject, wouldn’t the subject then be the natural opposite of those categories instead of substance or particulars?</p>
+<p>Not exactly, for predicates and properties can themselves be subjects! For the man that this man is is itself an animal, and for this man who wears a jacket that is green, that green is itself a color. Then a subject can either be a particular thing, or predicates describing that thing, properties belonging in that thing, or predicates describing those properties.</p>
+<p>Draw it out: according to what we have discussed so far, everything we say about anything, <em>speech itself</em>, appears to spiral out of what we call particulars, and particularly what we call substance.</p>
+<p>The two conditions by which we can distinguish beings, as predicates or as properties, in turn produce a table with four categories:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 41%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Not a predicate</strong><br>(Particular things)</th>
+<th><strong>Predicate</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Not a property</strong><br><strong>(Substance)</strong></td>
+<td>This man</td>
+<td>Man</td>
+</tr>
+<tr class="even">
+<td><strong>Property</strong></td>
+<td>This knowledge</td>
+<td>Knowledge</td>
+</tr>
+</tbody>
+</table>
+<p>Here everything interlaces in a complex crossing:</p>
+<ul>
+<li><strong>Property predicates</strong> are generic entities that describe properties: knowledge, color, shape, and so on.</li>
+<li><strong>Substantial predicates</strong> are generic entities that describe particulars: man, horse, cars, and then higher concepts such as animal, vehicle, and so on.</li>
+<li><strong>Property particulars</strong> are specific details about particular things: the flakiness of a certain pastry, the specific way someone walks, the sound your car when it turns on.</li>
+<li>Then, finally, <strong>substantial particulars</strong>: the individual things – that is, everything around you at all times – in the world that can be described with predicates and possess properties (that in turn can also be described), but never themselves describe or belong to another particular.</li>
+</ul>
+<p>From this a certain <em>ordering</em> has been implanted about the nature of the world: there is a sense in which ideas, concepts, descriptions, generic terms, and possibly language itself <em>come second</em> to the particular things we encounter in around us.</p>
+</section>
+<section id="genera-describe-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="genera-describe-descriptions">3. Genera describe descriptions</h2>
+<p>Predicates of predicates also apply to particular things. So if a particular man is a human, and humans are animals, then the particular man is also an animal.</p>
+<p>In the language of Aristotle, these predicates of predicates are called “genera,” while the predicates underneath describing actual things are called “species.”</p>
+<p>Species within a genus are distinguished by “differentiae.” For instance, species of the genus animal can be distinguished by being footed, winged, and so on.</p>
+<p>Differentiae of a genus have no bearing on an unrelated genus: the genus of knowledge cannot be distinguished by footed, winged, and so on.</p>
+<p>But differentiae of a higher genus <em>can</em> apply to lower genera: under animal is the genus of bird, which itself contains species that may be footed (flightless), winged (flighted), and so on. This may not always hold but it is possible.</p>
+</section>
+<section id="the-categories" class="level2">
+<h2 class="anchored" data-anchor-id="the-categories">4. The categories</h2>
+<p>Every uncombined utterance signifies one of the following:</p>
+<ul>
+<li><em>Substance (οὐσία)</em> [5.]</li>
+<li>Quantity (πόσος) [6.]</li>
+<li>Quality (ποιός) &lt;– Affection (πάσχειν) [8.]</li>
+<li>Relation (πρός τι) &lt;– Posture (κεῖσθαι) [7.]</li>
+<li>Place (ποῦ)</li>
+<li>Time (ποτὲ)</li>
+<li>State (ἔχειν)</li>
+<li>Action (ποιεῖν)</li>
+</ul>
+<p>These are the categories. Somehow, every uncombined utterance refers to one of them.</p>
+<p>Insofar as <em>all</em> speech is comprised of uncombined utterances, then the categories are fundamentally what is <em>meant</em> by all talking. Perhaps they map the layout of the “ground floor” of what we actually <em>refer to</em> when we use speech to do things in the world.</p>
+<p>The remainder of Aristotle’s text will discuss six of these categories in detail: Substance, Quantity, Quality, and Relation, with Affection being mentioned alongside Quality, and Posture showing up with Relation.</p>
+<p>Only utterances combined into a statement can, strictly speaking, be true or false.</p>
+</section>
+<section id="substance" class="level2">
+<h2 class="anchored" data-anchor-id="substance">5. Substance</h2>
+<p>Substance (ἡ οὐσία) has two senses, first and second.</p>
+<p>First substance refers to <em>actual things</em>: these are the particular objects we discussed in the first classification.</p>
+<p>First substance is truly the <em>first</em> utterance in that everything else we speak of seems takes root in actual things. If first substance did not exist, the rest – species, genera, differentiae, and properties – simply could not exist. Therefore of utterances it is the first.</p>
+<p>Secondary substance refers to substantial predicates: to the species, genera, and differentiae that describe <em>what actual things are</em>.</p>
+<p>Only second substance describes actual things synonymously. So if this man is a man, then the definition of man, animal, applies to him. On the other hand, this man having skin of a certain shade (a property) does not proceed to define him as a color: it is homonymous.</p>
+<p>Species is more substantial than genre. For one, it is “nearer” to substance in being a more natural substitute: it is more sensible to call this man a man than it is to call him an animal. Species also behaves more like substance in that it describe less things than genre.</p>
+<p>Second substances, despite being predicates, are truly substances:</p>
+<p>For even though they are descriptions, species and genre alone pertain to and clarify <em>what first substances are</em>. For you can measure whatever you like about a man – his height, his knowledge, age, posture, and so on – none of these properties will tell you <em>what he is</em>: a man.</p>
+<p>Species and genre can also be described like first substance: for if this man is said to walk on two legs and possess knowledge, then the same can be said of man and animal. Species and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.</p>
+<p>Let us define first and secondary substance a bit more carefully.</p>
+<p><strong>First substance is what all speech is about.</strong> It is what all utterance, no matter how, what where, or why it is being said, refers to.</p>
+<p>This is why Aristotle defines first substance as τόδε τι, something with the basic character of being <em>pointed out</em>. All speech fundamentally points to substance, and substance cannot be understood in any other capacity than this basic ability to be referred to and remarked.</p>
+<p>Accordingly, second substance clarifies substance by its <em>kind</em>. By pointing to an actual thing as a human or a dog,</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
