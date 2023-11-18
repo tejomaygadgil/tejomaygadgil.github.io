@@ -2,14 +2,14 @@ project:
   type: website
 
 website:
-  title: "blog"
+  title: "Tejomay's blog"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/tejomaygadgil/
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/tejomaygadgil/
 format:
   html:
     theme: cosmo
