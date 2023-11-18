@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
-</head>
+<link rel="alternate" type="application/rss+xml" title="Tejomay's blog" href="index.xml"></head>
 
 <body class="nav-fixed">
 
@@ -166,37 +166,43 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1699344000000" data-listing-file-modified-sort="1700268842101" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
-<div class="thumbnail">
-<p><a href="./posts/aristotle_categories/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/aristotle_categories/index.html">
-<h3 class="no-anchor listing-title">
-Introduction to Aristotle’s <em>Categories</em>
-</h3>
-<div class="listing-subtitle">
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 
-</div>
-<div class="listing-description">
-Few essays in the history of philosophy are as important, less as inscrutable, and none as important for <em>being</em> inscrutable as Aristotle’s <em>Categories</em>.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/aristotle_categories/index.html">
-<div class="listing-date">
-Nov 7, 2023
-</div>
-<div class="listing-author">
-Tejomay Gadgil
-</div>
-</a>
-</div>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Author
+</th>
+<th>
+Reading Time
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1699344000000" data-listing-file-modified-sort="1700270003255" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-title-sort="Introduction to Aristotle's *Categories*" data-listing-filename-sort="aristotle_categories.qmd">
+<td>
+<span class="listing-date">Nov 7, 2023</span>
+</td>
+<td>
+<a href="./posts/aristotle_categories.html" class="title listing-title">Introduction to Aristotle’s <em>Categories</em></a>
+</td>
+<td>
+<span class="listing-author">Tejomay Gadgil</span>
+</td>
+<td>
+<span class="listing-reading-time">10 min</span>
+</td>
+</tr>
+</tbody>
+
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
