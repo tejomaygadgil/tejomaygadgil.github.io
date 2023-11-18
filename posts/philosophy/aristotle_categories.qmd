@@ -16,19 +16,19 @@ Few essays in the history of philosophy are as important, less as inscrutable, a
 
 The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Is it language? Logic? Metaphysics? Something else entirely?
 
-Introducing such an evasive text is therefore impossible: a full account of its meaning and history would not fit into the space of an introduction, while a few factual "hors d'oeuvres," no matter how well sourced, would fail to introduce the actual *work* in question. Abstract summary, no matter how well rendered, will never introduce us to the *Categories*. Our only option is interpretation.
+Introducing such an evasive text is therefore impossible: a full account of its meaning and history would not fit into the space of an introduction, while a few factual "hors d'oeuvres," no matter how well plated, would fail to introduce the actual *work* in question. Summarization will never introduce us to the *Categories*. Instead out only option is interpretation.
 
-To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpreting begins to teeter. This softens the offset between ourselves and what we are trying to understand, and in doing so we become introduced. Interpretation is always difficult, not just because it is "hard," but because it is fundamentally *productive*.
+To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to teeter. This softening the offset between ourselves and what we are trying to understand is what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is fundamentally *productive*.
 
 This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made, and points have been rendered in order to practically engage the reader with the material ordering, as it always does, the words on the page.
 
 ## Things can have a common name for different reasons
 
-**Synonyms** have a common name for the same reason: a cat and a bird are both "animals" because they are both living entities.
+Synonyms have a common name for the same reason: a cat and a bird are both "animals" because they are both living entities.
 
-**Homonyms** have a common name for different reasons: a cello and a microscope are both "instruments," the former because it produces music, and the latter because it is a tool for science.
+Homonyms have a common name for different reasons: a cello and a microscope are both "instruments," the former because it produces music, and the latter because it is a tool for science.
 
-**Paronyms** share a common root: to preach and preacher, for instance.
+Paronyms share a common root: to preach and preacher, for instance.
 
 ## Beings can be predicates, and they can be properties
 
@@ -82,11 +82,11 @@ Differentiae of a genus have no bearing on an unrelated genus: the genus of know
 
 But differentiae of a higher genus *can* apply to lower genera: under animal is the genus of bird, which itself contains species that may be footed (flightless), winged (flighted), and so on. This may not always hold but it is possible.
 
-## Every utterance signifies one of ten things
+## Every utterance refers to one of ten things
 
-Every uncombined utterance signifies one of the following:
+Every uncombined utterance ultimately signifies one of the following:
 
-| English   | Greek   | Chapter        |
+| English   | Greek   | Section        |
 |-----------|---------|----------------|
 | Substance | οὐσία   | @sec-substance |
 | Quantity  | πόσος   | @sec-quantity  |
@@ -99,13 +99,11 @@ Every uncombined utterance signifies one of the following:
 | Action    | ποιεῖν  | Not discussed  |
 | Affection | πάσχειν | @sec-quality   |
 
-These are the categories. Somehow, every uncombined utterance refers to one of them.
+Insofar as all speech consists of uncombined utterances, these ten things, it seems, must be the ultimate referents of all talking: in other words, the meaning of speech in general. Perhaps they are the layout of the "ground floor" of what we mean when we use speech to to go about our lives in the daily world.
 
-Insofar as *all* speech is comprised of uncombined utterances, then the categories are fundamentally what is *meant* by all talking. Perhaps they map the layout of the "ground floor" of what we actually *refer to* when we use speech to do things in the world.
+The remainder of Aristotle's text will discuss six of these categories in detail: Substance, Quantity, Quality and Affection, and Relation and Posture.
 
-The remainder of Aristotle's text will discuss six of these categories in detail: Substance, Quantity, Quality, and Relation, with Affection being mentioned alongside Quality, and Posture showing up with Relation.
-
-Only utterances combined into a statement can, strictly speaking, be true or false.
+Aristotle also notes here that only utterances combined into a statement can, strictly speaking, be true or false.
 
 ## Substance {#sec-substance}
 
