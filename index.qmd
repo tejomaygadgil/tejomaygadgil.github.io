@@ -1,26 +1,22 @@
 ---
-title: "Posts"
+title: Posts
 listing:
 - id: posts
-  contents: posts/posts
-  type: table
-  fields: [date, title, author, categories, reading-time]
-  sort: "date desc"
-  categories: false
-  sort-ui: false
-  filter-ui: false
-- id: notes
-  contents: posts/notes
-  type: table
-  fields: [date, title, author, categories, reading-time]
-  sort: "date desc"
+  contents: 
+  - qmd/categories.qmd
+  type: grid
+  fields: [image, title, description, reading-time, date]
+  sort: "date asc"
   categories: false
   sort-ui: false
   filter-ui: false
 - id: resources
-  contents: posts/resources
+  contents: 
+  - qmd/fastai.qmd
+  - qmd/neovim.qmd
   type: grid
-  sort: "date desc"
+  fields: [image, title, description, date]
+  sort: "date asc"
   categories: false
   sort-ui: false
   filter-ui: false
@@ -28,16 +24,10 @@ page-layout: full
 title-block-banner: true
 ---
 
-
-## Posts
+## Writings
 :::{#posts}
 :::
 
-## Notes
-:::{#notes}
-:::
-
-## Resources
-
+## Notes and resources
 :::{#resources}
 :::

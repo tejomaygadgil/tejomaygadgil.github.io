@@ -1,17 +1,12 @@
 ---
 title: Neovim resources
-author: "Tejomay Gadgil"
-date: "2023-11-18"
-categories: 
-  - Nvim
-format:
-  html:
-    comments:
-      utterances:
-        repo: tejomaygadgil/tejomaygadgil.github.io
+date: 11/22/2023
+format: html
+image: ../img/neovim.png
 ---
 
-An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wild world of [neovim](https://neovim.io/).
+An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wide world of [neovim](https://neovim.io/).
+
 
 ## Packages
 

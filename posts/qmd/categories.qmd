@@ -1,6 +1,5 @@
 ---
 title: "Introduction to Aristotle's *Categories*"
-author: "Tejomay Gadgil"
 date: "2023-11-07"
 categories: 
   - Philosophy
@@ -10,6 +9,7 @@ format:
       utterances:
         repo: tejomaygadgil/tejomaygadgil.github.io
 number-sections: true
+image: ../img/categories.png
 ---
 
 Few essays in the history of philosophy are as important, less as inscrutable, and none as important for *being* inscrutable as Aristotle's *Categories*.

@@ -1,6 +1,5 @@
 ---
 title: "Test post"
-author: "Tejomay Gadgil"
 date: "2023-11-17"
 categories:
   - Data science

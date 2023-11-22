@@ -1,5 +1,5 @@
 ---
-title: "Notes for fast.ai's Practical Deep Learning for Coders"
+title: "Notes on fast.ai's Deep Learning course"
 author: "Tejomay Gadgil"
 date: "2023-11-18"
 categories: 
@@ -10,9 +10,10 @@ format:
       utterances:
         repo: tejomaygadgil/tejomaygadgil.github.io
 number-sections: true
+image: ../img/fastai.webp
 ---
 
-Notes on the 2022 Fastai Deep Learning course <https://course.fast.ai/>.
+My notes on the 2022 Practical Deep Learning for Coders offered by fast.ai (<https://course.fast.ai/>).
 
 ## Getting started
 
