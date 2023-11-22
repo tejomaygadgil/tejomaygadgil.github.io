@@ -1,9 +1,25 @@
 ---
 title: "Posts"
 listing:
-  contents: posts
+- id: posts
+  contents: posts/posts
   type: table
   fields: [date, title, author, categories, reading-time]
+  sort: "date desc"
+  categories: false
+  sort-ui: false
+  filter-ui: false
+- id: notes
+  contents: posts/notes
+  type: table
+  fields: [date, title, author, categories, reading-time]
+  sort: "date desc"
+  categories: false
+  sort-ui: false
+  filter-ui: false
+- id: resources
+  contents: posts/resources
+  type: grid
   sort: "date desc"
   categories: false
   sort-ui: false
@@ -13,3 +29,15 @@ title-block-banner: true
 ---
 
 
+## Posts
+:::{#posts}
+:::
+
+## Notes
+:::{#notes}
+:::
+
+## Resources
+
+:::{#resources}
+:::

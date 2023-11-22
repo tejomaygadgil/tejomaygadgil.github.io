@@ -1,0 +1,36 @@
+---
+title: Neovim resources
+author: "Tejomay Gadgil"
+date: "2023-11-18"
+categories: 
+  - Nvim
+format:
+  html:
+    comments:
+      utterances:
+        repo: tejomaygadgil/tejomaygadgil.github.io
+---
+
+An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wild world of [neovim](https://neovim.io/).
+
+## Packages
+
+For Data Science / general programming / note-taking / publishing I recommend the [Quarto kickstarter](https://github.com/jmbuhr/quarto-nvim-kickstarter). The shortcuts below are written with this configuration installed so YMMV.
+
+## Shortcuts 
+
+|Command|Description|
+|---|---|
+|`u`|Undo.|
+|`<ctrl>+r`|Redo.|
+|`<shift>-k`|Look up function definition.|
+|`<shift>-h`|Flip back and forth through buffers (tabs) on nvim.|
+|`<shift>-l`|Flip back and forth through buffers (tabs) on nvim.|
+|`<ctrl>-w`|Open window options.|
+|`<ctrl>-w + v`|Vertical split.|
+|`<ctrl>-w + s`|Horizontal split.|
+|`:tabnew`|New tab.|
+|`<leader>-f + d`|Open buffers.|
+|`<shift>-g`|End of the file.|
+|`gg`|Beginning of the file.|
+|`<leader> + c + O/o + p`|New python cell above/below.|
