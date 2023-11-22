@@ -7,164 +7,157 @@
     "text": "Tejomay’s blog."
   },
   {
-    "objectID": "posts/notes/fastai.html",
-    "href": "posts/notes/fastai.html",
-    "title": "Notes for fast.ai’s Practical Deep Learning for Coders",
+    "objectID": "posts/qmd/fastai.html",
+    "href": "posts/qmd/fastai.html",
+    "title": "Notes on fast.ai’s Deep Learning course",
     "section": "",
-    "text": "Notes on the 2022 Fastai Deep Learning course https://course.fast.ai/."
+    "text": "My notes on the 2022 Practical Deep Learning for Coders offered by fast.ai (https://course.fast.ai/)."
   },
   {
-    "objectID": "posts/notes/fastai.html#getting-started",
-    "href": "posts/notes/fastai.html#getting-started",
-    "title": "Notes for fast.ai’s Practical Deep Learning for Coders",
+    "objectID": "posts/qmd/fastai.html#getting-started",
+    "href": "posts/qmd/fastai.html#getting-started",
+    "title": "Notes on fast.ai’s Deep Learning course",
     "section": "1 Getting started",
     "text": "1 Getting started\n\n1.1 The significance of the XOR affair\nMinksy’s Perceptrons (1969) is infamous stalling AI research by claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn’t actually true. But the book has become a symbol of a certain side of a debate about AI.\nThe dispute is about logic.\nToday logic is not that important. We don’t care what a model does as long as it is useful. But this was not always the case. Stemming off very intense movements in philosophy and other disciplines1, logic in the last century was seen by some as the very fabric of reality. It is in this environment that computers, prized as first and foremost for being logical machines, were invented.\nMinsky’s problem with neural networks, then, was that they were not logical structured. Unlike a computer, which is built from the ground up using determinate Boolean operations, neural networks instead use calculus and numerical optimization to fit curves.\nIt is against this background that Minsky’s actual argument, that a single neuron cannot not compute a basic logical function called “exclusive or” (XOR for short), makes any sense. Otherwise he comes off as nitpicking. Perhaps, but this misses the stakes of the argument: the disputation between what is true and what is useful.\n\n1.1.1 Appendix\nFor reference XOR looks like this:\n\n\n\n\nFalse\nTrue\n\n\n\n\nFalse\n0\n1\n\n\nTrue\n1\n0\n\n\n\nMinsky’s basic argument is that a Perceptron (a single neuron) cannot learn this function because it is not linearly separable: in other words you cannot draw a straight line to separate the 0s from the 1s. In fact XOR is the only such logical function that is not linearly separable, which is probably why Minsky chose it for his analysis.\nFor reference AND looks like this:\n\n\n\n\nFalse\nTrue\n\n\n\n\nFalse\n0\n0\n\n\nTrue\n0\n1\n\n\n\nYou can draw a straight line to separate the 0s and 1s for AND, but you cannot do it for XOR.\nIt would take the introduction of non-linear transformations (ReLU) to enable neural networks to draw the squiggly lines that can solve these types of problems. But in the eyes of the logicists, this would be just another hack to a fundamentally unsound technology."
   },
   {
-    "objectID": "posts/notes/fastai.html#deployment",
-    "href": "posts/notes/fastai.html#deployment",
-    "title": "Notes for fast.ai’s Practical Deep Learning for Coders",
+    "objectID": "posts/qmd/fastai.html#deployment",
+    "href": "posts/qmd/fastai.html#deployment",
+    "title": "Notes on fast.ai’s Deep Learning course",
     "section": "2 Deployment",
     "text": "2 Deployment\n\n2.1 The Drivetrain framework helps you build useful ML products\nThe Drivetrain approach to ML product design helps you produce actionable outcomes for a useful task instead of getting stuck building models. It has four stages.\nThe first stage is to clearly define the product objective. For instance, for a search engine the main user objective is to find a useful answer to their query. Therefore the objective of the product becomes: “find the most relevant result for a given query.”\nNext consider which possible levers can achieve this objective. In our case it is the ordering of the results: a well-ranked list of results is useful and satisfies the user objective, while a poorly ranked list does the opposite.\nAfter defining levers think about which data can power them. The very graph structure of the internet can be harnessed to produce good rankings, as sites containing higher quality results will invariably be linked to more often by other sites.\nFinally we turn to modeling, which is the process to produce the most effective mapping from inputs (data) to the outputs (levers) that satisfy the objective. If done right a high performance model will produce high performance outcomes by driving action.\nAnother example: recommendation systems.\nObjective: People buy what they like. Therefore we drive sales by linking users to other products they will enjoy or find useful (user taste).\nLevers: Rank all products by user taste and return the top 5 or 10.\nData: Purchase history contains the taste of each user. Matching users to other users would enable the system to recommend products the user has not tried yet, or even recommend to new users.\nModel: A useful model will take a user’s purchase history (or answers to a quick quiz for new users) and use it to produce a ranked list of products the user will like.\n\n\n2.2 Always train a model before looking at your data\nTrain a model before touching your data will help you figure out where to focus your efforts.\nFor instance looking at examples the model struggled on will inform extra data you may need to collect, or suggest architecture choices to consider.\nFlipping through misclassified / high loss examples can also help you find systematic biases in the data, or weed out mislabeled or corrupt examples.\nUse ImageClassifierCleaner from fastai.vision.widgets for an automated GUI to expedite this process.\n\n\n2.3 Model deployment does not require a GPU\nGenerating a prediction is far less expensive than training and so does not require a GPU.\nAlso GPUs are only good at batch processing, which is probably not necessary or helpful for a small scale app.\nLastly managing GPU servers is very complex and expensive. You are better off delaying it until server traffic merits it.\n\n\n2.4 Models rarely work as expected in deployment\nThe training set rarely reflects real-world conditions, leading to a few common issues:\n\nThe predictions data does not match the training data (training-serving skew). An example is a classifier that was trained on well-lit, professional images from the internet but is used in practice to predict on grainy images taken on mobile phone cameras. This new type of images will have to be incorporated into the model.\nThe nature of the process being modeled changes (domain shift). As norms and rules of a society evolve certain data relationships no longer hold, leading the model to make bad predictions based on false assumptions.\n\nThe very flexibility that lets neural networks learn very complex mappings is also what makes them difficult to interpret and to fix when something goes wrong.\nTherefore the best strategy for deployment has two aspects:\n\nRoll out any model gradually, first in parallel with whatever pre-existing process it is replacing, then in a limited scope with plenty of supervision, finally expanding to more areas as the model gains trust.\nGrapple with the implications of two questions: 1. what could go wrong, and 2. what happens in the best case scenario? The former will help you build the correct reporting structure around deployment to catch and address any issues, and the latter will force you to confront any possible feedback loops: that is, unintended changes in user behavior or outcomes as a consequence of deployment."
   },
   {
-    "objectID": "posts/notes/fastai.html#neural-network-foundations",
-    "href": "posts/notes/fastai.html#neural-network-foundations",
-    "title": "Notes for fast.ai’s Practical Deep Learning for Coders",
+    "objectID": "posts/qmd/fastai.html#neural-network-foundations",
+    "href": "posts/qmd/fastai.html#neural-network-foundations",
+    "title": "Notes on fast.ai’s Deep Learning course",
     "section": "3 Neural network foundations",
     "text": "3 Neural network foundations\n\n3.1 ML explained simply\nMachine learning is fundamentally about fitting a function to data. Then we can use the function instead of data to make predictions.\nA model defines the function shape. After that, all we have to do is find the weights that minimize the difference between the model output and the actual data.\nWe can find optimal weights by starting with random values and nudging them slowly in the direction that seems to minimize this difference. If we do this long enough with the right nudging strategy then we will arrive at the best weights for the model we chose.\n\n\n3.2 Start with simple models\nProtip: start with very simple models (i.e. ResNet18 or 34). You’ll be able to iterate quickly at the beginning to figure out data augmentation and cleaning strategies. When you have those nailed down you can train on a bigger, more expensive model to see if it is worth the time and cost.\n\n\n3.3 Neural networks explained simply\nNeural networks represent data by using simple shapes like squiggles and angles to build more complicated curves. This allows the network to slowly piecing things together like a jigsaw puzzle.\nThe activation function defines the basic shape. For instance, the ReLU function generates a simple angular kink that can be moved around, stretched, and rotated by the network using the weights it has learned. The network uses many of these kinks at once to represent a complex silhouette.\nWhat makes neural networks “deep” is that outputs of one layer become inputs for the next layer. This allows the network to fashion its own jigsaw pieces based on what seems most useful for approximating the final curve."
   },
   {
-    "objectID": "posts/notes/fastai.html#nlp",
-    "href": "posts/notes/fastai.html#nlp",
-    "title": "Notes for fast.ai’s Practical Deep Learning for Coders",
+    "objectID": "posts/qmd/fastai.html#nlp",
+    "href": "posts/qmd/fastai.html#nlp",
+    "title": "Notes on fast.ai’s Deep Learning course",
     "section": "4 NLP",
     "text": "4 NLP\n\n4.1 Fine-tuning\nFine-tuning lets you use a more general model to accomplish a more specific task.\nFor instance, many language models are generally trained on a very large corpus such as Wikipedia or Reddit. They understand the patterns of language but do not necessarily perform a useful task. You can use the knowledge (i.e. learned weights) of these models to accomplish a more specific task such as sentiment classification for user reviews."
   },
   {
-    "objectID": "posts/notes/fastai.html#footnotes",
-    "href": "posts/notes/fastai.html#footnotes",
-    "title": "Notes for fast.ai’s Practical Deep Learning for Coders",
+    "objectID": "posts/qmd/fastai.html#footnotes",
+    "href": "posts/qmd/fastai.html#footnotes",
+    "title": "Notes on fast.ai’s Deep Learning course",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nCf. the Vienna circle, Hilbert’s Entscheidungsproblem, and American Pragmatism. These movements participate in the idea that logic and mathematics are the sole fabric of reality.↩︎"
   },
   {
-    "objectID": "posts/posts/test_post.html",
-    "href": "posts/posts/test_post.html",
-    "title": "Test post",
-    "section": "",
-    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html",
-    "href": "posts/posts/aristotle_categories.html",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "",
-    "text": "Few essays in the history of philosophy are as important, less as inscrutable, and none as important for being inscrutable as Aristotle’s Categories.\nThe central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Is it language? Logic? Metaphysics? Something else entirely?\nIntroducing such an evasive text is therefore impossible: a full account of its meaning and history would not fit into the space of an introduction, while a few factual “hors d’oeuvres,” no matter how well presented, would fail to introduce the actual work in question. Summary will never introduce us to the Categories. Instead our only option is to interpret it.\nTo interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to teeter. This softening the offset between ourselves and what we are trying to understand is what we call being “introduced.” Interpretation is always difficult, not just because it is “hard,” but because it is fundamentally productive.\nThis introduction, therefore, is nothing other than a plain English interpretation of the Categories, where “plain” hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering of the words on the page."
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html#things-can-have-a-common-name-for-different-reasons",
-    "href": "posts/posts/aristotle_categories.html#things-can-have-a-common-name-for-different-reasons",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "1 Things can have a common name for different reasons",
-    "text": "1 Things can have a common name for different reasons\nSynonyms have a common name for the same reason: a cat and a bird are both “animals” because they are both living entities.\nHomonyms have a common name for different reasons: a cello and a microscope are both “instruments,” the former because it produces music, and the latter because it is a tool for science.\nParonyms share a common root: to preach and preacher, for instance."
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html#beings-can-be-predicates-and-they-can-be-properties",
-    "href": "posts/posts/aristotle_categories.html#beings-can-be-predicates-and-they-can-be-properties",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "2 Beings can be predicates, and they can be properties",
-    "text": "2 Beings can be predicates, and they can be properties\nUtterances (τὰ λεγόμενα) can be interwoven in speech, or not: the former produces propositions such as “The man runs,” the latter simple terms such as “man,” and “runs.” This will become relevant later.\nBeings (τὰ ὄντα) can distinguished in two ways: as predicates, or as properties.\nPredicates describe a subject (καθ’ ὑποκειμένου λέγεται). Man, for instance, is the entity that characterizes a person, and tall is something that describes a redwood tree. Predicates are always generic.\nParticular things are the opposite of a predicate. You cannot describe anything using a particular. Particulars cannot complete a sentence of the type “X is ___.”\nConsider your phone. It is a particular entity. Your phone could never describe another entity; rather it can only be described by generic predicates such as model number, color, size, shape, and so on. Even the seeming counter-example “My favorite thing is this phone,” is actually the anastrophe of the proper statement “This phone is my favorite thing”, where “favorite thing” is a predicate.\nProperties belong to a subject (ἐν ὑποκειμένῳ ἐστιν). Examples include colors, height, length, location, and so on: you will never encounter “blue” or “tall” on its own, but only as an attribute of a pre-existing thing.\nSubstance (ἡ οὐσία) opposes property. And what is that, substance? Indeed, the rest of this work – and the overall movement of philosophy itself – will radically address this question. But for the time being, you can think of substance as individuality: that by which you can single out something particular as being something particular.\nBut what about the subject? If predicates describe a subject, and properties belong in a subject, shouldn’t the subject oppose them instead of particulars and substance?\nNot exactly, because predicates and properties can themselves be subjects! For the human that this man is is itself an animal, and for this man who wears a jacket that is green, that green is itself a color. Then a subject can either be a particular thing, or predicates describing that thing, properties belonging in that thing, or predicates describing those properties.\nDraw it out: according to what we have discussed so far, everything we say about anything, speech itself, appears to spiral out of what we call particulars, and particularly what we call substance.\nThe two conditions by which we can distinguish beings, as predicates or as properties, in turn produce a table with four categories:\n\n\n\n\n\n\n\n\n\nNot a predicate(Particular things)\nPredicate\n\n\n\n\nNot a property(Substance)\nThis man\nMan\n\n\nProperty\nThis knowledge\nKnowledge\n\n\n\nHere everything interlaces in a complex crossing:\n\nProperty predicates are generic descriptors of properties: knowledge, color, shape, and so on.\nSubstantial predicates are generic descriptors of particulars: human, horse, cars, and more general labels like animal, vehicle, and so on.\nProperty particulars are specific details about particular things: the flakiness of a pastry, the specific way someone walks, the sound your car makes when it turns on.\nThen, finally, substantial particulars: the individual things – that is, everything surrounding you at all times – in the world that can be described with predicates and that possess properties (that in turn can also be described). But they never themselves describe or belong to anything else.\n\nFrom this a certain ordering about the nature of the world has been implanted: there is a sense in which ideas, concepts, descriptions, generic terms, and possibly language itself come second to the particular things we encounter around us."
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html#genera-also-describe-things",
-    "href": "posts/posts/aristotle_categories.html#genera-also-describe-things",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "3 Genera also describe things",
-    "text": "3 Genera also describe things\nIn the language of Aristotle, these predicates of predicates are called “genera,” while the predicates underneath describing actual things are called “species.”\nGenera apply downward to the particulars. So if a man is a human, and humans are animals, then that man is also an animal.\nSpecies within a genus are distinguished by “differentiae.” Species of animal can be distinguished by being footed, winged, and so on.\nDifferentiae of one genus have no bearing toward an unrelated genus: knowledge, for instance, cannot be distinguished by footed, winged, and so on.\nBut differentiae of a genus can apply downward: the bird genus, underneath animal, itself contains species that may be distinguished as being footed (flightless), winged (flighted), and so on. This does not always hold (human is not distinguished by being footed or winged), but it is possible."
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html#every-word-refers-to-one-of-ten-things",
-    "href": "posts/posts/aristotle_categories.html#every-word-refers-to-one-of-ten-things",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "4 Every word refers to one of ten things",
-    "text": "4 Every word refers to one of ten things\nEvery uncombined utterance (word) ultimately means one of the following:\n\n\n\nEnglish\nGreek\nSection\n\n\n\n\nSubstance\nοὐσία\nSection 5\n\n\nQuantity\nπόσος\nSection 6\n\n\nQuality\nποιός\nSection 7\n\n\nRelation\nπρός τι\nSection 8\n\n\nPlace\nποῦ\nNot discussed\n\n\nTime\nποτὲ\nNot discussed\n\n\nPosture\nκεῖσθαι\nSection 8\n\n\nState\nἔχειν\nNot discussed\n\n\nAction\nποιεῖν\nNot discussed\n\n\nAffection\nπάσχειν\nSection 7\n\n\n\nInsofar as all speech consists of words, these ten things, it seems, constitute the meaning of speech in general.\nIf words are signs referring to things (“cat” stands in for the idea of a type of fuzzy four legged creature, and “my cat” is shorthand for the actual fuzzy animal that lives with me), then these ten concepts, it seems, must be the ultimately what all words signify. Perhaps they constitute the layout of the “ground floor” of what we must constantly be referring to when we go about talking in our everyday lives.\nHere also Aristotle notes here that only combined utterances, statements, strictly speaking, be true or false."
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html#sec-substance",
-    "href": "posts/posts/aristotle_categories.html#sec-substance",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "5 Substance",
-    "text": "5 Substance\nThere are two kinds of substance (ἡ οὐσία), first and second.\nFirst substance refers to actual things: these are the particular objects we discussed in the first classification.\nFirst substance is truly the first utterance in that everything else we speak of seems takes root in actual things. If first substance did not exist, the rest – species, genera, differentiae, and properties – simply could not exist. Therefore of utterances it is the first.\nSecondary substance refers to substantial predicates: to the species, genera, and differentiae that describe what actual things are.\nOnly second substance describes actual things synonymously. So if this man is a man, then the definition of man, animal, applies to him. On the other hand, this man having skin of a certain shade (a property) does not proceed to define him as a color: it is homonymous.\nSpecies is more substantial than genre. For one, it is “nearer” to substance in being a more natural substitute: it is more sensible to call this man a man than it is to call him an animal. Species also behaves more like substance in that it describe less things than genre.\nSecond substances, despite being predicates, are truly substances:\nFor even though they are descriptions, species and genre alone pertain to and clarify what first substances are. For you can measure whatever you like about a man – his height, his knowledge, age, posture, and so on – none of these properties will tell you what he is: a man.\nSpecies and genre can also be described like first substance: for if this man is said to walk on two legs and possess knowledge, then the same can be said of man and animal. Species and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.\nLet us define first and secondary substance a bit more carefully.\nFirst substance is what all speech is about. It is what all utterance, no matter how, what where, or why it is being said, refers to.\nThis is why Aristotle defines first substance as τόδε τι, something with the basic character of being pointed out. All speech fundamentally points to substance, and substance cannot be understood in any other capacity than this basic ability to be referred to and remarked.\nAccordingly, second substance clarifies substance by its kind. By pointing to an actual thing as a human or a dog,"
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html#sec-quantity",
-    "href": "posts/posts/aristotle_categories.html#sec-quantity",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "6 Quantity",
-    "text": "6 Quantity"
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html#sec-quality",
-    "href": "posts/posts/aristotle_categories.html#sec-quality",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "7 Quality",
-    "text": "7 Quality"
-  },
-  {
-    "objectID": "posts/posts/aristotle_categories.html#sec-relation",
-    "href": "posts/posts/aristotle_categories.html#sec-relation",
-    "title": "Introduction to Aristotle’s Categories",
-    "section": "8 Relation",
-    "text": "8 Relation"
-  },
-  {
-    "objectID": "posts/resources/nvim.html",
-    "href": "posts/resources/nvim.html",
+    "objectID": "posts/qmd/neovim.html",
+    "href": "posts/qmd/neovim.html",
     "title": "Neovim resources",
     "section": "",
-    "text": "An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wild world of neovim."
+    "text": "An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wide world of neovim."
   },
   {
-    "objectID": "posts/resources/nvim.html#packages",
-    "href": "posts/resources/nvim.html#packages",
+    "objectID": "posts/qmd/neovim.html#packages",
+    "href": "posts/qmd/neovim.html#packages",
     "title": "Neovim resources",
     "section": "Packages",
     "text": "Packages\nFor Data Science / general programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV."
   },
   {
-    "objectID": "posts/resources/nvim.html#shortcuts",
-    "href": "posts/resources/nvim.html#shortcuts",
+    "objectID": "posts/qmd/neovim.html#shortcuts",
+    "href": "posts/qmd/neovim.html#shortcuts",
     "title": "Neovim resources",
     "section": "Shortcuts",
     "text": "Shortcuts\n\n\n\nCommand\nDescription\n\n\n\n\nu\nUndo.\n\n\n&lt;ctrl&gt;+r\nRedo.\n\n\n&lt;shift&gt;-k\nLook up function definition.\n\n\n&lt;shift&gt;-h\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;shift&gt;-l\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;ctrl&gt;-w\nOpen window options.\n\n\n&lt;ctrl&gt;-w + v\nVertical split.\n\n\n&lt;ctrl&gt;-w + s\nHorizontal split.\n\n\n:tabnew\nNew tab.\n\n\n&lt;leader&gt;-f + d\nOpen buffers.\n\n\n&lt;shift&gt;-g\nEnd of the file.\n\n\ngg\nBeginning of the file.\n\n\n&lt;leader&gt; + c + O/o + p\nNew python cell above/below."
+  },
+  {
+    "objectID": "posts/qmd/categories.html",
+    "href": "posts/qmd/categories.html",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "",
+    "text": "Few essays in the history of philosophy are as important, less as inscrutable, and none as important for being inscrutable as Aristotle’s Categories.\nThe central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Is it language? Logic? Metaphysics? Something else entirely?\nIntroducing such an evasive text is therefore impossible: a full account of its meaning and history would not fit into the space of an introduction, while a few factual “hors d’oeuvres,” no matter how well presented, would fail to introduce the actual work in question. Summary will never introduce us to the Categories. Instead our only option is to interpret it.\nTo interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to teeter. This softening the offset between ourselves and what we are trying to understand is what we call being “introduced.” Interpretation is always difficult, not just because it is “hard,” but because it is fundamentally productive.\nThis introduction, therefore, is nothing other than a plain English interpretation of the Categories, where “plain” hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering of the words on the page."
+  },
+  {
+    "objectID": "posts/qmd/categories.html#things-can-have-a-common-name-for-different-reasons",
+    "href": "posts/qmd/categories.html#things-can-have-a-common-name-for-different-reasons",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "1 Things can have a common name for different reasons",
+    "text": "1 Things can have a common name for different reasons\nSynonyms have a common name for the same reason: a cat and a bird are both “animals” because they are both living entities.\nHomonyms have a common name for different reasons: a cello and a microscope are both “instruments,” the former because it produces music, and the latter because it is a tool for science.\nParonyms share a common root: to preach and preacher, for instance."
+  },
+  {
+    "objectID": "posts/qmd/categories.html#beings-can-be-predicates-and-they-can-be-properties",
+    "href": "posts/qmd/categories.html#beings-can-be-predicates-and-they-can-be-properties",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "2 Beings can be predicates, and they can be properties",
+    "text": "2 Beings can be predicates, and they can be properties\nUtterances (τὰ λεγόμενα) can be interwoven in speech, or not: the former produces propositions such as “The man runs,” the latter simple terms such as “man,” and “runs.” This will become relevant later.\nBeings (τὰ ὄντα) can distinguished in two ways: as predicates, or as properties.\nPredicates describe a subject (καθ’ ὑποκειμένου λέγεται). Man, for instance, is the entity that characterizes a person, and tall is something that describes a redwood tree. Predicates are always generic.\nParticular things are the opposite of a predicate. You cannot describe anything using a particular. Particulars cannot complete a sentence of the type “X is ___.”\nConsider your phone. It is a particular entity. Your phone could never describe another entity; rather it can only be described by generic predicates such as model number, color, size, shape, and so on. Even the seeming counter-example “My favorite thing is this phone,” is actually the anastrophe of the proper statement “This phone is my favorite thing”, where “favorite thing” is a predicate.\nProperties belong to a subject (ἐν ὑποκειμένῳ ἐστιν). Examples include colors, height, length, location, and so on: you will never encounter “blue” or “tall” on its own, but only as an attribute of a pre-existing thing.\nSubstance (ἡ οὐσία) opposes property. And what is that, substance? Indeed, the rest of this work – and the overall movement of philosophy itself – will radically address this question. But for the time being, you can think of substance as individuality: that by which you can single out something particular as being something particular.\nBut what about the subject? If predicates describe a subject, and properties belong in a subject, shouldn’t the subject oppose them instead of particulars and substance?\nNot exactly, because predicates and properties can themselves be subjects! For the human that this man is is itself an animal, and for this man who wears a jacket that is green, that green is itself a color. Then a subject can either be a particular thing, or predicates describing that thing, properties belonging in that thing, or predicates describing those properties.\nDraw it out: according to what we have discussed so far, everything we say about anything, speech itself, appears to spiral out of what we call particulars, and particularly what we call substance.\nThe two conditions by which we can distinguish beings, as predicates or as properties, in turn produce a table with four categories:\n\n\n\n\n\n\n\n\n\nNot a predicate(Particular things)\nPredicate\n\n\n\n\nNot a property(Substance)\nThis man\nMan\n\n\nProperty\nThis knowledge\nKnowledge\n\n\n\nHere everything interlaces in a complex crossing:\n\nProperty predicates are generic descriptors of properties: knowledge, color, shape, and so on.\nSubstantial predicates are generic descriptors of particulars: human, horse, cars, and more general labels like animal, vehicle, and so on.\nProperty particulars are specific details about particular things: the flakiness of a pastry, the specific way someone walks, the sound your car makes when it turns on.\nThen, finally, substantial particulars: the individual things – that is, everything surrounding you at all times – in the world that can be described with predicates and that possess properties (that in turn can also be described). But they never themselves describe or belong to anything else.\n\nFrom this a certain ordering about the nature of the world has been implanted: there is a sense in which ideas, concepts, descriptions, generic terms, and possibly language itself come second to the particular things we encounter around us."
+  },
+  {
+    "objectID": "posts/qmd/categories.html#genera-also-describe-things",
+    "href": "posts/qmd/categories.html#genera-also-describe-things",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "3 Genera also describe things",
+    "text": "3 Genera also describe things\nIn the language of Aristotle, these predicates of predicates are called “genera,” while the predicates underneath describing actual things are called “species.”\nGenera apply downward to the particulars. So if a man is a human, and humans are animals, then that man is also an animal.\nSpecies within a genus are distinguished by “differentiae.” Species of animal can be distinguished by being footed, winged, and so on.\nDifferentiae of one genus have no bearing toward an unrelated genus: knowledge, for instance, cannot be distinguished by footed, winged, and so on.\nBut differentiae of a genus can apply downward: the bird genus, underneath animal, itself contains species that may be distinguished as being footed (flightless), winged (flighted), and so on. This does not always hold (human is not distinguished by being footed or winged), but it is possible."
+  },
+  {
+    "objectID": "posts/qmd/categories.html#every-word-refers-to-one-of-ten-things",
+    "href": "posts/qmd/categories.html#every-word-refers-to-one-of-ten-things",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "4 Every word refers to one of ten things",
+    "text": "4 Every word refers to one of ten things\nEvery uncombined utterance (word) ultimately means one of the following:\n\n\n\nEnglish\nGreek\nSection\n\n\n\n\nSubstance\nοὐσία\nSection 5\n\n\nQuantity\nπόσος\nSection 6\n\n\nQuality\nποιός\nSection 7\n\n\nRelation\nπρός τι\nSection 8\n\n\nPlace\nποῦ\nNot discussed\n\n\nTime\nποτὲ\nNot discussed\n\n\nPosture\nκεῖσθαι\nSection 8\n\n\nState\nἔχειν\nNot discussed\n\n\nAction\nποιεῖν\nNot discussed\n\n\nAffection\nπάσχειν\nSection 7\n\n\n\nInsofar as all speech consists of words, these ten things, it seems, constitute the meaning of speech in general.\nIf words are signs referring to things (“cat” stands in for the idea of a type of fuzzy four legged creature, and “my cat” is shorthand for the actual fuzzy animal that lives with me), then these ten concepts, it seems, must be the ultimately what all words signify. Perhaps they constitute the layout of the “ground floor” of what we must constantly be referring to when we go about talking in our everyday lives.\nHere also Aristotle notes here that only combined utterances, statements, strictly speaking, be true or false."
+  },
+  {
+    "objectID": "posts/qmd/categories.html#sec-substance",
+    "href": "posts/qmd/categories.html#sec-substance",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "5 Substance",
+    "text": "5 Substance\nThere are two kinds of substance (ἡ οὐσία), first and second.\nFirst substance refers to actual things: these are the particular objects we discussed in the first classification.\nFirst substance is truly the first utterance in that everything else we speak of seems takes root in actual things. If first substance did not exist, the rest – species, genera, differentiae, and properties – simply could not exist. Therefore of utterances it is the first.\nSecondary substance refers to substantial predicates: to the species, genera, and differentiae that describe what actual things are.\nOnly second substance describes actual things synonymously. So if this man is a man, then the definition of man, animal, applies to him. On the other hand, this man having skin of a certain shade (a property) does not proceed to define him as a color: it is homonymous.\nSpecies is more substantial than genre. For one, it is “nearer” to substance in being a more natural substitute: it is more sensible to call this man a man than it is to call him an animal. Species also behaves more like substance in that it describe less things than genre.\nSecond substances, despite being predicates, are truly substances:\nFor even though they are descriptions, species and genre alone pertain to and clarify what first substances are. For you can measure whatever you like about a man – his height, his knowledge, age, posture, and so on – none of these properties will tell you what he is: a man.\nSpecies and genre can also be described like first substance: for if this man is said to walk on two legs and possess knowledge, then the same can be said of man and animal. Species and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.\nLet us define first and secondary substance a bit more carefully.\nFirst substance is what all speech is about. It is what all utterance, no matter how, what where, or why it is being said, refers to.\nThis is why Aristotle defines first substance as τόδε τι, something with the basic character of being pointed out. All speech fundamentally points to substance, and substance cannot be understood in any other capacity than this basic ability to be referred to and remarked.\nAccordingly, second substance clarifies substance by its kind. By pointing to an actual thing as a human or a dog,"
+  },
+  {
+    "objectID": "posts/qmd/categories.html#sec-quantity",
+    "href": "posts/qmd/categories.html#sec-quantity",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "6 Quantity",
+    "text": "6 Quantity"
+  },
+  {
+    "objectID": "posts/qmd/categories.html#sec-quality",
+    "href": "posts/qmd/categories.html#sec-quality",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "7 Quality",
+    "text": "7 Quality"
+  },
+  {
+    "objectID": "posts/qmd/categories.html#sec-relation",
+    "href": "posts/qmd/categories.html#sec-relation",
+    "title": "Introduction to Aristotle’s Categories",
+    "section": "8 Relation",
+    "text": "8 Relation"
+  },
+  {
+    "objectID": "posts/qmd/test_post.html",
+    "href": "posts/qmd/test_post.html",
+    "title": "Test post",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\nCategories\n\n\nReading Time\n\n\n\n\n\n\nNov 17, 2023\n\n\nTest post\n\n\nTejomay Gadgil\n\n\nData science\n\n\n1 min\n\n\n\n\nNov 7, 2023\n\n\nIntroduction to Aristotle’s Categories\n\n\nTejomay Gadgil\n\n\nPhilosophy\n\n\n10 min\n\n\n\n\n\n\nNo matching items"
+    "text": "10 min\n\n\n\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html#posts",
-    "href": "index.html#posts",
+    "objectID": "index.html#writings",
+    "href": "index.html#writings",
     "title": "Posts",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\nCategories\n\n\nReading Time\n\n\n\n\n\n\nNov 17, 2023\n\n\nTest post\n\n\nTejomay Gadgil\n\n\nData science\n\n\n1 min\n\n\n\n\nNov 7, 2023\n\n\nIntroduction to Aristotle’s Categories\n\n\nTejomay Gadgil\n\n\nPhilosophy\n\n\n10 min\n\n\n\n\n\n\nNo matching items"
+    "text": "10 min\n\n\n\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html#notes",
-    "href": "index.html#notes",
+    "objectID": "index.html#notes-and-resources",
+    "href": "index.html#notes-and-resources",
     "title": "Posts",
-    "section": "Notes",
-    "text": "Notes\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\nCategories\n\n\nReading Time\n\n\n\n\n\n\nNov 18, 2023\n\n\nNotes for fast.ai’s Practical Deep Learning for Coders\n\n\nTejomay Gadgil\n\n\nNotes\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#resources",
-    "href": "index.html#resources",
-    "title": "Posts",
-    "section": "Resources",
-    "text": "Resources\n\n\n\n\n\n\n\n\nNeovim resources\n\n\n\n\n\n\nTejomay Gadgil\n\n\nNov 18, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "section": "Notes and resources",
+    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nNotes on fast.ai’s Deep Learning course\n\n\n\n\n\n\nNov 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\n\n\n\n\nNov 22, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

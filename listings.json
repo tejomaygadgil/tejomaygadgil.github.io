@@ -2,10 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/posts/test_post.html",
-      "/posts/posts/aristotle_categories.html",
-      "/posts/notes/fastai.html",
-      "/posts/resources/nvim.html"
+      "/posts/qmd/categories.html",
+      "/posts/qmd/fastai.html",
+      "/posts/qmd/neovim.html"
     ]
   }
 ]
