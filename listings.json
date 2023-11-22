@@ -2,9 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/posts/test_post.html",
+      "/posts/posts/aristotle_categories.html",
       "/posts/notes/fastai.html",
-      "/posts/data_science/test_post.html",
-      "/posts/philosophy/aristotle_categories.html"
+      "/posts/resources/nvim.html"
     ]
   }
 ]

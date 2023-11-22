@@ -9,7 +9,7 @@
 <meta name="author" content="Tejomay Gadgil">
 <meta name="dcterms.date" content="2023-11-18">
 
-<title>Tejomay’s blog - Notes for fast.ai’s Practical Deep Learning for Coders</title>
+<title>Tejomay’s blog - Neovim resources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,9 +108,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Notes for fast.ai’s Practical Deep Learning for Coders</h1>
+      <h1 class="title">Neovim resources</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Notes</div>
+                <div class="quarto-category">Nvim</div>
               </div>
                   </div>
   </div>
@@ -146,148 +146,80 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Notes on the 2022 Fastai Deep Learning course <a href="https://course.fast.ai/" class="uri">https://course.fast.ai/</a>.</p>
-<section id="getting-started" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">1</span> Getting started</h2>
-<section id="the-significance-of-the-xor-affair" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="the-significance-of-the-xor-affair"><span class="header-section-number">1.1</span> The significance of the XOR affair</h3>
-<p>Minksy’s <em>Perceptrons</em> (1969) is infamous stalling AI research by claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn’t actually true. But the book has become a symbol of a certain side of a debate about AI.</p>
-<p>The dispute is about logic.</p>
-<p>Today logic is not that important. We don’t care what a model does as long as it is useful. But this was not always the case. Stemming off very intense movements in philosophy and other disciplines<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, logic in the last century was seen by some as the very fabric of reality. It is in this environment that computers, prized as first and foremost for being <em>logical</em> machines, were invented.</p>
-<p>Minsky’s problem with neural networks, then, was that they were not logical structured. Unlike a computer, which is built from the ground up using determinate Boolean operations, neural networks instead use calculus and numerical optimization to fit curves.</p>
-<p>It is against this background that Minsky’s actual argument, that a single neuron cannot not compute a basic <em>logical</em> function called “exclusive or” (XOR for short), makes any sense. Otherwise he comes off as nitpicking. Perhaps, but this misses the stakes of the argument: the disputation between what is <em>true</em> and what is <em>useful</em>.</p>
-<section id="appendix" class="level4" data-number="1.1.1">
-<h4 data-number="1.1.1" class="anchored" data-anchor-id="appendix"><span class="header-section-number">1.1.1</span> Appendix</h4>
-<p>For reference XOR looks like this:</p>
+<p>An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wild world of <a href="https://neovim.io/">neovim</a>.</p>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>For Data Science / general programming / note-taking / publishing I recommend the <a href="https://github.com/jmbuhr/quarto-nvim-kickstarter">Quarto kickstarter</a>. The shortcuts below are written with this configuration installed so YMMV.</p>
+</section>
+<section id="shortcuts" class="level2">
+<h2 class="anchored" data-anchor-id="shortcuts">Shortcuts</h2>
 <table class="table">
 <thead>
 <tr class="header">
-<th></th>
-<th>False</th>
-<th>True</th>
+<th>Command</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>False</td>
-<td>0</td>
-<td>1</td>
+<td><code>u</code></td>
+<td>Undo.</td>
 </tr>
 <tr class="even">
-<td>True</td>
-<td>1</td>
-<td>0</td>
+<td><code>&lt;ctrl&gt;+r</code></td>
+<td>Redo.</td>
 </tr>
-</tbody>
-</table>
-<p>Minsky’s basic argument is that a Perceptron (a single neuron) cannot learn this function because it is not linearly separable: in other words you cannot draw a straight line to separate the 0s from the 1s. In fact XOR is the only such logical function that is not linearly separable, which is probably why Minsky chose it for his analysis.</p>
-<p>For reference AND looks like this:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>False</th>
-<th>True</th>
-</tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td>False</td>
-<td>0</td>
-<td>0</td>
+<td><code>&lt;shift&gt;-k</code></td>
+<td>Look up function definition.</td>
 </tr>
 <tr class="even">
-<td>True</td>
-<td>0</td>
-<td>1</td>
+<td><code>&lt;shift&gt;-h</code></td>
+<td>Flip back and forth through buffers (tabs) on nvim.</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;shift&gt;-l</code></td>
+<td>Flip back and forth through buffers (tabs) on nvim.</td>
+</tr>
+<tr class="even">
+<td><code>&lt;ctrl&gt;-w</code></td>
+<td>Open window options.</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;ctrl&gt;-w + v</code></td>
+<td>Vertical split.</td>
+</tr>
+<tr class="even">
+<td><code>&lt;ctrl&gt;-w + s</code></td>
+<td>Horizontal split.</td>
+</tr>
+<tr class="odd">
+<td><code>:tabnew</code></td>
+<td>New tab.</td>
+</tr>
+<tr class="even">
+<td><code>&lt;leader&gt;-f + d</code></td>
+<td>Open buffers.</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;shift&gt;-g</code></td>
+<td>End of the file.</td>
+</tr>
+<tr class="even">
+<td><code>gg</code></td>
+<td>Beginning of the file.</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;leader&gt; + c + O/o + p</code></td>
+<td>New python cell above/below.</td>
 </tr>
 </tbody>
 </table>
-<p>You can draw a straight line to separate the 0s and 1s for AND, but you cannot do it for XOR.</p>
-<p>It would take the introduction of non-linear transformations (ReLU) to enable neural networks to draw the squiggly lines that can solve these types of problems. But in the eyes of the logicists, this would be just another hack to a fundamentally unsound technology.</p>
-</section>
-</section>
-</section>
-<section id="deployment" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="deployment"><span class="header-section-number">2</span> Deployment</h2>
-<section id="the-drivetrain-framework-helps-you-build-useful-ml-products" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="the-drivetrain-framework-helps-you-build-useful-ml-products"><span class="header-section-number">2.1</span> The Drivetrain framework helps you build useful ML products</h3>
-<p>The Drivetrain approach to ML product design helps you produce <em>actionable outcomes</em> for a useful task instead of getting stuck building models. It has four stages.</p>
-<p>The first stage is to clearly define the product <em>objective</em>. For instance, for a search engine the main user objective is to find a useful answer to their query. Therefore the objective of the product becomes: “find the most relevant result for a given query.”</p>
-<p>Next consider which possible <em>levers</em> can achieve this objective. In our case it is the <em>ordering of the results</em>: a well-ranked list of results is useful and satisfies the user objective, while a poorly ranked list does the opposite.</p>
-<p>After defining levers think about which <em>data</em> can power them. The very graph structure of the internet can be harnessed to produce good rankings, as sites containing higher quality results will invariably be linked to more often by other sites.</p>
-<p>Finally we turn to <em>modeling</em>, which is the process to produce the most effective mapping from inputs (data) to the outputs (levers) that satisfy the objective. If done right a high performance model will produce high performance outcomes by driving <em>action</em>.</p>
-<p>Another example: recommendation systems.</p>
-<p>Objective: People buy what they like. Therefore we drive sales by linking users to other products they will enjoy or find useful (user taste).</p>
-<p>Levers: Rank all products by user taste and return the top 5 or 10.</p>
-<p>Data: Purchase history contains the taste of each user. Matching users to other users would enable the system to recommend products the user has not tried yet, or even recommend to new users.</p>
-<p>Model: A useful model will take a user’s purchase history (or answers to a quick quiz for new users) and use it to produce a ranked list of products the user will like.</p>
-</section>
-<section id="always-train-a-model-before-looking-at-your-data" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="always-train-a-model-before-looking-at-your-data"><span class="header-section-number">2.2</span> Always train a model <em>before</em> looking at your data</h3>
-<p>Train a model before touching your data will help you figure out where to focus your efforts.</p>
-<p>For instance looking at examples the model struggled on will inform extra data you may need to collect, or suggest architecture choices to consider.</p>
-<p>Flipping through misclassified / high loss examples can also help you find systematic biases in the data, or weed out mislabeled or corrupt examples.</p>
-<p>Use <code>ImageClassifierCleaner</code> from <code>fastai.vision.widgets</code> for an automated GUI to expedite this process.</p>
-</section>
-<section id="model-deployment-does-not-require-a-gpu" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="model-deployment-does-not-require-a-gpu"><span class="header-section-number">2.3</span> Model deployment does not require a GPU</h3>
-<p>Generating a prediction is far less expensive than training and so does not require a GPU.</p>
-<p>Also GPUs are only good at batch processing, which is probably not necessary or helpful for a small scale app.</p>
-<p>Lastly managing GPU servers is very complex and expensive. You are better off delaying it until server traffic merits it.</p>
-</section>
-<section id="models-rarely-work-as-expected-in-deployment" class="level3" data-number="2.4">
-<h3 data-number="2.4" class="anchored" data-anchor-id="models-rarely-work-as-expected-in-deployment"><span class="header-section-number">2.4</span> Models rarely work as expected in deployment</h3>
-<p>The training set rarely reflects real-world conditions, leading to a few common issues:</p>
-<ol type="1">
-<li><p>The predictions data does not match the training data (<em>training-serving skew</em>). An example is a classifier that was trained on well-lit, professional images from the internet but is used in practice to predict on grainy images taken on mobile phone cameras. This new type of images will have to be incorporated into the model.</p></li>
-<li><p>The nature of the process being modeled changes (<em>domain shift</em>). As norms and rules of a society evolve certain data relationships no longer hold, leading the model to make bad predictions based on false assumptions.</p></li>
-</ol>
-<p>The very flexibility that lets neural networks learn very complex mappings is also what makes them difficult to interpret and to fix when something goes wrong.</p>
-<p>Therefore the best strategy for deployment has two aspects:</p>
-<ol type="1">
-<li><p>Roll out any model gradually, first in parallel with whatever pre-existing process it is replacing, then in a limited scope with plenty of supervision, finally expanding to more areas as the model gains trust.</p></li>
-<li><p>Grapple with the implications of two questions: <em>1. what could go wrong, and 2. what happens in the best case scenario?</em> The former will help you build the correct reporting structure around deployment to catch and address any issues, and the latter will force you to confront any possible <em>feedback loops</em>: that is, unintended changes in user behavior or outcomes as a consequence of deployment.</p></li>
-</ol>
-</section>
-</section>
-<section id="neural-network-foundations" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="neural-network-foundations"><span class="header-section-number">3</span> Neural network foundations</h2>
-<section id="ml-explained-simply" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="ml-explained-simply"><span class="header-section-number">3.1</span> ML explained simply</h3>
-<p>Machine learning is fundamentally about fitting a function to data. Then we can use the function instead of data to make predictions.</p>
-<p>A model defines the function shape. After that, all we have to do is find the weights that minimize the difference between the model output and the actual data.</p>
-<p>We can find optimal weights by starting with random values and nudging them slowly in the direction that seems to minimize this difference. If we do this long enough with the right nudging strategy then we will arrive at the best weights for the model we chose.</p>
-</section>
-<section id="start-with-simple-models" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="start-with-simple-models"><span class="header-section-number">3.2</span> Start with simple models</h3>
-<p>Protip: start with very simple models (i.e.&nbsp;ResNet18 or 34). You’ll be able to iterate quickly at the beginning to figure out data augmentation and cleaning strategies. When you have those nailed down you can train on a bigger, more expensive model to see if it is worth the time and cost.</p>
-</section>
-<section id="neural-networks-explained-simply" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="neural-networks-explained-simply"><span class="header-section-number">3.3</span> Neural networks explained simply</h3>
-<p>Neural networks represent data by using simple shapes like squiggles and angles to build more complicated curves. This allows the network to slowly piecing things together like a jigsaw puzzle.</p>
-<p>The activation function defines the basic shape. For instance, the ReLU function generates a simple angular kink that can be moved around, stretched, and rotated by the network using the weights it has learned. The network uses many of these kinks at once to represent a complex silhouette.</p>
-<p>What makes neural networks “deep” is that outputs of one layer become inputs for the next layer. This allows the network to <em>fashion its own jigsaw pieces</em> based on what seems most useful for approximating the final curve.</p>
-</section>
-</section>
-<section id="nlp" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="nlp"><span class="header-section-number">4</span> NLP</h2>
-<section id="fine-tuning" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="fine-tuning"><span class="header-section-number">4.1</span> Fine-tuning</h3>
-<p>Fine-tuning lets you use a more general model to accomplish a more specific task.</p>
-<p>For instance, many language models are generally trained on a very large corpus such as Wikipedia or Reddit. They understand the patterns of language but do not necessarily perform a useful task. You can use the knowledge (i.e.&nbsp;learned weights) of these models to accomplish a more specific task such as sentiment classification for user reviews.</p>
 
 
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Cf. the Vienna circle, Hilbert’s Entscheidungsproblem, and American Pragmatism. These movements participate in the idea that logic and mathematics are the sole fabric of reality.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

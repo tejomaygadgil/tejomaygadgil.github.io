@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -77,7 +77,63 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-notes .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-notes'] = new List('listing-notes', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-resources .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-resources'] = new List('listing-resources', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -162,11 +218,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<section id="posts" class="level2">
+<h2 class="anchored" data-anchor-id="posts">Posts</h2>
+<div id="listing-posts" class="quarto-listing quarto-listing-container-table">
 
 <table class="quarto-listing-table table">
 <thead>
@@ -189,29 +243,12 @@ Reading Time
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="Notes" data-listing-date-sort="1700294400000" data-listing-file-modified-sort="1700274685377" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-title-sort="Notes for fast.ai's Practical Deep Learning for Coders" data-listing-filename-sort="fastai.qmd">
-<td>
-<span class="listing-date">Nov 18, 2023</span>
-</td>
-<td>
-<a href="./posts/notes/fastai.html" class="title listing-title">Notes for fast.ai’s Practical Deep Learning for Coders</a>
-</td>
-<td>
-<span class="listing-author">Tejomay Gadgil</span>
-</td>
-<td>
-<span class="listing-categories">Notes</span>
-</td>
-<td>
-<span class="listing-reading-time">8 min</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Data science" data-listing-date-sort="1700208000000" data-listing-file-modified-sort="1700274430459" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Test post" data-listing-filename-sort="test_post.qmd">
+<tr data-index="0" data-categories="Data science" data-listing-date-sort="1700208000000" data-listing-file-modified-sort="1700451951047" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Test post" data-listing-filename-sort="test_post.qmd">
 <td>
 <span class="listing-date">Nov 17, 2023</span>
 </td>
 <td>
-<a href="./posts/data_science/test_post.html" class="title listing-title">Test post</a>
+<a href="./posts/posts/test_post.html" class="title listing-title">Test post</a>
 </td>
 <td>
 <span class="listing-author">Tejomay Gadgil</span>
@@ -223,12 +260,12 @@ Reading Time
 <span class="listing-reading-time">1 min</span>
 </td>
 </tr>
-<tr data-index="2" data-categories="Philosophy" data-listing-date-sort="1699344000000" data-listing-file-modified-sort="1700349886290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-title-sort="Introduction to Aristotle's *Categories*" data-listing-filename-sort="aristotle_categories.qmd">
+<tr data-index="1" data-categories="Philosophy" data-listing-date-sort="1699344000000" data-listing-file-modified-sort="1700450893563" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-title-sort="Introduction to Aristotle's *Categories*" data-listing-filename-sort="aristotle_categories.qmd">
 <td>
 <span class="listing-date">Nov 7, 2023</span>
 </td>
 <td>
-<a href="./posts/philosophy/aristotle_categories.html" class="title listing-title">Introduction to Aristotle’s <em>Categories</em></a>
+<a href="./posts/posts/aristotle_categories.html" class="title listing-title">Introduction to Aristotle’s <em>Categories</em></a>
 </td>
 <td>
 <span class="listing-author">Tejomay Gadgil</span>
@@ -246,7 +283,96 @@ Reading Time
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+</section>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<div id="listing-notes" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Author
+</th>
+<th>
+Categories
+</th>
+<th>
+Reading Time
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="Notes" data-listing-date-sort="1700294400000" data-listing-file-modified-sort="1700690953122" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-title-sort="Notes for fast.ai's Practical Deep Learning for Coders" data-listing-filename-sort="fastai.qmd">
+<td>
+<span class="listing-date">Nov 18, 2023</span>
+</td>
+<td>
+<a href="./posts/notes/fastai.html" class="title listing-title">Notes for fast.ai’s Practical Deep Learning for Coders</a>
+</td>
+<td>
+<span class="listing-author">Tejomay Gadgil</span>
+</td>
+<td>
+<span class="listing-categories">Notes</span>
+</td>
+<td>
+<span class="listing-reading-time">8 min</span>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<div id="listing-resources" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Nvim" data-listing-date-sort="1700294400000" data-listing-file-modified-sort="1700692328038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/resources/nvim.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Neovim resources
+</h5>
+<div class="card-text listing-description">
+An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wild world of neovim.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Tejomay Gadgil
+</div>
+<div class="listing-date">
+Nov 18, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
