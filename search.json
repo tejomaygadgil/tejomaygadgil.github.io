@@ -53,21 +53,14 @@
     "href": "posts/qmd/neovim.html",
     "title": "Neovim resources",
     "section": "",
-    "text": "Neovim is a terminal based text editor. It is a revamp of an older (but still very popular) editor called Vim.\nVim/Nvim are excellent tools but daunting to newcomers. That’s I’m sharing what I’ve learned to help more people get into Nvim."
+    "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
   },
   {
-    "objectID": "posts/qmd/neovim.html#what-is-neovim-and-why",
-    "href": "posts/qmd/neovim.html#what-is-neovim-and-why",
+    "objectID": "posts/qmd/neovim.html#quarto",
+    "href": "posts/qmd/neovim.html#quarto",
     "title": "Neovim resources",
     "section": "",
-    "text": "Neovim is a terminal based text editor. It is a revamp of an older (but still very popular) editor called Vim.\nVim/Nvim are excellent tools but daunting to newcomers. That’s I’m sharing what I’ve learned to help more people get into Nvim."
-  },
-  {
-    "objectID": "posts/qmd/neovim.html#packages",
-    "href": "posts/qmd/neovim.html#packages",
-    "title": "Neovim resources",
-    "section": "Packages",
-    "text": "Packages\nFor Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV."
+    "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
   },
   {
     "objectID": "posts/qmd/neovim.html#shortcuts",
@@ -151,20 +144,20 @@
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "Interpreting the most importantly inscrutable text in the history of philosophy.\n\n\n10 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Working through the most importantly inscrutable essay in the history of philosophy.\n\n\n10 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#writings",
     "href": "index.html#writings",
     "title": "Posts",
     "section": "",
-    "text": "Interpreting the most importantly inscrutable text in the history of philosophy.\n\n\n10 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Working through the most importantly inscrutable essay in the history of philosophy.\n\n\n10 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#notes-and-resources",
     "href": "index.html#notes-and-resources",
     "title": "Posts",
     "section": "Notes and resources",
-    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nCourse notes: fast.ai Deep Learning\n\n\nMy takeaways from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\nNov 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\nNov 22, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nCourse notes: fast.ai Deep Learning\n\n\nMy takeaways from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
