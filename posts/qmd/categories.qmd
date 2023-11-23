@@ -1,6 +1,6 @@
 ---
 title: Introduction to Aristotle's *Categories*
-subtitle: Attempting to explain the most importantly inscrutable text in the history of philosophy.
+subtitle: Interpreting the most importantly inscrutable text in the history of philosophy.
 date: "2023-11-07"
 format:
   html:
@@ -15,7 +15,7 @@ image: ../img/categories.png
 
 Few essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for *being* inscrutable as Aristotle's *Categories*.
 
-The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Is it language? Logic? Metaphysics? Something else entirely?
+The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else entirely?
 
 Introducing such an evasive text is therefore impossible: a full account of its meaning and history is intractable, while a few factual "hors d'oeuvres," no matter how well presented, would fail to introduce the actual *work* in question. Summary cannot introduce us to the *Categories*. Instead we must interpret it.
 
