@@ -53,14 +53,21 @@
     "href": "posts/qmd/neovim.html",
     "title": "Neovim resources",
     "section": "",
-    "text": "An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wide world of neovim."
+    "text": "Neovim is a terminal based text editor. It is a revamp of an older (but still very popular) editor called Vim.\nVim/Nvim are excellent tools but daunting to newcomers. That’s I’m sharing what I’ve learned to help more people get into Nvim."
+  },
+  {
+    "objectID": "posts/qmd/neovim.html#what-is-neovim-and-why",
+    "href": "posts/qmd/neovim.html#what-is-neovim-and-why",
+    "title": "Neovim resources",
+    "section": "",
+    "text": "Neovim is a terminal based text editor. It is a revamp of an older (but still very popular) editor called Vim.\nVim/Nvim are excellent tools but daunting to newcomers. That’s I’m sharing what I’ve learned to help more people get into Nvim."
   },
   {
     "objectID": "posts/qmd/neovim.html#packages",
     "href": "posts/qmd/neovim.html#packages",
     "title": "Neovim resources",
     "section": "Packages",
-    "text": "Packages\nFor Data Science / general programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV."
+    "text": "Packages\nFor Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV."
   },
   {
     "objectID": "posts/qmd/neovim.html#shortcuts",
@@ -74,7 +81,7 @@
     "href": "posts/qmd/categories.html",
     "title": "Introduction to Aristotle’s Categories",
     "section": "",
-    "text": "A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.\nFew essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for being inscrutable as Aristotle’s Categories.\nThe central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else entirely?\nIntroducing such an evasive text is therefore impossible: a full account of its meaning and history is intractable, while a few factual “hors d’oeuvres,” no matter how well presented, would fail to introduce the actual work in question. Summary cannot introduce us to the Categories. Instead we must interpret it.\nTo interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we are trying to understand is what we call being “introduced.” Interpretation is always difficult, not just because it is “hard,” but because it is fundamentally productive.\nThis introduction, therefore, is nothing other than a plain English interpretation of the Categories, where “plain” hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering of the words on the page."
+    "text": "A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.\nFew essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for being inscrutable as Aristotle’s Categories.\nThe central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else entirely?\nIntroducing such an evasive text is therefore impossible: a full account of its meaning and history is intractable, while a few factual “hors d’oeuvres,” no matter how well presented, would fail to introduce the actual work in question. Summary cannot introduce us to the Categories. Instead we must interpret it.\nTo interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we are trying to understand is what we call being “introduced.” Interpretation is always difficult, not just because it is “hard,” but because it is fundamentally productive.\nThis introduction, therefore, is nothing other than a plain English interpretation of the Categories, where “plain” hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering the words on the page."
   },
   {
     "objectID": "posts/qmd/categories.html#things-can-have-a-common-name-for-different-reasons",
@@ -158,6 +165,6 @@
     "href": "index.html#notes-and-resources",
     "title": "Posts",
     "section": "Notes and resources",
-    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nCourse notes: fast.ai Deep Learning\n\n\n\n\n\n\nNov 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\n\n\n\n\nNov 22, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nCourse notes: fast.ai Deep Learning\n\n\nMy takeaways from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\nNov 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\nNov 22, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
