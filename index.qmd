@@ -4,7 +4,6 @@ listing:
 - id: posts
   contents: 
   - qmd/categories.qmd
-  - qmd/test_post.qmd
   type: grid
   fields: [image, title, subtitle, reading-time, date]
   sort: "date asc"
