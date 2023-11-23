@@ -1,5 +1,6 @@
 ---
-title: "Introduction to Aristotle's *Categories*"
+title: Introduction to Aristotle's *Categories*
+subtitle: Attempting to explain the most importantly inscrutable text in the history of philosophy.
 date: "2023-11-07"
 categories: 
   - Philosophy
@@ -8,17 +9,19 @@ format:
     comments:
       utterances:
         repo: tejomaygadgil/tejomaygadgil.github.io
-number-sections: true
+    number-sections: true
 image: ../img/categories.png
 ---
 
-Few essays in the history of philosophy are as important, less as inscrutable, and none as important for *being* inscrutable as Aristotle's *Categories*.
+![A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.](../img/categories.png){cap-align="center"}
+
+Few essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for *being* inscrutable as Aristotle's *Categories*.
 
 The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Is it language? Logic? Metaphysics? Something else entirely?
 
-Introducing such an evasive text is therefore impossible: a full account of its meaning and history would not fit into the space of an introduction, while a few factual "hors d'oeuvres," no matter how well presented, would fail to introduce the actual *work* in question. Summary will never introduce us to the *Categories*. Instead our only option is to interpret it.
+Introducing such an evasive text is therefore impossible: a full account of its meaning and history is intractable, while a few factual "hors d'oeuvres," no matter how well presented, would fail to introduce the actual *work* in question. Summary cannot introduce us to the *Categories*. Instead we must interpret it.
 
-To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to teeter. This softening the offset between ourselves and what we are trying to understand is what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is fundamentally *productive*.
+To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we are trying to understand is what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is fundamentally *productive*.
 
 This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the *material ordering* of the words on the page.
 
@@ -32,7 +35,7 @@ Paronyms share a common root: to preach and preacher, for instance.
 
 ## Beings can be predicates, and they can be properties
 
-Utterances (τὰ λεγόμενα) can be interwoven in speech, or not: the former produces propositions such as "The man runs," the latter simple terms such as "man," and "runs." This will become relevant later.
+Utterances (τὰ λεγόμενα) can be interwoven or not: the former makes sentences such as "The man runs," while the latter produces simple terms such as "man," and "runs."
 
 Beings (τὰ ὄντα) can distinguished in two ways: as predicates, or as properties.
 
@@ -70,19 +73,19 @@ From this a certain *ordering* about the nature of the world has been implanted:
 
 ## Genera also describe things
 
-In the language of Aristotle, these predicates of predicates are called "genera," while the predicates underneath describing actual things are called "species."
+In the language of Aristotle, predicates that describe actual things are "species." Predicates of these predicates are "genera."
 
 Genera apply downward to the particulars. So if a man is a human, and humans are animals, then that man is also an animal.
 
-Species within a genus are distinguished by "differentiae." Species of animal can be distinguished by being footed, winged, and so on.
+Species of a genus are distinguished by "differentiae." Species of animal can be distinguished by being footed, winged, and so on.
 
 Differentiae of one genus have no bearing toward an unrelated genus: knowledge, for instance, cannot be distinguished by footed, winged, and so on.
 
 But differentiae of a genus can apply downward: the bird genus, underneath animal, itself contains species that may be distinguished as being footed (flightless), winged (flighted), and so on. This does not always hold (human is not distinguished by being footed or winged), but it is possible.
 
-## Every word refers to one of ten things
+## The categories
 
-Every uncombined utterance (word) ultimately means one of the following:
+Every word (uncombined utterance) ultimately refers to one of the following:
 
 | English   | Greek   | Section        |
 |-----------|---------|----------------|
@@ -97,9 +100,9 @@ Every uncombined utterance (word) ultimately means one of the following:
 | Action    | ποιεῖν  | Not discussed  |
 | Affection | πάσχειν | @sec-quality   |
 
-**Insofar as all speech consists of words, these ten things, it seems, constitute the meaning of speech in general.**
+**Insofar as speech consists of words, these ten categories constitute the meaning of speech in general.**
 
-If words are signs referring to things ("cat" stands in for the idea of a type of fuzzy four legged creature, and "my cat" is shorthand for the actual fuzzy animal that lives with me), then these ten concepts, it seems, must be the ultimately what all words signify. Perhaps they constitute the layout of the "ground floor" of what we must constantly be referring to when we go about talking in our everyday lives.
+**Insofar as speech refers to actual things, any being whatsoever must fall into one of these ten categories.**
 
 Here also Aristotle notes here that only combined utterances, statements, strictly speaking, be true or false.
 
@@ -107,29 +110,63 @@ Here also Aristotle notes here that only combined utterances, statements, strict
 
 There are two kinds of substance (ἡ οὐσία), first and second.
 
-First substance refers to *actual things*: these are the particular objects we discussed in the first classification.
+### First substance
 
-First substance is truly the *first* utterance in that everything else we speak of seems takes root in actual things. If first substance did not exist, the rest -- species, genera, differentiae, and properties -- simply could not exist. Therefore of utterances it is the first.
+First substance refers to *actual things*: these are the particulars we discussed above.
 
-Secondary substance refers to substantial predicates: to the species, genera, and differentiae that describe *what actual things are*.
+First substances is truly the *first word* in that it did not exist, there would be nothing else to talk about. The rest -- species, genera, differentiae, and properties -- would have no referent, and therefore could not be otherwise.
 
-Only second substance describes actual things synonymously. So if this man is a man, then the definition of man, animal, applies to him. On the other hand, this man having skin of a certain shade (a property) does not proceed to define him as a color: it is homonymous.
+### Second substance
 
-Species is more substantial than genre. For one, it is "nearer" to substance in being a more natural substitute: it is more sensible to call this man a man than it is to call him an animal. Species also behaves more like substance in that it describe less things than genre.
+Secondary substances are the substantial predicates: species, genera, and differentiae that describe what actual things are.
 
-Second substances, despite being predicates, are truly substances:
+Only second substance describes actual things synonymously. So if this man is a man, then the definition of man, animal, applies to him. On the other hand, properties of a man -- his skin tone -- do not proceed to define him as that genus -- a color. Therefore they are is homonymous.
 
-For even though they are descriptions, species and genre alone pertain to and clarify *what first substances are*. For you can measure whatever you like about a man -- his height, his knowledge, age, posture, and so on -- none of these properties will tell you *what he is*: a man.
+Species is more substantial than genre:
 
-Species and genre can also be described like first substance: for if this man is said to walk on two legs and possess knowledge, then the same can be said of man and animal. Species and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.
+* It is "nearer" to substance in that it is a more natural substitute: it is more sensible to refer to this man a man than it does to call him an animal.
+* It also behaves more similarly in that it has less capacity for description than genre. (First substance, recall, cannot describe anything at all.)
 
-Let us define first and secondary substance a bit more carefully.
+Despite being predicates, second substances are still truly substances:
 
-**First substance is what all speech is about.** It is what all utterance, no matter how, what where, or why it is being said, refers to.
+* They alone _define_ first substance. As noted above, you can measure whatever property you like about a man -- his height, his knowledge, age, posture, and so on -- but none of these will tell what what he actually is.
+* They can be described just like first substance. So if this man walks on two legs and has knowledge, then man and animal can be described similarly. 
+* Species and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.
 
-This is why Aristotle defines first substance as τόδε τι, something with the basic character of being *pointed out*. All speech fundamentally points to substance, and substance cannot be understood in any other capacity than this basic ability to be referred to and remarked.
+### Defining substance
 
-Accordingly, second substance clarifies substance by its *kind*. By pointing to an actual thing as a human or a dog,
+What is substance? Let us ask again.
+
+#### First substance
+
+As we saw, everything we say is rooted, either as description or as property, in reference to substance.
+
+This is why defining substance by itself becomes tricky: without descriptions, we literally run out of words to describe it.
+
+**All substance can possibly point to, then, is its _very ability to be pointed to_.**
+
+This is what Aristotle means when he famously notes that substance appears to mark τόδε τι, "a this."
+
+Here both words share equal weight:
+
+* τόδε, "this," is a demonstrative: that which has been pointed out.
+* τι, "a," is the indefinite pronoun: it conveys the generality of the definition.
+
+When we strip particular things of their qualifiers, all they refer to in general is _their ability to be referred to_ as whatever they specifically are.
+
+Substance, then, in an unusual turn of the word, is thoroughly _remarkable_.
+
+#### Second substance 
+
+Accordingly, second substance is the defining remark: it distinguishes first substance by its *kind*. 
+
+If first substance is remarkability, then second substance fills in this potential by telling us what it actually is.  
+
+### Properties of substances
+
+
+### Substance vs. statements
+
 
 ## Quantity {#sec-quantity}
 
