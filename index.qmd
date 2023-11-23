@@ -15,7 +15,7 @@ listing:
   - qmd/fastai.qmd
   - qmd/neovim.qmd
   type: grid
-  fields: [image, title, description, date]
+  fields: [image, title, subtitle, date]
   sort: "date asc"
   categories: false
   sort-ui: false

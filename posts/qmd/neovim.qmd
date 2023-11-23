@@ -1,16 +1,20 @@
 ---
 title: Neovim resources
+subtitle: An ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.
 date: 11/22/2023
 format: html
 image: ../img/neovim.png
 ---
 
-An ongoing list of tips, shortcuts, and tricks I find useful while navigating the wide world of [neovim](https://neovim.io/).
+## What is Neovim, and why?
 
+Neovim is a terminal based text editor. It is a revamp of an older (but still very popular) editor called Vim.
+
+Vim/Nvim are excellent tools but daunting to newcomers. That's I'm sharing what I've learned to help more people get into Nvim.
 
 ## Packages
 
-For Data Science / general programming / note-taking / publishing I recommend the [Quarto kickstarter](https://github.com/jmbuhr/quarto-nvim-kickstarter). The shortcuts below are written with this configuration installed so YMMV.
+For Data Science / programming / note-taking / publishing I recommend the [Quarto kickstarter](https://github.com/jmbuhr/quarto-nvim-kickstarter). The shortcuts below are written with this configuration installed so YMMV.
 
 ## Shortcuts 
 

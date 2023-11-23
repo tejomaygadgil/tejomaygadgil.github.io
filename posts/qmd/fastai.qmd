@@ -1,6 +1,6 @@
 ---
 title: "Course notes: fast.ai Deep Learning"
-author: "Tejomay Gadgil"
+subtitle: My takeaways from fast.ai's 2022 offering of Practical Deep Learning for Coders.
 date: "2023-11-18"
 format:
   html:
