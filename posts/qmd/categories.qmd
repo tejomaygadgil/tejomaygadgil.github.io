@@ -1,6 +1,6 @@
 ---
 title: Introduction to Aristotle's *Categories*
-subtitle: Interpreting the most importantly inscrutable text in the history of philosophy.
+subtitle: Working through the most importantly inscrutable essay in the history of philosophy.
 date: "2023-11-07"
 format:
   html:

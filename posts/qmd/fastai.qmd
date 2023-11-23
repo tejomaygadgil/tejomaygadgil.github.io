@@ -1,15 +1,12 @@
 ---
 title: "Course notes: fast.ai Deep Learning"
 subtitle: My takeaways from fast.ai's 2022 offering of Practical Deep Learning for Coders.
-date: "2023-11-18"
-format:
-  html:
-    comments:
-      utterances:
-        repo: tejomaygadgil/tejomaygadgil.github.io
+format: html
 number-sections: true
 image: ../img/fastai.webp
 ---
+
+![](../img/fastai.webp)
 
 This is what I found useful from the 2022 Practical Deep Learning for Coders course offered by [fast.ai](<https://course.fast.ai/>).
 
