@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/qmd/categories.html",
+      "/posts/qmd/test_post.html",
       "/posts/qmd/fastai.html",
       "/posts/qmd/neovim.html"
     ]
