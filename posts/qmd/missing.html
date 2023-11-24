@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tejomay’s blog - Bash tips from ./missing-semester</title>
+<title>Tejomay’s blog - Tips from ./missing-semester</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -106,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Bash tips from ./missing-semester</h1>
+      <h1 class="title">Tips from ./missing-semester</h1>
             <p class="subtitle lead">Things I learned from MIT’s “Missing Semester of Your CS Education” course.</p>
                       </div>
   </div>
@@ -130,13 +164,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="../img/missing.png" class="img-fluid"></p>
 <p>This some fun stuff I picked up from the 2020 offering of the fantastic <a href="https://missing.csail.mit.edu/">./missing-semester</a> class at MIT.</p>
 <p>Enjoy!</p>
-<section id="lecture-1-shell-basics" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-1-shell-basics">Lecture 1: Shell basics</h2>
-<section id="redirection-and-piping" class="level3">
-<h3 class="anchored" data-anchor-id="redirection-and-piping">Redirection and piping</h3>
+<section id="shell-basics" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="shell-basics"><span class="header-section-number">1</span> <a href="https://missing.csail.mit.edu/2020/course-shell/">Shell basics</a></h2>
+<section id="redirection-and-piping" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="redirection-and-piping"><span class="header-section-number">1.1</span> Redirection and piping</h3>
 <ul>
 <li><code>&gt;</code> and <code>&lt;</code> redirect output from and to a file or stream.</li>
 <li><code>x &lt; y</code> redirects <code>y</code> as input to <code>x</code>.</li>
@@ -145,23 +178,173 @@ ul.task-list li input[type="checkbox"] {
 <li><code>|</code> chains program together.</li>
 </ul>
 </section>
-<section id="use-single-quotations-to-nullify-meaning" class="level3">
-<h3 class="anchored" data-anchor-id="use-single-quotations-to-nullify-meaning">Use single quotations to nullify meaning</h3>
+<section id="use-single-quotations-to-nullify-meaning" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="use-single-quotations-to-nullify-meaning"><span class="header-section-number">1.2</span> Use single quotations to nullify meaning</h3>
 <blockquote class="blockquote">
 <p>Enclosing characters in single quotes (’’’) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </blockquote>
 </section>
-<section id="sudo" class="level3">
-<h3 class="anchored" data-anchor-id="sudo">sudo</h3>
+<section id="sudo" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="sudo"><span class="header-section-number">1.3</span> sudo</h3>
 <p><code>sudo</code> stands for “super user do”.</p>
 </section>
 </section>
-<section id="lecture-2-shell-tools-and-scripting" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-2-shell-tools-and-scripting">Lecture 2: Shell tools and scripting</h2>
-<section id="setting-variables" class="level3">
-<h3 class="anchored" data-anchor-id="setting-variables">Setting variables</h3>
-<p>Set variables with <code>x=foo</code> with no spaces between anything.</p>
+<section id="shell-tools-and-scripting" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="shell-tools-and-scripting"><span class="header-section-number">2</span> <a href="https://missing.csail.mit.edu/2020/shell-tools/">Shell tools and scripting</a></h2>
+<section id="setting-variables" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="setting-variables"><span class="header-section-number">2.1</span> Setting variables</h3>
+<p>Set variable using <code>x=[value]</code> with no spaces between anything.</p>
 <p>Access it with <code>echo $x</code>.</p>
+</section>
+<section id="bash-scripts" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="bash-scripts"><span class="header-section-number">2.2</span> Bash scripts</h3>
+<p>We can write a bash script by copying the following into <code>mcd.sh</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>mcd () {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  mkir -p "$1"</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  cd "$1"</span>
+<span id="cb1-4"><a href="#cb1-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>$1</code> refers to the first positional argument the function recieves. Putting double quotations around it ensures that names that contain a space don’t accidently get truncated.</p>
+<p>If you load this function into the terminal with <code>source mcd.sh</code> you can run it using <code>mcd [dirname]</code>.</p>
+<p>Some more variable names:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>$1</code> to <code>$9</code></td>
+<td>First 9 positional arguments (use <code>${i}</code> to access argumennts past the 9th).</td>
+</tr>
+<tr class="even">
+<td><code>$0</code></td>
+<td>Name of the filename that the script is being run from (will be <code>/bin/bash</code> for the example above.)</td>
+</tr>
+<tr class="odd">
+<td><code>$_</code></td>
+<td>Last argument of the last command. So we could have changed line 3 above to <code>cd "$_"</code>.</td>
+</tr>
+<tr class="even">
+<td><code>$#</code></td>
+<td>Number of arguments passed in.</td>
+</tr>
+<tr class="odd">
+<td><code>!!</code></td>
+<td>Reruns the previous command. Useful for redoing things that failed due to permissions: <code>sudo !!</code>.</td>
+</tr>
+<tr class="even">
+<td><code>$?</code></td>
+<td>Exit code of the previous command. You can use it to catch errors with <code>||</code> and <code>&amp;&amp;</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="command-substitution" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="command-substitution"><span class="header-section-number">2.3</span> Command substitution</h3>
+<p>You can store the output of a command into a variable using parentheses. For instance, <code>x=(pwd)</code> will save your working directory into <code>x</code>.</p>
+<p><strong>Process substitution</strong> lets you pass command output into commands that expect a file instead of STDIN: <code>cat &lt;(ls) &lt;(ls ..)</code> will concatenate the contents of the current directory with that of its parent directory.</p>
+</section>
+<section id="globbing" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="globbing"><span class="header-section-number">2.4</span> Globbing</h3>
+<p>Grab files names using patterns with wildcards:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Wildcard</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>?</code></td>
+<td>Matches one position: <code>x?</code> matches <code>x1</code> but not <code>x10</code>.</td>
+</tr>
+<tr class="even">
+<td><code>*</code></td>
+<td>Matches multiple positions: <code>x*</code> matches <code>x1</code> and <code>x10</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>{}</code></td>
+<td>Perform expansion of all values. Use multiple for Cartesian product; e.g.&nbsp;<code>echo {1,2}{3,4}</code> returns <code>13 14 23 24</code>. Use <code>{x..y..i}</code> to go from <code>x</code> to <code>y</code> with increment <code>i</code>.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="useful-shell-commands" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="useful-shell-commands"><span class="header-section-number">2.5</span> Useful shell commands</h3>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>spellcheck</code></td>
+<td>Analyze shell scripts for errors and bugs.</td>
+<td><code>spellcheck script.sh</code></td>
+</tr>
+<tr class="even">
+<td><code>tldr</code></td>
+<td>Get concise help pages (with examples!).</td>
+<td><code>tldr [command]</code></td>
+</tr>
+<tr class="odd">
+<td><code>find</code></td>
+<td>Find files recursively in a folder.</td>
+<td><code>find [dir] -name '[filename|*.ext]'</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>find</code> can also process the results:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a># Delete all files with .tmp extension</span>
+<span id="cb2-2"><a href="#cb2-2"></a>find . -name '*.tmp' -exec rm {} \;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="alternatives-to-find" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="alternatives-to-find"><span class="header-section-number">2.6</span> Alternatives to <code>find</code></h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>fd</code></td>
+<td>Modernized implementation with simpler syntax.</td>
+</tr>
+<tr class="even">
+<td><code>locate</code></td>
+<td>Faster lookup via file indexing (updated by <code>updatedb</code>).</td>
+</tr>
+<tr class="odd">
+<td><code>grep</code></td>
+<td>Search the content of files.</td>
+</tr>
+<tr class="even">
+<td><code>rg</code> (ripgrep)</td>
+<td>Faster, modernized <code>grep</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>rga</code></td>
+<td>Use <code>rg</code> on PDFs, and other documents.</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
@@ -172,6 +355,7 @@ ul.task-list li input[type="checkbox"] {
 
 <ol>
 <li id="fn1"><p><a href="https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html" class="uri">https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://www.gnu.org/software/bash/manual/bash.html#Lists" class="uri">https://www.gnu.org/software/bash/manual/bash.html#Lists</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

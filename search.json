@@ -126,8 +126,8 @@
     "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
   },
   {
-    "objectID": "posts/qmd/neovim.html#quarto",
-    "href": "posts/qmd/neovim.html#quarto",
+    "objectID": "posts/qmd/neovim.html#configuration",
+    "href": "posts/qmd/neovim.html#configuration",
     "title": "Neovim resources",
     "section": "",
     "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
@@ -137,35 +137,35 @@
     "href": "posts/qmd/neovim.html#shortcuts",
     "title": "Neovim resources",
     "section": "Shortcuts",
-    "text": "Shortcuts\n\n\n\nCommand\nDescription\n\n\n\n\nu\nUndo.\n\n\n&lt;ctrl&gt;+r\nRedo.\n\n\n&lt;shift&gt;-k\nLook up function definition.\n\n\n&lt;shift&gt;-h\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;shift&gt;-l\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;ctrl&gt;-w\nOpen window options.\n\n\n&lt;ctrl&gt;-w + v\nVertical split.\n\n\n&lt;ctrl&gt;-w + s\nHorizontal split.\n\n\n:tabnew\nNew tab.\n\n\n&lt;leader&gt;-f + d\nOpen buffers.\n\n\n&lt;shift&gt;-g\nEnd of the file.\n\n\ngg\nBeginning of the file.\n\n\n&lt;leader&gt; + c + O/o + p\nNew python cell above/below."
+    "text": "Shortcuts\n\n\n\nCommand\nDescription\n\n\n\n\nu\nUndo.\n\n\n&lt;ctrl&gt;+r\nRedo.\n\n\n&lt;shift&gt;-k\nLook up function definition.\n\n\n&lt;shift&gt;-h\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;shift&gt;-l\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;ctrl&gt;-w\nOpen window options.\n\n\n&lt;ctrl&gt;-w + v\nVertical split.\n\n\n&lt;ctrl&gt;-w + s\nHorizontal split.\n\n\n&lt;ctrl&gt;-w + &lt;shift&gt;-j\nSwitch between vertical and horizontal splits.\n\n\n&lt;ctrl&gt;-w + s\nHorizontal split.\n\n\n:tabnew\nNew tab.\n\n\n&lt;leader&gt;-f + d\nOpen buffers.\n\n\n&lt;shift&gt;-g\nEnd of the file.\n\n\ngg\nBeginning of the file.\n\n\n&lt;leader&gt; + c + O/o + p\nNew python cell above/below."
   },
   {
     "objectID": "posts/qmd/missing.html",
     "href": "posts/qmd/missing.html",
-    "title": "Bash tips from ./missing-semester",
+    "title": "Tips from ./missing-semester",
     "section": "",
     "text": "This some fun stuff I picked up from the 2020 offering of the fantastic ./missing-semester class at MIT.\nEnjoy!"
   },
   {
-    "objectID": "posts/qmd/missing.html#lecture-1-shell-basics",
-    "href": "posts/qmd/missing.html#lecture-1-shell-basics",
-    "title": "Bash tips from ./missing-semester",
-    "section": "Lecture 1: Shell basics",
-    "text": "Lecture 1: Shell basics\n\nRedirection and piping\n\n&gt; and &lt; redirect output from and to a file or stream.\nx &lt; y redirects y as input to x.\nx &gt; y redirects output of x to y.\n&lt;&lt; and &gt;&gt; will append as opposed to overwrite.\n| chains program together.\n\n\n\nUse single quotations to nullify meaning\n\nEnclosing characters in single quotes (’’’) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.1\n\n\n\nsudo\nsudo stands for “super user do”."
+    "objectID": "posts/qmd/missing.html#shell-basics",
+    "href": "posts/qmd/missing.html#shell-basics",
+    "title": "Tips from ./missing-semester",
+    "section": "1 Shell basics",
+    "text": "1 Shell basics\n\n1.1 Redirection and piping\n\n&gt; and &lt; redirect output from and to a file or stream.\nx &lt; y redirects y as input to x.\nx &gt; y redirects output of x to y.\n&lt;&lt; and &gt;&gt; will append as opposed to overwrite.\n| chains program together.\n\n\n\n1.2 Use single quotations to nullify meaning\n\nEnclosing characters in single quotes (’’’) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.1\n\n\n\n1.3 sudo\nsudo stands for “super user do”."
   },
   {
-    "objectID": "posts/qmd/missing.html#lecture-2-shell-tools-and-scripting",
-    "href": "posts/qmd/missing.html#lecture-2-shell-tools-and-scripting",
-    "title": "Bash tips from ./missing-semester",
-    "section": "Lecture 2: Shell tools and scripting",
-    "text": "Lecture 2: Shell tools and scripting\n\nSetting variables\nSet variables with x=foo with no spaces between anything.\nAccess it with echo $x."
+    "objectID": "posts/qmd/missing.html#shell-tools-and-scripting",
+    "href": "posts/qmd/missing.html#shell-tools-and-scripting",
+    "title": "Tips from ./missing-semester",
+    "section": "2 Shell tools and scripting",
+    "text": "2 Shell tools and scripting\n\n2.1 Setting variables\nSet variable using x=[value] with no spaces between anything.\nAccess it with echo $x.\n\n\n2.2 Bash scripts\nWe can write a bash script by copying the following into mcd.sh:\nmcd () {\n  mkir -p \"$1\"\n  cd \"$1\"\n}\n$1 refers to the first positional argument the function recieves. Putting double quotations around it ensures that names that contain a space don’t accidently get truncated.\nIf you load this function into the terminal with source mcd.sh you can run it using mcd [dirname].\nSome more variable names:\n\n\n\nCommand\nDescription\n\n\n\n\n$1 to $9\nFirst 9 positional arguments (use ${i} to access argumennts past the 9th).\n\n\n$0\nName of the filename that the script is being run from (will be /bin/bash for the example above.)\n\n\n$_\nLast argument of the last command. So we could have changed line 3 above to cd \"$_\".\n\n\n$#\nNumber of arguments passed in.\n\n\n!!\nReruns the previous command. Useful for redoing things that failed due to permissions: sudo !!.\n\n\n$?\nExit code of the previous command. You can use it to catch errors with || and &&2.\n\n\n\n\n\n2.3 Command substitution\nYou can store the output of a command into a variable using parentheses. For instance, x=(pwd) will save your working directory into x.\nProcess substitution lets you pass command output into commands that expect a file instead of STDIN: cat &lt;(ls) &lt;(ls ..) will concatenate the contents of the current directory with that of its parent directory.\n\n\n2.4 Globbing\nGrab files names using patterns with wildcards:\n\n\n\n\n\n\n\nWildcard\nDescription\n\n\n\n\n?\nMatches one position: x? matches x1 but not x10.\n\n\n*\nMatches multiple positions: x* matches x1 and x10.\n\n\n{}\nPerform expansion of all values. Use multiple for Cartesian product; e.g. echo {1,2}{3,4} returns 13 14 23 24. Use {x..y..i} to go from x to y with increment i.\n\n\n\n\n\n2.5 Useful shell commands\n\n\n\n\n\n\n\n\nCommand\nDescription\nExample\n\n\n\n\nspellcheck\nAnalyze shell scripts for errors and bugs.\nspellcheck script.sh\n\n\ntldr\nGet concise help pages (with examples!).\ntldr [command]\n\n\nfind\nFind files recursively in a folder.\nfind [dir] -name '[filename|*.ext]'\n\n\n\nfind can also process the results:\n# Delete all files with .tmp extension\nfind . -name '*.tmp' -exec rm {} \\;\n\n\n2.6 Alternatives to find\n\n\n\nCommand\nBenefit\n\n\n\n\nfd\nModernized implementation with simpler syntax.\n\n\nlocate\nFaster lookup via file indexing (updated by updatedb).\n\n\ngrep\nSearch the content of files.\n\n\nrg (ripgrep)\nFaster, modernized grep.\n\n\nrga\nUse rg on PDFs, and other documents."
   },
   {
     "objectID": "posts/qmd/missing.html#footnotes",
     "href": "posts/qmd/missing.html#footnotes",
-    "title": "Bash tips from ./missing-semester",
+    "title": "Tips from ./missing-semester",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nhttps://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html↩︎"
+    "text": "Footnotes\n\n\nhttps://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html↩︎\nhttps://www.gnu.org/software/bash/manual/bash.html#Lists↩︎"
   },
   {
     "objectID": "index.html",
@@ -186,6 +186,6 @@
     "href": "index.html#notes-and-resources",
     "title": "Posts",
     "section": "Notes and resources",
-    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nCourse notes: fast.ai Deep Learning\n\n\nMy takeaways from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\n\n\n\n\n\n\n\n\n\n\nBash tips from ./missing-semester\n\n\nThings I learned from MIT’s “Missing Semester of Your CS Education” course.\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nCourse notes: fast.ai Deep Learning\n\n\nMy takeaways from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\n\n\n\n\n\n\n\n\n\n\nTips from ./missing-semester\n\n\nThings I learned from MIT’s “Missing Semester of Your CS Education” course.\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
