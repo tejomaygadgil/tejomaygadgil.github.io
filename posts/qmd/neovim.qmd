@@ -5,7 +5,7 @@ format: html
 image: ../img/neovim.png
 ---
 
-## Quarto
+## Configuration
 
 For Data Science / programming / note-taking / publishing I recommend the [Quarto kickstarter](https://github.com/jmbuhr/quarto-nvim-kickstarter). The shortcuts below are written with this configuration installed so YMMV.
 
@@ -22,6 +22,8 @@ For Data Science / programming / note-taking / publishing I recommend the [Quart
 |`<shift>-l`|Flip back and forth through buffers (tabs) on nvim.|
 |`<ctrl>-w`|Open window options.|
 |`<ctrl>-w + v`|Vertical split.|
+|`<ctrl>-w + s`|Horizontal split.|
+|`<ctrl>-w + <shift>-j`|Switch between vertical and horizontal splits.|
 |`<ctrl>-w + s`|Horizontal split.|
 |`:tabnew`|New tab.|
 |`<leader>-f + d`|Open buffers.|

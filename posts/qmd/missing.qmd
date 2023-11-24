@@ -1,17 +1,18 @@
 ---
-title: "Bash tips from ./missing-semester"
+title: "Tips from ./missing-semester"
 subtitle: Things I learned from MIT's "Missing Semester of Your CS Education" course.
-format: html
+format: 
+  html:
+    code-line-numbers: true
+    number-sections: true
 image: ../img/missing.png
 ---
-
-![](../img/missing.png)
 
 This some fun stuff I picked up from the 2020 offering of the fantastic [./missing-semester](https://missing.csail.mit.edu/) class at MIT. 
 
 Enjoy!
 
-## Lecture 1: Shell basics
+## [Shell basics](https://missing.csail.mit.edu/2020/course-shell/)
 
 ### Redirection and piping
 
@@ -31,10 +32,80 @@ Enjoy!
 
 `sudo` stands for "super user do".
 
-## Lecture 2: Shell tools and scripting
+## [Shell tools and scripting](https://missing.csail.mit.edu/2020/shell-tools/)
 
 ### Setting variables
 
-Set variables with `x=foo` with no spaces between anything.
+Set variable using `x=[value]` with no spaces between anything.
 
 Access it with `echo $x`.
+
+### Bash scripts
+
+We can write a bash script by copying the following into `mcd.sh`:
+
+```{{bash}}
+mcd () {
+  mkir -p "$1"
+  cd "$1"
+}
+```
+
+`$1` refers to the first positional argument the function recieves. Putting double quotations around it ensures that names that contain a space don't accidently get truncated.
+
+If you load this function into the terminal with `source mcd.sh` you can run it using `mcd [dirname]`.
+
+Some more variable names:
+
+|Command|Description|
+|---|---|
+|`$1` to `$9`|First 9 positional arguments (use `${i}` to access argumennts past the 9th).|
+|`$0`|Name of the filename that the script is being run from (will be `/bin/bash` for the example above.)|
+|`$_`|Last argument of the last command. So we could have changed line 3 above to `cd "$_"`.|
+|`$#`|Number of arguments passed in.|
+|`!!`|Reruns the previous command. Useful for redoing things that failed due to permissions: `sudo !!`.|
+|`$?`|Exit code of the previous command. You can use it to catch errors with `||` and `&&`[^2].|
+
+[^2]: <https://www.gnu.org/software/bash/manual/bash.html#Lists>
+
+### Command substitution
+
+You can store the output of a command into a variable using parentheses. For instance, `x=(pwd)` will save your working directory into `x`.
+
+**Process substitution** lets you pass command output into commands that expect a file instead of STDIN: `cat <(ls) <(ls ..)` will concatenate the contents of the current directory with that of its parent directory.
+
+### Globbing
+
+Grab files names using patterns with wildcards:
+
+|Wildcard|Description|
+|---|---|
+|`?`|Matches one position: `x?` matches `x1` but not `x10`.|
+|`*`|Matches multiple positions: `x*` matches `x1` and `x10`.|
+|`{}`|Perform expansion of all values. Use multiple for Cartesian product; e.g. `echo {1,2}{3,4}` returns `13 14 23 24`. Use `{x..y..i}` to go from `x` to `y` with increment `i`.|
+
+### Useful shell commands
+
+|Command|Description|Example|
+|---|---|---|
+|`spellcheck`|Analyze shell scripts for errors and bugs.|`spellcheck script.sh`|
+|`tldr`|Get concise help pages (with examples!).|`tldr [command]`|
+|`find`|Find files recursively in a folder.|`find [dir] -name '[filename|*.ext]'`|
+
+`find` can also process the results:
+
+```{{bash}}
+# Delete all files with .tmp extension
+find . -name '*.tmp' -exec rm {} \;
+```
+
+### Alternatives to `find`
+
+|Command|Benefit|
+|---|---|
+|`fd`|Modernized implementation with simpler syntax.|
+|`locate`|Faster lookup via file indexing (updated by `updatedb`).|
+|`grep`|Search the content of files.|
+|`rg` (ripgrep)|Faster, modernized `grep`.|
+|`rga`|Use `rg` on PDFs, and other documents.|
+
