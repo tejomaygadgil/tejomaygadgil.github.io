@@ -14,7 +14,7 @@ This is what I found useful from the 2022 Practical Deep Learning for Coders cou
 
 ### The significance of the XOR affair
 
-Minksy's *Perceptrons* (1969) is infamous stalling AI research by claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn't actually true. But the book has become a symbol of a certain side of a debate about AI.
+Minksy's *Perceptrons* (1969) known for infamously claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn't actually true. But the book has become a symbol of a certain side of a debate about AI.
 
 The dispute is about logic.
 
@@ -136,13 +136,16 @@ Fine-tuning lets you use a more general model to accomplish a more specific task
 
 For instance, many language models are generally trained on a very large corpus such as Wikipedia or Reddit. They understand the patterns of language but do not necessarily perform a useful task. You can use the knowledge (i.e. learned weights) of these models to accomplish a more specific task such as sentiment classification for user reviews. 
 
+Fine tuning works by throwing away the last layer that actually produces the output and replacing it with a new random matrix for the new task we are trying to learn.
 
+### NLP tasks
 
+The most popular task for NLP is _classification_, assigning a document into categories.
 
+* Sentiment categorizes documents as having positive or negative emotional content.
+* Author identification returns the author that wrote the document.
+* Legal discovery returns whether a document is relevant for a trial or not.
 
-
-
-
-
+Related to classification is _document similarity_: are two documents about the same thing? We can convert this into a classification problem by concatenating the two documents and mapping the resulting string to the categories "different", "similar," and "identical."
 
 

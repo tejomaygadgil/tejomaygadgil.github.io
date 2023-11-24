@@ -1,8 +1,6 @@
 ---
 title: "Test post"
 date: "2023-11-17"
-categories:
-  - Data science
 format:
   html:
     code-fold: true

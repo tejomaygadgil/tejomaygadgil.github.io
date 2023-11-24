@@ -1,6 +1,6 @@
 ---
 title: Introduction to Aristotle's *Categories*
-subtitle: Working through the most importantly inscrutable essay in the history of philosophy.
+subtitle: Understand the most importantly inscrutable essay in the history of philosophy.
 date: "2023-11-07"
 format:
   html:
@@ -17,9 +17,11 @@ Few essays in the history of philosophy are as impactful, less as inscrutable, a
 
 The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else entirely?
 
-Introducing such an evasive text is therefore impossible: a full account of its meaning and history is intractable, while a few factual "hors d'oeuvres," no matter how well presented, would fail to introduce the actual _work_ in question. Summary cannot introduce us to the *Categories*. Instead we must interpret it.
+Introducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while factual "hors d'oeuvres," no matter how well presented, fail to introduce the actual _work_ in question. 
 
-To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we are trying to understand is what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is fundamentally _productive_.
+Summary cannot introduce us to the *Categories*. Instead we must interpret it.
+
+To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we were trying to understand is what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is fundamentally _productive_.
 
 This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering the words on the page.
 
@@ -137,13 +139,13 @@ What is substance? Let us ask again.
 
 #### First substance
 
-As we saw, everything we say is rooted, either as description or as property, in reference to substance.
+We only seem, as we saw, to talk about substance, either by way of description or by property.
 
 This is why defining substance by itself becomes tricky: without descriptions, we literally run out of words to describe it.
 
-**All substance can possibly point to, then, is its _very ability to be pointed to_.**
+**All substance can possibly denote, then, is its _very ability to be pointed out_.**
 
-This is what Aristotle means when he famously notes that substance appears to mark τόδε τι, "a this."
+This is what Aristotle means by his famous claim that substance appears to mark τόδε τι, "a this."
 
 Here both words share equal weight:
 
@@ -152,7 +154,19 @@ Here both words share equal weight:
 
 When we strip particular things of their qualifiers, all they refer to in general is _their ability to be referred to_ as whatever they specifically are.
 
-Substance, then, in an unusual turn of the word, is thoroughly _remarkable_.
+Substance, then, in an unusual turn of the word, is thoroughly _remarkable_: it is the very origin of every possible remark.
+
+TODO: This also refers to the ACT of pointing substance out. Substance points to the _activity_ of pointing out.
+
+old text:
+
+This means any utterance, no matter how, what, where, or why it is said, must ultimately _refer to_ a primary substance.
+
+This is exactly the definition Aristotle gives for primary substance: _something that has been pointed out_ (τόδε τι).
+
+Substance never does any pointing: it never stands in for another entity. Instead substance is that which in every case is _pointed to_: clarified by predicates or described by properties. It is the seat of all possible signification.
+
+For this reason substance itself cannot be defined as anything but the _mere act of pointing_
 
 #### Second substance 
 
