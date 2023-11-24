@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tejomaygadgil.github.io/about.html</loc>
-    <lastmod>2023-11-23T10:05:18.947Z</lastmod>
+    <lastmod>2023-11-24T00:02:51.160Z</lastmod>
   </url>
   <url>
     <loc>https://tejomaygadgil.github.io/posts/qmd/fastai.html</loc>
-    <lastmod>2023-11-23T10:05:17.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tejomaygadgil.github.io/posts/qmd/neovim.html</loc>
-    <lastmod>2023-11-23T10:05:15.271Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tejomaygadgil.github.io/posts/qmd/categories.html</loc>
-    <lastmod>2023-11-23T10:05:14.383Z</lastmod>
+    <lastmod>2023-11-24T00:02:49.644Z</lastmod>
   </url>
   <url>
     <loc>https://tejomaygadgil.github.io/posts/qmd/test_post.html</loc>
-    <lastmod>2023-11-23T10:05:16.523Z</lastmod>
+    <lastmod>2023-11-24T00:02:48.308Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tejomaygadgil.github.io/posts/qmd/categories.html</loc>
+    <lastmod>2023-11-24T00:02:46.716Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tejomaygadgil.github.io/posts/qmd/neovim.html</loc>
+    <lastmod>2023-11-24T00:02:47.200Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tejomaygadgil.github.io/posts/qmd/missing.html</loc>
+    <lastmod>2023-11-24T00:02:48.824Z</lastmod>
   </url>
   <url>
     <loc>https://tejomaygadgil.github.io/index.html</loc>
-    <lastmod>2023-11-23T10:05:18.535Z</lastmod>
+    <lastmod>2023-11-24T00:02:50.636Z</lastmod>
   </url>
 </urlset>

@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">1</span> Getting started</h2>
 <section id="the-significance-of-the-xor-affair" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="the-significance-of-the-xor-affair"><span class="header-section-number">1.1</span> The significance of the XOR affair</h3>
-<p>Minksy’s <em>Perceptrons</em> (1969) is infamous stalling AI research by claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn’t actually true. But the book has become a symbol of a certain side of a debate about AI.</p>
+<p>Minksy’s <em>Perceptrons</em> (1969) known for infamously claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn’t actually true. But the book has become a symbol of a certain side of a debate about AI.</p>
 <p>The dispute is about logic.</p>
 <p>Today logic is not that important. We don’t care what a model does as long as it is useful. But this was not always the case. Stemming off very intense movements in philosophy and other disciplines<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, logic in the last century was seen by some as the very fabric of reality. It is in this environment that computers, prized as first and foremost for being <em>logical</em> machines, were invented.</p>
 <p>Minsky’s problem with neural networks, then, was that they were not logical structured. Unlike a computer, which is built from the ground up using determinate Boolean operations, neural networks instead use calculus and numerical optimization to fit curves.</p>
@@ -261,6 +261,17 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="4.1" class="anchored" data-anchor-id="fine-tuning"><span class="header-section-number">4.1</span> Fine-tuning</h3>
 <p>Fine-tuning lets you use a more general model to accomplish a more specific task.</p>
 <p>For instance, many language models are generally trained on a very large corpus such as Wikipedia or Reddit. They understand the patterns of language but do not necessarily perform a useful task. You can use the knowledge (i.e.&nbsp;learned weights) of these models to accomplish a more specific task such as sentiment classification for user reviews.</p>
+<p>Fine tuning works by throwing away the last layer that actually produces the output and replacing it with a new random matrix for the new task we are trying to learn.</p>
+</section>
+<section id="nlp-tasks" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="nlp-tasks"><span class="header-section-number">4.2</span> NLP tasks</h3>
+<p>The most popular task for NLP is <em>classification</em>, assigning a document into categories.</p>
+<ul>
+<li>Sentiment categorizes documents as having positive or negative emotional content.</li>
+<li>Author identification returns the author that wrote the document.</li>
+<li>Legal discovery returns whether a document is relevant for a trial or not.</li>
+</ul>
+<p>Related to classification is <em>document similarity</em>: are two documents about the same thing? We can convert this into a classification problem by concatenating the two documents and mapping the resulting string to the categories “different”, “similar,” and “identical.”</p>
 
 
 </section>

@@ -18,7 +18,7 @@
     "href": "posts/qmd/fastai.html#getting-started",
     "title": "Course notes: fast.ai Deep Learning",
     "section": "1 Getting started",
-    "text": "1 Getting started\n\n1.1 The significance of the XOR affair\nMinksy’s Perceptrons (1969) is infamous stalling AI research by claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn’t actually true. But the book has become a symbol of a certain side of a debate about AI.\nThe dispute is about logic.\nToday logic is not that important. We don’t care what a model does as long as it is useful. But this was not always the case. Stemming off very intense movements in philosophy and other disciplines1, logic in the last century was seen by some as the very fabric of reality. It is in this environment that computers, prized as first and foremost for being logical machines, were invented.\nMinsky’s problem with neural networks, then, was that they were not logical structured. Unlike a computer, which is built from the ground up using determinate Boolean operations, neural networks instead use calculus and numerical optimization to fit curves.\nIt is against this background that Minsky’s actual argument, that a single neuron cannot not compute a basic logical function called “exclusive or” (XOR for short), makes any sense. Otherwise he comes off as nitpicking. Perhaps, but this misses the stakes of the argument: the disputation between what is true and what is useful.\n\n1.1.1 Appendix\nFor reference XOR looks like this:\n\n\n\n\nFalse\nTrue\n\n\n\n\nFalse\n0\n1\n\n\nTrue\n1\n0\n\n\n\nMinsky’s basic argument is that a Perceptron (a single neuron) cannot learn this function because it is not linearly separable: in other words you cannot draw a straight line to separate the 0s from the 1s. In fact XOR is the only such logical function that is not linearly separable, which is probably why Minsky chose it for his analysis.\nFor reference AND looks like this:\n\n\n\n\nFalse\nTrue\n\n\n\n\nFalse\n0\n0\n\n\nTrue\n0\n1\n\n\n\nYou can draw a straight line to separate the 0s and 1s for AND, but you cannot do it for XOR.\nIt would take the introduction of non-linear transformations (ReLU) to enable neural networks to draw the squiggly lines that can solve these types of problems. But in the eyes of the logicists, this would be just another hack to a fundamentally unsound technology."
+    "text": "1 Getting started\n\n1.1 The significance of the XOR affair\nMinksy’s Perceptrons (1969) known for infamously claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn’t actually true. But the book has become a symbol of a certain side of a debate about AI.\nThe dispute is about logic.\nToday logic is not that important. We don’t care what a model does as long as it is useful. But this was not always the case. Stemming off very intense movements in philosophy and other disciplines1, logic in the last century was seen by some as the very fabric of reality. It is in this environment that computers, prized as first and foremost for being logical machines, were invented.\nMinsky’s problem with neural networks, then, was that they were not logical structured. Unlike a computer, which is built from the ground up using determinate Boolean operations, neural networks instead use calculus and numerical optimization to fit curves.\nIt is against this background that Minsky’s actual argument, that a single neuron cannot not compute a basic logical function called “exclusive or” (XOR for short), makes any sense. Otherwise he comes off as nitpicking. Perhaps, but this misses the stakes of the argument: the disputation between what is true and what is useful.\n\n1.1.1 Appendix\nFor reference XOR looks like this:\n\n\n\n\nFalse\nTrue\n\n\n\n\nFalse\n0\n1\n\n\nTrue\n1\n0\n\n\n\nMinsky’s basic argument is that a Perceptron (a single neuron) cannot learn this function because it is not linearly separable: in other words you cannot draw a straight line to separate the 0s from the 1s. In fact XOR is the only such logical function that is not linearly separable, which is probably why Minsky chose it for his analysis.\nFor reference AND looks like this:\n\n\n\n\nFalse\nTrue\n\n\n\n\nFalse\n0\n0\n\n\nTrue\n0\n1\n\n\n\nYou can draw a straight line to separate the 0s and 1s for AND, but you cannot do it for XOR.\nIt would take the introduction of non-linear transformations (ReLU) to enable neural networks to draw the squiggly lines that can solve these types of problems. But in the eyes of the logicists, this would be just another hack to a fundamentally unsound technology."
   },
   {
     "objectID": "posts/qmd/fastai.html#deployment",
@@ -39,7 +39,7 @@
     "href": "posts/qmd/fastai.html#nlp",
     "title": "Course notes: fast.ai Deep Learning",
     "section": "4 NLP",
-    "text": "4 NLP\n\n4.1 Fine-tuning\nFine-tuning lets you use a more general model to accomplish a more specific task.\nFor instance, many language models are generally trained on a very large corpus such as Wikipedia or Reddit. They understand the patterns of language but do not necessarily perform a useful task. You can use the knowledge (i.e. learned weights) of these models to accomplish a more specific task such as sentiment classification for user reviews."
+    "text": "4 NLP\n\n4.1 Fine-tuning\nFine-tuning lets you use a more general model to accomplish a more specific task.\nFor instance, many language models are generally trained on a very large corpus such as Wikipedia or Reddit. They understand the patterns of language but do not necessarily perform a useful task. You can use the knowledge (i.e. learned weights) of these models to accomplish a more specific task such as sentiment classification for user reviews.\nFine tuning works by throwing away the last layer that actually produces the output and replacing it with a new random matrix for the new task we are trying to learn.\n\n\n4.2 NLP tasks\nThe most popular task for NLP is classification, assigning a document into categories.\n\nSentiment categorizes documents as having positive or negative emotional content.\nAuthor identification returns the author that wrote the document.\nLegal discovery returns whether a document is relevant for a trial or not.\n\nRelated to classification is document similarity: are two documents about the same thing? We can convert this into a classification problem by concatenating the two documents and mapping the resulting string to the categories “different”, “similar,” and “identical.”"
   },
   {
     "objectID": "posts/qmd/fastai.html#footnotes",
@@ -49,32 +49,18 @@
     "text": "Footnotes\n\n\nCf. the Vienna circle, Hilbert’s Entscheidungsproblem, and American Pragmatism. These movements participate in the idea that logic and mathematics are the sole fabric of reality.↩︎"
   },
   {
-    "objectID": "posts/qmd/neovim.html",
-    "href": "posts/qmd/neovim.html",
-    "title": "Neovim resources",
+    "objectID": "posts/qmd/test_post.html",
+    "href": "posts/qmd/test_post.html",
+    "title": "Test post",
     "section": "",
-    "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
-  },
-  {
-    "objectID": "posts/qmd/neovim.html#quarto",
-    "href": "posts/qmd/neovim.html#quarto",
-    "title": "Neovim resources",
-    "section": "",
-    "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
-  },
-  {
-    "objectID": "posts/qmd/neovim.html#shortcuts",
-    "href": "posts/qmd/neovim.html#shortcuts",
-    "title": "Neovim resources",
-    "section": "Shortcuts",
-    "text": "Shortcuts\n\n\n\nCommand\nDescription\n\n\n\n\nu\nUndo.\n\n\n&lt;ctrl&gt;+r\nRedo.\n\n\n&lt;shift&gt;-k\nLook up function definition.\n\n\n&lt;shift&gt;-h\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;shift&gt;-l\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;ctrl&gt;-w\nOpen window options.\n\n\n&lt;ctrl&gt;-w + v\nVertical split.\n\n\n&lt;ctrl&gt;-w + s\nHorizontal split.\n\n\n:tabnew\nNew tab.\n\n\n&lt;leader&gt;-f + d\nOpen buffers.\n\n\n&lt;shift&gt;-g\nEnd of the file.\n\n\ngg\nBeginning of the file.\n\n\n&lt;leader&gt; + c + O/o + p\nNew python cell above/below."
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   },
   {
     "objectID": "posts/qmd/categories.html",
     "href": "posts/qmd/categories.html",
     "title": "Introduction to Aristotle’s Categories",
     "section": "",
-    "text": "A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.\nFew essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for being inscrutable as Aristotle’s Categories.\nThe central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else entirely?\nIntroducing such an evasive text is therefore impossible: a full account of its meaning and history is intractable, while a few factual “hors d’oeuvres,” no matter how well presented, would fail to introduce the actual work in question. Summary cannot introduce us to the Categories. Instead we must interpret it.\nTo interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we are trying to understand is what we call being “introduced.” Interpretation is always difficult, not just because it is “hard,” but because it is fundamentally productive.\nThis introduction, therefore, is nothing other than a plain English interpretation of the Categories, where “plain” hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering the words on the page."
+    "text": "A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.\nFew essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for being inscrutable as Aristotle’s Categories.\nThe central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else entirely?\nIntroducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while factual “hors d’oeuvres,” no matter how well presented, fail to introduce the actual work in question.\nSummary cannot introduce us to the Categories. Instead we must interpret it.\nTo interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we were trying to understand is what we call being “introduced.” Interpretation is always difficult, not just because it is “hard,” but because it is fundamentally productive.\nThis introduction, therefore, is nothing other than a plain English interpretation of the Categories, where “plain” hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering the words on the page."
   },
   {
     "objectID": "posts/qmd/categories.html#things-can-have-a-common-name-for-different-reasons",
@@ -109,7 +95,7 @@
     "href": "posts/qmd/categories.html#sec-substance",
     "title": "Introduction to Aristotle’s Categories",
     "section": "5 Substance",
-    "text": "5 Substance\nThere are two kinds of substance (ἡ οὐσία), first and second.\n\n5.1 First substance\nFirst substance refers to actual things: these are the particulars we discussed above.\nFirst substances is truly the first word in that it did not exist, there would be nothing else to talk about. The rest – species, genera, differentiae, and properties – would have no referent, and therefore could not be otherwise.\n\n\n5.2 Second substance\nSecondary substances are the substantial predicates: species, genera, and differentiae that describe what actual things are.\nOnly second substance describes actual things synonymously. So if this man is a man, then the definition of man, animal, applies to him. On the other hand, properties of a man – his skin tone – do not proceed to define him as that genus – a color. Therefore they are is homonymous.\nSpecies is more substantial than genre:\n\nIt is “nearer” to substance in that it is a more natural substitute: it is more sensible to refer to this man a man than it does to call him an animal.\nIt also behaves more similarly in that it has less capacity for description than genre. (First substance, recall, cannot describe anything at all.)\n\nDespite being predicates, second substances are still truly substances:\n\nThey alone define first substance. As noted above, you can measure whatever property you like about a man – his height, his knowledge, age, posture, and so on – but none of these will tell what what he actually is.\nThey can be described just like first substance. So if this man walks on two legs and has knowledge, then man and animal can be described similarly.\nSpecies and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.\n\n\n\n5.3 Defining substance\nWhat is substance? Let us ask again.\n\n5.3.1 First substance\nAs we saw, everything we say is rooted, either as description or as property, in reference to substance.\nThis is why defining substance by itself becomes tricky: without descriptions, we literally run out of words to describe it.\nAll substance can possibly point to, then, is its very ability to be pointed to.\nThis is what Aristotle means when he famously notes that substance appears to mark τόδε τι, “a this.”\nHere both words share equal weight:\n\nτόδε, “this,” is a demonstrative: that which has been pointed out.\nτι, “a,” is the indefinite pronoun: it conveys the generality of the definition.\n\nWhen we strip particular things of their qualifiers, all they refer to in general is their ability to be referred to as whatever they specifically are.\nSubstance, then, in an unusual turn of the word, is thoroughly remarkable.\n\n\n5.3.2 Second substance\nAccordingly, second substance is the defining remark: it distinguishes first substance by its kind.\nIf first substance is remarkability, then second substance fills in this potential by telling us what it actually is.\n\n\n\n5.4 Properties of substances\n\n\n5.5 Substance vs. statements"
+    "text": "5 Substance\nThere are two kinds of substance (ἡ οὐσία), first and second.\n\n5.1 First substance\nFirst substance refers to actual things: these are the particulars we discussed above.\nFirst substances is truly the first word in that it did not exist, there would be nothing else to talk about. The rest – species, genera, differentiae, and properties – would have no referent, and therefore could not be otherwise.\n\n\n5.2 Second substance\nSecondary substances are the substantial predicates: species, genera, and differentiae that describe what actual things are.\nOnly second substance describes actual things synonymously. So if this man is a man, then the definition of man, animal, applies to him. On the other hand, properties of a man – his skin tone – do not proceed to define him as that genus – a color. Therefore they are is homonymous.\nSpecies is more substantial than genre:\n\nIt is “nearer” to substance in that it is a more natural substitute: it is more sensible to refer to this man a man than it does to call him an animal.\nIt also behaves more similarly in that it has less capacity for description than genre. (First substance, recall, cannot describe anything at all.)\n\nDespite being predicates, second substances are still truly substances:\n\nThey alone define first substance. As noted above, you can measure whatever property you like about a man – his height, his knowledge, age, posture, and so on – but none of these will tell what what he actually is.\nThey can be described just like first substance. So if this man walks on two legs and has knowledge, then man and animal can be described similarly.\nSpecies and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.\n\n\n\n5.3 Defining substance\nWhat is substance? Let us ask again.\n\n5.3.1 First substance\nWe only seem, as we saw, to talk about substance, either by way of description or by property.\nThis is why defining substance by itself becomes tricky: without descriptions, we literally run out of words to describe it.\nAll substance can possibly denote, then, is its very ability to be pointed out.\nThis is what Aristotle means by his famous claim that substance appears to mark τόδε τι, “a this.”\nHere both words share equal weight:\n\nτόδε, “this,” is a demonstrative: that which has been pointed out.\nτι, “a,” is the indefinite pronoun: it conveys the generality of the definition.\n\nWhen we strip particular things of their qualifiers, all they refer to in general is their ability to be referred to as whatever they specifically are.\nSubstance, then, in an unusual turn of the word, is thoroughly remarkable: it is the very origin of every possible remark.\nTODO: This also refers to the ACT of pointing substance out. Substance points to the activity of pointing out.\nold text:\nThis means any utterance, no matter how, what, where, or why it is said, must ultimately refer to a primary substance.\nThis is exactly the definition Aristotle gives for primary substance: something that has been pointed out (τόδε τι).\nSubstance never does any pointing: it never stands in for another entity. Instead substance is that which in every case is pointed to: clarified by predicates or described by properties. It is the seat of all possible signification.\nFor this reason substance itself cannot be defined as anything but the mere act of pointing\n\n\n5.3.2 Second substance\nAccordingly, second substance is the defining remark: it distinguishes first substance by its kind.\nIf first substance is remarkability, then second substance fills in this potential by telling us what it actually is.\n\n\n\n5.4 Properties of substances\n\n\n5.5 Substance vs. statements"
   },
   {
     "objectID": "posts/qmd/categories.html#sec-quantity",
@@ -133,31 +119,73 @@
     "text": "8 Relation"
   },
   {
-    "objectID": "posts/qmd/test_post.html",
-    "href": "posts/qmd/test_post.html",
-    "title": "Test post",
+    "objectID": "posts/qmd/neovim.html",
+    "href": "posts/qmd/neovim.html",
+    "title": "Neovim resources",
     "section": "",
-    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+    "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
+  },
+  {
+    "objectID": "posts/qmd/neovim.html#quarto",
+    "href": "posts/qmd/neovim.html#quarto",
+    "title": "Neovim resources",
+    "section": "",
+    "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
+  },
+  {
+    "objectID": "posts/qmd/neovim.html#shortcuts",
+    "href": "posts/qmd/neovim.html#shortcuts",
+    "title": "Neovim resources",
+    "section": "Shortcuts",
+    "text": "Shortcuts\n\n\n\nCommand\nDescription\n\n\n\n\nu\nUndo.\n\n\n&lt;ctrl&gt;+r\nRedo.\n\n\n&lt;shift&gt;-k\nLook up function definition.\n\n\n&lt;shift&gt;-h\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;shift&gt;-l\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;ctrl&gt;-w\nOpen window options.\n\n\n&lt;ctrl&gt;-w + v\nVertical split.\n\n\n&lt;ctrl&gt;-w + s\nHorizontal split.\n\n\n:tabnew\nNew tab.\n\n\n&lt;leader&gt;-f + d\nOpen buffers.\n\n\n&lt;shift&gt;-g\nEnd of the file.\n\n\ngg\nBeginning of the file.\n\n\n&lt;leader&gt; + c + O/o + p\nNew python cell above/below."
+  },
+  {
+    "objectID": "posts/qmd/missing.html",
+    "href": "posts/qmd/missing.html",
+    "title": "Bash tips from ./missing-semester",
+    "section": "",
+    "text": "This some fun stuff I picked up from the 2020 offering of the fantastic ./missing-semester class at MIT.\nEnjoy!"
+  },
+  {
+    "objectID": "posts/qmd/missing.html#lecture-1-shell-basics",
+    "href": "posts/qmd/missing.html#lecture-1-shell-basics",
+    "title": "Bash tips from ./missing-semester",
+    "section": "Lecture 1: Shell basics",
+    "text": "Lecture 1: Shell basics\n\nRedirection and piping\n\n&gt; and &lt; redirect output from and to a file or stream.\nx &lt; y redirects y as input to x.\nx &gt; y redirects output of x to y.\n&lt;&lt; and &gt;&gt; will append as opposed to overwrite.\n| chains program together.\n\n\n\nUse single quotations to nullify meaning\n\nEnclosing characters in single quotes (’’’) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.1\n\n\n\nsudo\nsudo stands for “super user do”."
+  },
+  {
+    "objectID": "posts/qmd/missing.html#lecture-2-shell-tools-and-scripting",
+    "href": "posts/qmd/missing.html#lecture-2-shell-tools-and-scripting",
+    "title": "Bash tips from ./missing-semester",
+    "section": "Lecture 2: Shell tools and scripting",
+    "text": "Lecture 2: Shell tools and scripting\n\nSetting variables\nSet variables with x=foo with no spaces between anything.\nAccess it with echo $x."
+  },
+  {
+    "objectID": "posts/qmd/missing.html#footnotes",
+    "href": "posts/qmd/missing.html#footnotes",
+    "title": "Bash tips from ./missing-semester",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html↩︎"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "Working through the most importantly inscrutable essay in the history of philosophy.\n\n\n10 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Understand the most importantly inscrutable essay in the history of philosophy.\n\n\n10 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#writings",
     "href": "index.html#writings",
     "title": "Posts",
     "section": "",
-    "text": "Working through the most importantly inscrutable essay in the history of philosophy.\n\n\n10 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Understand the most importantly inscrutable essay in the history of philosophy.\n\n\n10 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#notes-and-resources",
     "href": "index.html#notes-and-resources",
     "title": "Posts",
     "section": "Notes and resources",
-    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nCourse notes: fast.ai Deep Learning\n\n\nMy takeaways from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Notes and resources\n\n\n\n\n\n\n\n\n\n\nCourse notes: fast.ai Deep Learning\n\n\nMy takeaways from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNeovim resources\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\n\n\n\n\n\n\n\n\n\n\nBash tips from ./missing-semester\n\n\nThings I learned from MIT’s “Missing Semester of Your CS Education” course.\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
