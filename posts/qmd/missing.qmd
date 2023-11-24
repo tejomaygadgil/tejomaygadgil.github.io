@@ -109,3 +109,31 @@ find . -name '*.tmp' -exec rm {} \;
 |`rg` (ripgrep)|Faster, modernized `grep`.|
 |`rga`|Use `rg` on PDFs, and other documents.|
 
+### Finding shell commands
+
+|Command|Description|
+|---|---|
+|`history`|Returns all commands that you ran.|
+|`history [n]`|Returns the last n commands.|
+|`history | rg [search term]`| Searches through commands.|
+|`<ctrl>-r`|Built-in search.`<ctrl>+r` to cycle through entries and `<ctrl>-c` to cancel the search.|
+
+You can improve `<ctrl>-r` by incorporating `fzf` to fuzzy match. Learn how with this command:
+
+```{{bash}}
+cat $(rg README <(apt show fzf) | cut -d ' ' -f 3)
+```
+
+Hopefully it makes sense to you based on what you've read so far! 
+
+### Directory navigation
+
+|Command|Description|
+|---|---|
+|`tree`|Basic tree visualizer.|
+|`broot`|Nicer tree UI.
+|`nnn`|Mac-style explorer.|
+
+
+
+
