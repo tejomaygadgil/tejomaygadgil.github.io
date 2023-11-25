@@ -30,3 +30,9 @@ For Data Science / programming / note-taking / publishing I recommend the [Quart
 |`<shift>-g`|End of the file.|
 |`gg`|Beginning of the file.|
 |`<leader> + c + O/o + p`|New python cell above/below.|
+|`.`|Pastes the previous edit.|
+|`zb/zz/zt`|Adjust the screen to the bottom/middle/top without moving the cursor.|
+|`<ctrl>-i/o`|Go forward/backward in cursor position.|
+
+
+

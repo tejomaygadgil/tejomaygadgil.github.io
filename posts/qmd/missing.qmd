@@ -136,7 +136,72 @@ Hopefully it makes sense to you based on what you've read so far!
 
 ## Editors (Vim)
 
+### Modes 
 
+Vim is based on different _modes_: 
 
+|Mode|How to enter|
+|---|---|
+|`NORMAL`|`<esc>`|
+|`INSERT`|`i`|
+|`REPLACE`|`R`|
+|`VISUAL`|`v`|
+|`V-LINE`|`<shift>-v`|
+|`V-BLOCK`|`<ctrl>-v`|
+|`COMMAND-LINE`|`:`|
+
+### Movement
+
+|Command|Description|
+|---|---|
+|`j/k`|Down/up.|
+|`h/l`|Left/right.|
+|`w`|Next word.|
+|`b/e`|Beginning/end of word.|
+|`0/$/^`|Move to beginning/end/first non-empty character of line.|
+|`gg/G`|Beginning/end of file.|
+|`H/M/L`|Top/middle/bottom of screen.|
+|`<ctrl>-u/d`|Page up/down.|
+|`[number]G`|Go to line.|
+|`%`|Go to corresponding parenthesis, bracket, etc.|
+|`f/F`|Find a character forward/backward. Navigate back and forth with `,\;`.|
+|`t/T`|Like find but up until the character instead of on it.|
+
+You can do a lot of the movement commands n times, e.g. `[n]w` to go forward n words.
+
+### Editing
+
+|Command|Description|
+|---|---|
+|`a`|Append to current position.|
+|`A`|Append to end of current line.|
+|`r`|Replace one character.|
+|`R`|`REPLACE` mode.|
+|`d`|Delete.|
+|`c`|Delete movement and switch to insert mode.|
+|`x/X`|Delete a character forwards/backwards.|
+|`s`|Delete a character and switch to insert mode.|
+|`S`|Delete a line and switch to insert mode.|
+
+Editing commands can modified via movement commands, e.g. `dw` will delete a word, and `d[n]w` will delete n words.
+
+Quickly duplicate a line with `yy p`.
+
+### Modifiers
+
+|Modifier|Description|
+|---|---|
+|`a`|Around.|
+|`i`|Inner.|
+
+Modifiers change the meaning of a command.
+
+So `ci(` will delete the contents inside a pair of parentheses, while `ca(` will include the parentheses.
+
+Modifiers can also be used in visual mode: `vas` will select the current sentence, `vap` the paragraph, and `va(` the parenthetical block.
+
+### Find
+
+Find things with `/` followed by what you are looking for. Pressing `<enter>` will jump you to the closest occurrence. `n/N` cycle forwards/backwards through the results.
 
 
