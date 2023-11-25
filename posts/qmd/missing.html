@@ -345,6 +345,257 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</section>
+<section id="finding-shell-commands" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="finding-shell-commands"><span class="header-section-number">2.7</span> Finding shell commands</h3>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>history</code></td>
+<td>Returns all commands that you ran.</td>
+</tr>
+<tr class="even">
+<td><code>history [n]</code></td>
+<td>Returns the last n commands.</td>
+</tr>
+<tr class="odd">
+<td><code>history | rg [search term]</code></td>
+<td>Searches through commands.</td>
+</tr>
+<tr class="even">
+<td><code>&lt;ctrl&gt;-r</code></td>
+<td>Built-in search.<code>&lt;ctrl&gt;+r</code> to cycle through entries and <code>&lt;ctrl&gt;-c</code> to cancel the search.</td>
+</tr>
+</tbody>
+</table>
+<p>You can improve <code>&lt;ctrl&gt;-r</code> by incorporating <code>fzf</code> to add fuzzy matching. Learn how with this command:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>cat $(rg README &lt;(apt show fzf) | cut -d ' ' -f 3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Hopefully it makes sense to you based on what you’ve read so far!</p>
+</section>
+<section id="directory-navigation" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="directory-navigation"><span class="header-section-number">2.8</span> Directory navigation</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>tree</code></td>
+<td>Basic tree visualizer.</td>
+</tr>
+<tr class="even">
+<td><code>broot</code></td>
+<td>Nicer tree UI.</td>
+</tr>
+<tr class="odd">
+<td><code>nnn</code></td>
+<td>Mac-style explorer.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="editors-vim" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="editors-vim"><span class="header-section-number">3</span> Editors (Vim)</h2>
+<section id="modes" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="modes"><span class="header-section-number">3.1</span> Modes</h3>
+<p>Vim is based on different <em>modes</em>:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>How to enter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>NORMAL</code></td>
+<td><code>&lt;esc&gt;</code></td>
+</tr>
+<tr class="even">
+<td><code>INSERT</code></td>
+<td><code>i</code></td>
+</tr>
+<tr class="odd">
+<td><code>REPLACE</code></td>
+<td><code>R</code></td>
+</tr>
+<tr class="even">
+<td><code>VISUAL</code></td>
+<td><code>v</code></td>
+</tr>
+<tr class="odd">
+<td><code>V-LINE</code></td>
+<td><code>&lt;shift&gt;-v</code></td>
+</tr>
+<tr class="even">
+<td><code>V-BLOCK</code></td>
+<td><code>&lt;ctrl&gt;-v</code></td>
+</tr>
+<tr class="odd">
+<td><code>COMMAND-LINE</code></td>
+<td><code>:</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="movement" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="movement"><span class="header-section-number">3.2</span> Movement</h3>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>j/k</code></td>
+<td>Down/up.</td>
+</tr>
+<tr class="even">
+<td><code>h/l</code></td>
+<td>Left/right.</td>
+</tr>
+<tr class="odd">
+<td><code>w</code></td>
+<td>Next word.</td>
+</tr>
+<tr class="even">
+<td><code>b/e</code></td>
+<td>Beginning/end of word.</td>
+</tr>
+<tr class="odd">
+<td><code>0/$/^</code></td>
+<td>Move to beginning/end/first non-empty character of line.</td>
+</tr>
+<tr class="even">
+<td><code>gg/G</code></td>
+<td>Beginning/end of file.</td>
+</tr>
+<tr class="odd">
+<td><code>H/M/L</code></td>
+<td>Top/middle/bottom of screen.</td>
+</tr>
+<tr class="even">
+<td><code>&lt;ctrl&gt;-u/d</code></td>
+<td>Page up/down.</td>
+</tr>
+<tr class="odd">
+<td><code>[number]G</code></td>
+<td>Go to line.</td>
+</tr>
+<tr class="even">
+<td><code>%</code></td>
+<td>Go to corresponding parenthesis, bracket, etc.</td>
+</tr>
+<tr class="odd">
+<td><code>f/F</code></td>
+<td>Find a character forward/backward. Navigate back and forth with <code>,\;</code>.</td>
+</tr>
+<tr class="even">
+<td><code>t/T</code></td>
+<td>Like find but up until the character instead of on it.</td>
+</tr>
+</tbody>
+</table>
+<p>You can do a lot of the movement commands n times, e.g.&nbsp;<code>[n]w</code> to go forward n words.</p>
+</section>
+<section id="editing" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="editing"><span class="header-section-number">3.3</span> Editing</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>a</code></td>
+<td>Append to current position.</td>
+</tr>
+<tr class="even">
+<td><code>A</code></td>
+<td>Append to end of current line.</td>
+</tr>
+<tr class="odd">
+<td><code>r</code></td>
+<td>Replace one character.</td>
+</tr>
+<tr class="even">
+<td><code>R</code></td>
+<td><code>REPLACE</code> mode.</td>
+</tr>
+<tr class="odd">
+<td><code>d</code></td>
+<td>Delete.</td>
+</tr>
+<tr class="even">
+<td><code>c</code></td>
+<td>Delete movement and switch to insert mode.</td>
+</tr>
+<tr class="odd">
+<td><code>x/X</code></td>
+<td>Delete a character forwards/backwards.</td>
+</tr>
+<tr class="even">
+<td><code>s</code></td>
+<td>Delete a character and switch to insert mode.</td>
+</tr>
+<tr class="odd">
+<td><code>S</code></td>
+<td>Delete a line and switch to insert mode.</td>
+</tr>
+</tbody>
+</table>
+<p>Editing commands can modified via movement commands, e.g.&nbsp;<code>dw</code> will delete a word, and <code>d[n]w</code> will delete n words.</p>
+<p>Quickly duplicate a line with <code>yy p</code>.</p>
+</section>
+<section id="modifiers" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="modifiers"><span class="header-section-number">3.4</span> Modifiers</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Modifier</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>a</code></td>
+<td>Around.</td>
+</tr>
+<tr class="even">
+<td><code>i</code></td>
+<td>Inner.</td>
+</tr>
+</tbody>
+</table>
+<p>Modifiers change the meaning of a command.</p>
+<p>So <code>ci(</code> will delete the contents inside a pair of parentheses, while <code>ca(</code> will include the parentheses.</p>
+<p>Modifiers can also be used in visual mode: <code>vas</code> will select the current sentence, <code>vap</code> the paragraph, and <code>va(</code> the parenthetical block.</p>
+</section>
+<section id="find" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="find"><span class="header-section-number">3.5</span> Find</h3>
+<p>Find things with <code>/</code> followed by what you are looking for. Pressing <code>&lt;enter&gt;</code> will jump you to the closest occurrence. <code>n/N</code> cycle forwards/backwards through the results.</p>
 
 
 </section>
