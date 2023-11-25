@@ -118,7 +118,7 @@ find . -name '*.tmp' -exec rm {} \;
 |`history | rg [search term]`| Searches through commands.|
 |`<ctrl>-r`|Built-in search.`<ctrl>+r` to cycle through entries and `<ctrl>-c` to cancel the search.|
 
-You can improve `<ctrl>-r` by incorporating `fzf` to fuzzy match. Learn how with this command:
+You can improve `<ctrl>-r` by incorporating `fzf` to add fuzzy matching. Learn how with this command:
 
 ```{{bash}}
 cat $(rg README <(apt show fzf) | cut -d ' ' -f 3)
@@ -133,6 +133,9 @@ Hopefully it makes sense to you based on what you've read so far!
 |`tree`|Basic tree visualizer.|
 |`broot`|Nicer tree UI.
 |`nnn`|Mac-style explorer.|
+
+## Editors (Vim)
+
 
 
 
