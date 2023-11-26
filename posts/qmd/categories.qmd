@@ -17,11 +17,11 @@ Few essays in the history of philosophy are as impactful, less as inscrutable, a
 
 The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else entirely?
 
-Introducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while factual "hors d'oeuvres," no matter how well presented, fail to introduce the actual _work_ in question. 
+Introducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while factual "hors d'oeuvres," no matter how well presented, fail to introduce the actual *work* in question.
 
 Summary cannot introduce us to the *Categories*. Instead we must interpret it.
 
-To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we were trying to understand is what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is fundamentally _productive_.
+To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we were trying to understand is what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is fundamentally *productive*.
 
 This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering the words on the page.
 
@@ -124,14 +124,14 @@ Only second substance describes actual things synonymously. So if this man is a 
 
 Species is more substantial than genre:
 
-* It is "nearer" to substance in that it is a more natural substitute: it is more sensible to refer to this man a man than it does to call him an animal.
-* It also behaves more similarly in that it has less capacity for description than genre. (First substance, recall, cannot describe anything at all.)
+-   It is "nearer" to substance in that it is a more natural substitute: it is more sensible to refer to this man a man than it does to call him an animal.
+-   It also behaves more similarly in that it has less capacity for description than genre. (First substance, recall, cannot describe anything at all.)
 
 Despite being predicates, second substances are still truly substances:
 
-* They alone _define_ first substance. As noted above, you can measure whatever property you like about a man -- his height, his knowledge, age, posture, and so on -- but none of these will tell what what he actually is.
-* They can be described just like first substance. So if this man walks on two legs and has knowledge, then man and animal can be described similarly. 
-* Species and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.
+-   They alone *define* first substance. As noted above, you can measure whatever property you like about a man -- his height, his knowledge, age, posture, and so on -- but none of these will tell what what he actually is.
+-   They can be described just like first substance. So if this man walks on two legs and has knowledge, then man and animal can be described similarly.
+-   Species and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.
 
 ### Defining substance
 
@@ -143,42 +143,40 @@ We only seem, as we saw, to talk about substance, either by way of description o
 
 This is why defining substance by itself becomes tricky: without descriptions, we literally run out of words to describe it.
 
-**All substance can possibly denote, then, is its _very ability to be pointed out_.**
+**All substance can possibly denote, then, is its *very ability to be pointed out*.**
 
 This is what Aristotle means by his famous claim that substance appears to mark τόδε τι, "a this."
 
 Here both words share equal weight:
 
-* τόδε, "this," is a demonstrative: that which has been pointed out.
-* τι, "a," is the indefinite pronoun: it conveys the generality of the definition.
+-   τόδε, "this," is a demonstrative: that which has been pointed out.
+-   τι, "a," is the indefinite pronoun: it conveys the generality of the definition.
 
-When we strip particular things of their qualifiers, all they refer to in general is _their ability to be referred to_ as whatever they specifically are.
+When we strip particular things of their qualifiers, all they refer to in general is *their ability to be referred to* as whatever they specifically are.
 
-Substance, then, in an unusual turn of the word, is thoroughly _remarkable_: it is the very origin of every possible remark.
+Substance, then, in an unusual turn of the word, is thoroughly *remarkable*: it is the very origin of every possible remark.
 
-TODO: This also refers to the ACT of pointing substance out. Substance points to the _activity_ of pointing out.
+TODO: This also refers to the ACT of pointing substance out. Substance points to the *activity* of pointing out.
 
 old text:
 
-This means any utterance, no matter how, what, where, or why it is said, must ultimately _refer to_ a primary substance.
+This means any utterance, no matter how, what, where, or why it is said, must ultimately *refer to* a primary substance.
 
-This is exactly the definition Aristotle gives for primary substance: _something that has been pointed out_ (τόδε τι).
+This is exactly the definition Aristotle gives for primary substance: *something that has been pointed out* (τόδε τι).
 
-Substance never does any pointing: it never stands in for another entity. Instead substance is that which in every case is _pointed to_: clarified by predicates or described by properties. It is the seat of all possible signification.
+Substance never does any pointing: it never stands in for another entity. Instead substance is that which in every case is *pointed to*: clarified by predicates or described by properties. It is the seat of all possible signification.
 
-For this reason substance itself cannot be defined as anything but the _mere act of pointing_
+For this reason substance itself cannot be defined as anything but the *mere act of pointing*
 
-#### Second substance 
+#### Second substance
 
-Accordingly, second substance is the defining remark: it distinguishes first substance by its *kind*. 
+Accordingly, second substance is the defining remark: it distinguishes first substance by its *kind*.
 
-If first substance is remarkability, then second substance fills in this potential by telling us what it actually is.  
+If first substance is remarkability, then second substance fills in this potential by telling us what it actually is.
 
 ### Properties of substances
 
-
 ### Substance vs. statements
-
 
 ## Quantity {#sec-quantity}
 

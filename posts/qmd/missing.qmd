@@ -101,6 +101,8 @@ find . -name '*.tmp' -exec rm {} \;
 
 ### Alternatives to `find`
 
+Here are some options for extra functionality:
+
 |Command|Benefit|
 |---|---|
 |`fd`|Modernized implementation with simpler syntax.|
@@ -111,12 +113,14 @@ find . -name '*.tmp' -exec rm {} \;
 
 ### Finding shell commands
 
+Use `history` to avoid re-typing commands:
+
 |Command|Description|
 |---|---|
 |`history`|Returns all commands that you ran.|
 |`history [n]`|Returns the last n commands.|
 |`history | rg [search term]`| Searches through commands.|
-|`<ctrl>-r`|Built-in search.`<ctrl>+r` to cycle through entries and `<ctrl>-c` to cancel the search.|
+|`<ctrl>-r`|Built-in search.`<ctrl>-r` to cycle through entries and `<ctrl>-c` to cancel the search.|
 
 You can improve `<ctrl>-r` by incorporating `fzf` to add fuzzy matching. Learn how with this command:
 
@@ -128,13 +132,15 @@ Hopefully it makes sense to you based on what you've read so far!
 
 ### Directory navigation
 
+Commands to view files:
+
 |Command|Description|
 |---|---|
 |`tree`|Basic tree visualizer.|
 |`broot`|Nicer tree UI.
 |`nnn`|Mac-style explorer.|
 
-## Editors (Vim)
+## [Editors (Vim)](https://missing.csail.mit.edu/2020/editors/)
 
 ### Modes 
 
@@ -152,6 +158,8 @@ Vim is based on different _modes_:
 
 ### Movement
 
+Move around quickly using these commands:
+
 |Command|Description|
 |---|---|
 |`j/k`|Down/up.|
@@ -164,12 +172,14 @@ Vim is based on different _modes_:
 |`<ctrl>-u/d`|Page up/down.|
 |`[number]G`|Go to line.|
 |`%`|Go to corresponding parenthesis, bracket, etc.|
-|`f/F`|Find a character forward/backward. Navigate back and forth with `,\;`.|
-|`t/T`|Like find but up until the character instead of on it.|
+|`f/F`|Find a character forward/backward. Navigate back and forth with `,/;`.|
+|`t/T`|Like `find` but up until the character instead of on it.|
 
 You can do a lot of the movement commands n times, e.g. `[n]w` to go forward n words.
 
 ### Editing
+
+These are the basic editing commands:
 
 |Command|Description|
 |---|---|
@@ -204,4 +214,53 @@ Modifiers can also be used in visual mode: `vas` will select the current sentenc
 
 Find things with `/` followed by what you are looking for. Pressing `<enter>` will jump you to the closest occurrence. `n/N` cycle forwards/backwards through the results.
 
+## [Data wrangling](https://missing.csail.mit.edu/2020/data-wrangling/)
+
+### Stream editing
+
+Streams are sequences of elements that come in one at a time.
+  
+There are a number of commands you can use to process streams:
+
+|Command|Description|Syntax|
+|---|---|---|
+|`sed`|Process text in place using regex. Use `s` for text substitution and `-E` for modern syntax**.|`sed -E s/[pattern]/[replacment]/[flag]`|
+|`awk`|Process columnar data. Access the columns using `$n`. Using `BEGIN` and `END` enable stateful behavior.|`awk 'command'`|
+|`xargs`|Takes lines of inputs and turns them into command arguments.|`[STDOUT] | xargs [command]`|
+
+Also worth mentioning:
+
+* `sort`
+* `uniq` (requires a sorted list; `-c` to include counts)
+* `paste` (`-s` to concatenate columns and `-d` to change the delimiter)
+* `head`/`tail`
+* `bc` (calculator! Use with `-l` to read STDIN).
+
+### Regex
+
+Regular expressions is a language for expressing text patterns. Here are some common building blocks:
+
+|Expression|Description|
+|---|---|
+|`.`|Any character.|](https://missing.csail.mit.edu/2020/editors/)
+|`[...]`|A set of characters.|
+|`[^...]`|The opposite of the set.|
+|`(x|u|...)`|A set of strings.|
+|`(...)*`|0 or more.|
+|`(...)+`|1 or more.|
+|`(...)?`|0 or 1.|
+|`(...){n}`|N times.|
+|`(...){n,}`|N or more times.|
+|`(...){n, m}`|N to m times.|
+|`^`|Anchor for beginning of string.|
+|`$`|Anchor for end of string.|
+
+Adding `?` suffix to quantifiers (`*`, `+`, `?`, `{n}`, `{n,}`, `{n, m}`) will toggle **lazy** and match to the leftmost character. Quantifiers are **greedy** by default, meaning they will match the rightmost character, which can lead to unintended matches. 
+
+Create a **capture group** around an expression using parentheses `()`. Then you can select it positionally in a replace statement using `\n` to indicate the nth group:
+
+```{{bash}}
+# Return just the filenames from a list of PDFs.
+ls *.pdf | sed -E 's/^(.+).pdf$/\1/'
+```
 
