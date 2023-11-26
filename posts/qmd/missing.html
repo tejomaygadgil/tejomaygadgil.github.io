@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This some fun stuff I picked up from the 2020 offering of the fantastic <a href="https://missing.csail.mit.edu/">./missing-semester</a> class at MIT.</p>
 <p>Enjoy!</p>
 <section id="shell-basics" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="shell-basics"><span class="header-section-number">1</span> <a href="https://missing.csail.mit.edu/2020/course-shell/">Shell basics</a></h2>
+<h2 data-number="1" class="anchored" data-anchor-id="shell-basics"><span class="header-section-number">1</span> Shell basics</h2>
 <section id="redirection-and-piping" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="redirection-and-piping"><span class="header-section-number">1.1</span> Redirection and piping</h3>
 <ul>
@@ -190,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="shell-tools-and-scripting" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="shell-tools-and-scripting"><span class="header-section-number">2</span> <a href="https://missing.csail.mit.edu/2020/shell-tools/">Shell tools and scripting</a></h2>
+<h2 data-number="2" class="anchored" data-anchor-id="shell-tools-and-scripting"><span class="header-section-number">2</span> Shell tools and scripting</h2>
 <section id="setting-variables" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="setting-variables"><span class="header-section-number">2.1</span> Setting variables</h3>
 <p>Set variable using <code>x=[value]</code> with no spaces between anything.</p>
@@ -412,7 +412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="editors-vim" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="editors-vim"><span class="header-section-number">3</span> <a href="https://missing.csail.mit.edu/2020/editors/">Editors (Vim)</a></h2>
+<h2 data-number="3" class="anchored" data-anchor-id="editors-vim"><span class="header-section-number">3</span> Editors (Vim)</h2>
 <section id="modes" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="modes"><span class="header-section-number">3.1</span> Modes</h3>
 <p>Vim is based on different <em>modes</em>:</p>
@@ -604,7 +604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="data-wrangling" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="data-wrangling"><span class="header-section-number">4</span> <a href="https://missing.csail.mit.edu/2020/data-wrangling/">Data wrangling</a></h2>
+<h2 data-number="4" class="anchored" data-anchor-id="data-wrangling"><span class="header-section-number">4</span> Data wrangling</h2>
 <section id="stream-editing" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="stream-editing"><span class="header-section-number">4.1</span> Stream editing</h3>
 <p>Streams are sequences of elements that come in one at a time.</p>
@@ -673,7 +673,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>The opposite of the set.</td>
 </tr>
 <tr class="even">
-<td><code>(x|u|...)</code></td>
+<td><code>(x|y|...)</code></td>
 <td>A set of strings.</td>
 </tr>
 <tr class="odd">
@@ -710,7 +710,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Adding <code>?</code> suffix to quantifiers (<code>*</code>, <code>+</code>, <code>?</code>, <code>{n}</code>, <code>{n,}</code>, <code>{n, m}</code>) will toggle <strong>lazy</strong> and match to the leftmost character. Quantifiers are <strong>greedy</strong> by default, meaning they will match the rightmost character, which can lead to unintended matches.</p>
+<p>Adding <code>?</code> suffix to quantifiers (<code>*</code>, <code>+</code>, <code>?</code>, <code>{n}</code>, <code>{n,}</code>, <code>{n, m}</code>) will toggle <strong>lazy</strong> matching which will find the leftmost match. Quantifiers are <strong>greedy</strong> by default, meaning they will match the rightmost character, which can lead to unintended matches.</p>
 <p>Create a <strong>capture group</strong> around an expression using parentheses <code>()</code>. Then you can select it positionally in a replace statement using <code>\n</code> to indicate the nth group:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a># Return just the filenames from a list of PDFs.</span>
 <span id="cb4-2"><a href="#cb4-2"></a>ls *.pdf | sed -E 's/^(.+).pdf$/\1/'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
