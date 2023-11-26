@@ -315,6 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="alternatives-to-find" class="level3" data-number="2.6">
 <h3 data-number="2.6" class="anchored" data-anchor-id="alternatives-to-find"><span class="header-section-number">2.6</span> Alternatives to <code>find</code></h3>
+<p>Here are some options for extra functionality:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -348,6 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="finding-shell-commands" class="level3" data-number="2.7">
 <h3 data-number="2.7" class="anchored" data-anchor-id="finding-shell-commands"><span class="header-section-number">2.7</span> Finding shell commands</h3>
+<p>Use <code>history</code> to avoid re-typing commands:</p>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -374,7 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><code>&lt;ctrl&gt;-r</code></td>
-<td>Built-in search.<code>&lt;ctrl&gt;+r</code> to cycle through entries and <code>&lt;ctrl&gt;-c</code> to cancel the search.</td>
+<td>Built-in search.<code>&lt;ctrl&gt;-r</code> to cycle through entries and <code>&lt;ctrl&gt;-c</code> to cancel the search.</td>
 </tr>
 </tbody>
 </table>
@@ -384,6 +386,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="directory-navigation" class="level3" data-number="2.8">
 <h3 data-number="2.8" class="anchored" data-anchor-id="directory-navigation"><span class="header-section-number">2.8</span> Directory navigation</h3>
+<p>Commands to view files:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -409,7 +412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="editors-vim" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="editors-vim"><span class="header-section-number">3</span> Editors (Vim)</h2>
+<h2 data-number="3" class="anchored" data-anchor-id="editors-vim"><span class="header-section-number">3</span> <a href="https://missing.csail.mit.edu/2020/editors/">Editors (Vim)</a></h2>
 <section id="modes" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="modes"><span class="header-section-number">3.1</span> Modes</h3>
 <p>Vim is based on different <em>modes</em>:</p>
@@ -454,6 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="movement" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="movement"><span class="header-section-number">3.2</span> Movement</h3>
+<p>Move around quickly using these commands:</p>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -508,11 +512,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><code>f/F</code></td>
-<td>Find a character forward/backward. Navigate back and forth with <code>,\;</code>.</td>
+<td>Find a character forward/backward. Navigate back and forth with <code>,/;</code>.</td>
 </tr>
 <tr class="even">
 <td><code>t/T</code></td>
-<td>Like find but up until the character instead of on it.</td>
+<td>Like <code>find</code> but up until the character instead of on it.</td>
 </tr>
 </tbody>
 </table>
@@ -520,6 +524,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="editing" class="level3" data-number="3.3">
 <h3 data-number="3.3" class="anchored" data-anchor-id="editing"><span class="header-section-number">3.3</span> Editing</h3>
+<p>These are the basic editing commands:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -596,6 +601,119 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="find" class="level3" data-number="3.5">
 <h3 data-number="3.5" class="anchored" data-anchor-id="find"><span class="header-section-number">3.5</span> Find</h3>
 <p>Find things with <code>/</code> followed by what you are looking for. Pressing <code>&lt;enter&gt;</code> will jump you to the closest occurrence. <code>n/N</code> cycle forwards/backwards through the results.</p>
+</section>
+</section>
+<section id="data-wrangling" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="data-wrangling"><span class="header-section-number">4</span> <a href="https://missing.csail.mit.edu/2020/data-wrangling/">Data wrangling</a></h2>
+<section id="stream-editing" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="stream-editing"><span class="header-section-number">4.1</span> Stream editing</h3>
+<p>Streams are sequences of elements that come in one at a time.</p>
+<p>There are a number of commands you can use to process streams:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+<th>Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>sed</code></td>
+<td>Process text in place using regex. Use <code>s</code> for text substitution and <code>-E</code> for modern syntax**.</td>
+<td><code>sed -E s/[pattern]/[replacment]/[flag]</code></td>
+</tr>
+<tr class="even">
+<td><code>awk</code></td>
+<td>Process columnar data. Access the columns using <code>$n</code>. Using <code>BEGIN</code> and <code>END</code> enable stateful behavior.</td>
+<td><code>awk 'command'</code></td>
+</tr>
+<tr class="odd">
+<td><code>xargs</code></td>
+<td>Takes lines of inputs and turns them into command arguments.</td>
+<td><code>[STDOUT] | xargs [command]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Also worth mentioning:</p>
+<ul>
+<li><code>sort</code></li>
+<li><code>uniq</code> (requires a sorted list; <code>-c</code> to include counts)</li>
+<li><code>paste</code> (<code>-s</code> to concatenate columns and <code>-d</code> to change the delimiter)</li>
+<li><code>head</code>/<code>tail</code></li>
+<li><code>bc</code> (calculator! Use with <code>-l</code> to read STDIN).</li>
+</ul>
+</section>
+<section id="regex" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="regex"><span class="header-section-number">4.2</span> Regex</h3>
+<p>Regular expressions is a language for expressing text patterns. Here are some common building blocks:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Expression</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.</code></td>
+<td>Any character.</td>
+</tr>
+<tr class="even">
+<td><code>[...]</code></td>
+<td>A set of characters.</td>
+</tr>
+<tr class="odd">
+<td><code>[^...]</code></td>
+<td>The opposite of the set.</td>
+</tr>
+<tr class="even">
+<td><code>(x|u|...)</code></td>
+<td>A set of strings.</td>
+</tr>
+<tr class="odd">
+<td><code>(...)*</code></td>
+<td>0 or more.</td>
+</tr>
+<tr class="even">
+<td><code>(...)+</code></td>
+<td>1 or more.</td>
+</tr>
+<tr class="odd">
+<td><code>(...)?</code></td>
+<td>0 or 1.</td>
+</tr>
+<tr class="even">
+<td><code>(...){n}</code></td>
+<td>N times.</td>
+</tr>
+<tr class="odd">
+<td><code>(...){n,}</code></td>
+<td>N or more times.</td>
+</tr>
+<tr class="even">
+<td><code>(...){n, m}</code></td>
+<td>N to m times.</td>
+</tr>
+<tr class="odd">
+<td><code>^</code></td>
+<td>Anchor for beginning of string.</td>
+</tr>
+<tr class="even">
+<td><code>$</code></td>
+<td>Anchor for end of string.</td>
+</tr>
+</tbody>
+</table>
+<p>Adding <code>?</code> suffix to quantifiers (<code>*</code>, <code>+</code>, <code>?</code>, <code>{n}</code>, <code>{n,}</code>, <code>{n, m}</code>) will toggle <strong>lazy</strong> and match to the leftmost character. Quantifiers are <strong>greedy</strong> by default, meaning they will match the rightmost character, which can lead to unintended matches.</p>
+<p>Create a <strong>capture group</strong> around an expression using parentheses <code>()</code>. Then you can select it positionally in a replace statement using <code>\n</code> to indicate the nth group:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a># Return just the filenames from a list of PDFs.</span>
+<span id="cb4-2"><a href="#cb4-2"></a>ls *.pdf | sed -E 's/^(.+).pdf$/\1/'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
