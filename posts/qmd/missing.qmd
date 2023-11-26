@@ -5,6 +5,7 @@ format:
   html:
     code-line-numbers: true
     number-sections: true
+    toc: true
 image: ../img/missing.png
 ---
 
@@ -263,4 +264,8 @@ Create a **capture group** around an expression using parentheses `()`. Then you
 # Return just the filenames from a list of PDFs.
 ls *.pdf | sed -E 's/^(.+).pdf$/\1/'
 ```
+
+## Command-line environment
+
+###
 
