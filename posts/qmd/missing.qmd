@@ -12,7 +12,7 @@ This some fun stuff I picked up from the 2020 offering of the fantastic [./missi
 
 Enjoy!
 
-## [Shell basics](https://missing.csail.mit.edu/2020/course-shell/)
+## Shell basics
 
 ### Redirection and piping
 
@@ -32,7 +32,7 @@ Enjoy!
 
 `sudo` stands for "super user do".
 
-## [Shell tools and scripting](https://missing.csail.mit.edu/2020/shell-tools/)
+## Shell tools and scripting
 
 ### Setting variables
 
@@ -140,7 +140,7 @@ Commands to view files:
 |`broot`|Nicer tree UI.
 |`nnn`|Mac-style explorer.|
 
-## [Editors (Vim)](https://missing.csail.mit.edu/2020/editors/)
+## Editors (Vim)
 
 ### Modes 
 
@@ -214,7 +214,7 @@ Modifiers can also be used in visual mode: `vas` will select the current sentenc
 
 Find things with `/` followed by what you are looking for. Pressing `<enter>` will jump you to the closest occurrence. `n/N` cycle forwards/backwards through the results.
 
-## [Data wrangling](https://missing.csail.mit.edu/2020/data-wrangling/)
+## Data wrangling
 
 ### Stream editing
 
@@ -245,7 +245,7 @@ Regular expressions is a language for expressing text patterns. Here are some co
 |`.`|Any character.|](https://missing.csail.mit.edu/2020/editors/)
 |`[...]`|A set of characters.|
 |`[^...]`|The opposite of the set.|
-|`(x|u|...)`|A set of strings.|
+|`(x|y|...)`|A set of strings.|
 |`(...)*`|0 or more.|
 |`(...)+`|1 or more.|
 |`(...)?`|0 or 1.|
@@ -255,7 +255,7 @@ Regular expressions is a language for expressing text patterns. Here are some co
 |`^`|Anchor for beginning of string.|
 |`$`|Anchor for end of string.|
 
-Adding `?` suffix to quantifiers (`*`, `+`, `?`, `{n}`, `{n,}`, `{n, m}`) will toggle **lazy** and match to the leftmost character. Quantifiers are **greedy** by default, meaning they will match the rightmost character, which can lead to unintended matches. 
+Adding `?` suffix to quantifiers (`*`, `+`, `?`, `{n}`, `{n,}`, `{n, m}`) will toggle **lazy** matching which will find the leftmost match. Quantifiers are **greedy** by default, meaning they will match the rightmost character, which can lead to unintended matches. 
 
 Create a **capture group** around an expression using parentheses `()`. Then you can select it positionally in a replace statement using `\n` to indicate the nth group:
 
