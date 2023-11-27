@@ -141,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Tips from ./missing-semester</h1>
-            <p class="subtitle lead">Things I learned from MIT’s “Missing Semester of Your CS Education” course.</p>
+            <p class="subtitle lead">My takeaways from MIT’s “Missing Semester of Your CS Education” course.</p>
                       </div>
   </div>
     
@@ -202,6 +202,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#git-tracks-data-efficiently-using-hashing" id="toc-git-tracks-data-efficiently-using-hashing" class="nav-link" data-scroll-target="#git-tracks-data-efficiently-using-hashing"><span class="header-section-number">6.1</span> Git tracks data efficiently using hashing</a></li>
   <li><a href="#useful-git-commands" id="toc-useful-git-commands" class="nav-link" data-scroll-target="#useful-git-commands"><span class="header-section-number">6.2</span> Useful Git commands</a></li>
   </ul></li>
+  <li><a href="#debugging-and-profiling" id="toc-debugging-and-profiling" class="nav-link" data-scroll-target="#debugging-and-profiling"><span class="header-section-number">7</span> Debugging and profiling</a>
+  <ul class="collapse">
+  <li><a href="#loggers-collect-print-statements-for-later-analysis" id="toc-loggers-collect-print-statements-for-later-analysis" class="nav-link" data-scroll-target="#loggers-collect-print-statements-for-later-analysis"><span class="header-section-number">7.1</span> Loggers collect print statements for later analysis</a></li>
+  <li><a href="#debuggers-help-you-fix-code-interactively" id="toc-debuggers-help-you-fix-code-interactively" class="nav-link" data-scroll-target="#debuggers-help-you-fix-code-interactively"><span class="header-section-number">7.2</span> Debuggers help you fix code interactively</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -229,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="use-single-quotations-to-nullify-meaning" class="level3" data-number="1.2">
 <h3 data-number="1.2" class="anchored" data-anchor-id="use-single-quotations-to-nullify-meaning"><span class="header-section-number">1.2</span> Use single quotations to nullify meaning</h3>
 <blockquote class="blockquote">
-<p>Enclosing characters in single quotes (’’’) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Enclosing characters in single quotes preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </blockquote>
 </section>
 <section id="sudo" class="level3" data-number="1.3">
@@ -450,6 +455,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><code>nnn</code></td>
 <td>Mac-style explorer.</td>
+</tr>
+<tr class="even">
+<td><code>less</code></td>
+<td>Break long text into pages.</td>
 </tr>
 </tbody>
 </table>
@@ -811,7 +820,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><code>fg %n\PID</code></td>
-<td>Bring a background process to the foreground and resume it if it was paused.</td>
+<td>Bring and resume a background process to the foreground.</td>
 </tr>
 <tr class="odd">
 <td><code>kill %n/PID</code></td>
@@ -831,7 +840,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p><code>&lt;ctrl&gt;-z</code> followed by <code>bg</code> will send a currently running process to execute in the background.</p>
+<p><code>&lt;ctrl&gt;-z</code> followed by <code>bg</code> will send the current process to execute in the background.</p>
 </section>
 <section id="multiplexers-enable-multitasking-within-a-single-session" class="level3" data-number="5.2">
 <h3 data-number="5.2" class="anchored" data-anchor-id="multiplexers-enable-multitasking-within-a-single-session"><span class="header-section-number">5.2</span> Multiplexers enable multitasking within a single session</h3>
@@ -841,7 +850,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Windows</strong> are like tabs within a workspace.</li>
 <li><strong>Panes</strong> are individual splits within a window.</li>
 </ul>
-<p>Once a session is started (<code>tmux new -s NAME</code>) commands are bound to <code>&lt;ctrl&gt;-b</code> (though a common modification is to remap to <code>&lt;ctrl&gt;-a</code>).</p>
+<p>Once a session begins (<code>tmux new -s NAME</code>) commands are bound to <code>&lt;ctrl&gt;-b</code>. This is commonly remapped to <code>&lt;ctrl&gt;-a</code>.</p>
 <p>Then you can create new windows and rearrange panes. Use <code>&lt;ctrl&gt;-b + ?</code> for a list of options.</p>
 <p>Also feel free to consult this <a href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">tutorial</a> and its <a href="https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">followup</a> on customization.</p>
 </section>
@@ -850,9 +859,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="6" class="anchored" data-anchor-id="version-control-git"><span class="header-section-number">6</span> Version control (Git)</h2>
 <section id="git-tracks-data-efficiently-using-hashing" class="level3" data-number="6.1">
 <h3 data-number="6.1" class="anchored" data-anchor-id="git-tracks-data-efficiently-using-hashing"><span class="header-section-number">6.1</span> Git tracks data efficiently using hashing</h3>
-<p>Commits in Git are accompanied by a long alphanumeric string. This string is called a hash and it links each commit to the data it represents.</p>
-<p>A hash is a unique string generated by the content of a file. If the file changes, so does the hash. Git uses this fact to store files efficiently: only the files that have changed between commits get a new hash, while old files can still be accessed using the same hash value.</p>
-<p>Commits refer to the hash value of the root directory. The root directory itself contains the hashes of its contents, and so on. By storing hashes instead of data, Git avoids having to copy the same files over and over again for each commit. This underlying hash-based data structure is called content-addressed storage (CAS).</p>
+<p>Commits in Git come with a long alphanumeric string. This string is called a hash and it links each commit to the data it represents.</p>
+<p>A hash is a unique string generated by the content of a file. If the file changes, so does the hash. Git uses this fact to store files efficiently: modified files get a new hash, while unedited files keep the same value.</p>
+<p>Commits refer to the hash value of the root directory. The root directory itself contains the hashes of its contents, and so on. By storing hashes instead of data, Git avoids having to copy the same files over and over again for each commit. This hash-based data structure is called content-addressed storage (CAS).</p>
 <p>Use <code>git cat-file -p [commit hash]</code> to explore your commits!</p>
 </section>
 <section id="useful-git-commands" class="level3" data-number="6.2">
@@ -888,6 +897,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>Guide: <a href="https://cbea.ms/git-commit/">how to write good commits</a>.</p>
+</section>
+</section>
+<section id="debugging-and-profiling" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="debugging-and-profiling"><span class="header-section-number">7</span> Debugging and profiling</h2>
+<section id="loggers-collect-print-statements-for-later-analysis" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="loggers-collect-print-statements-for-later-analysis"><span class="header-section-number">7.1</span> Loggers collect print statements for later analysis</h3>
+<blockquote class="blockquote">
+<p>“The most effective debugging tool is still careful thought, coupled with judiciously placed print statements” — Brian Kernighan, Unix for Beginners.</p>
+</blockquote>
+<p>A logger will automatically save print statements to a file. It can capture anything from summary statistics about incoming data to error messages. You can set severity levels<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> to particular log entries to enable filtering through data as needed.</p>
+<p>Logs let you inspect runs to track and resolve issues over time. This strategy pays off as project complexity increases.</p>
+<p><code>/var/logs/</code> contains system logs.</p>
+</section>
+<section id="debuggers-help-you-fix-code-interactively" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="debuggers-help-you-fix-code-interactively"><span class="header-section-number">7.2</span> Debuggers help you fix code interactively</h3>
+<p>Debuggers are programs that let you step through code interactively and re-run sections so you can figure out what the code is doing.</p>
+<p><code>ipdb</code><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> is like Python’s built-in <code>pdb</code> but includes niceties such as colored output, tab completion and so on. You start <code>ipdb</code> by running <code>python -m ipdb [script]</code>.</p>
+<p>These are some useful commands for <code>pdb</code>/<code>ipdb</code>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>l</code></td>
+<td>Lists +/- 5 lines around a line. Use <code>l .</code> for the current line, or <code>l [start] [end]</code> for an arbitrary range.</td>
+</tr>
+<tr class="even">
+<td><code>ll</code></td>
+<td>Long lists all the code around the current line.</td>
+</tr>
+<tr class="odd">
+<td><code>s</code></td>
+<td>Run the current line and step to the next available line. This is could be inside of another function, so it’s not necessarily the next numerical line!</td>
+</tr>
+<tr class="even">
+<td><code>n</code></td>
+<td>Execute the current line and stop at the next numerical line, jumping over any function calls.</td>
+</tr>
+<tr class="odd">
+<td><code>restart</code></td>
+<td>Re-run the program from the top.</td>
+</tr>
+<tr class="even">
+<td><code>c</code></td>
+<td>Continue executing from the current line until the program halts, either due to hitting a breakpoint, completing, or crashing.</td>
+</tr>
+<tr class="odd">
+<td><code>p [var]</code></td>
+<td>Print the value of any variable in memory.</td>
+</tr>
+<tr class="even">
+<td><code>b [line number]</code></td>
+<td>Add a breakpoint to the specified line. The debugger will halt execution when it hits this line.</td>
+</tr>
+<tr class="odd">
+<td><code>q</code></td>
+<td>Quit.</td>
+</tr>
+</tbody>
+</table>
+<p>General debuggers like <code>gdb</code> work on any language and provide low-level information on hardware registers etc..</p>
 
 
 </section>
@@ -901,6 +979,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li id="fn2"><p>Obligatory: <a href="https://xkcd.com/149/" class="uri">https://xkcd.com/149/</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p><a href="https://www.gnu.org/software/bash/manual/bash.html#Lists" class="uri">https://www.gnu.org/software/bash/manual/bash.html#Lists</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>Look up <code>man signal</code> for a comprehensive list of every signal.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>cf.&nbsp;<a href="https://docs.python.org/3/library/logging.html#logging-levels">Python’s severity levels</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><a href="https://github.com/gotcha/ipdb" class="uri">https://github.com/gotcha/ipdb</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
