@@ -8,6 +8,8 @@ format:
       utterances:
         repo: tejomaygadgil/tejomaygadgil.github.io
     number-sections: true
+    toc: true
+    toc-title: Sections
 image: ../img/categories.png
 ---
 

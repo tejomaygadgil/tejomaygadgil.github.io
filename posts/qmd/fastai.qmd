@@ -1,6 +1,6 @@
 ---
 title: "Course notes: fast.ai Deep Learning"
-subtitle: My takeaways from fast.ai's 2022 offering of Practical Deep Learning for Coders.
+subtitle: Insights from fast.ai's 2022 offering of Practical Deep Learning for Coders.
 format: html
 number-sections: true
 image: ../img/fastai.webp
@@ -8,19 +8,19 @@ image: ../img/fastai.webp
 
 ![](../img/fastai.webp)
 
-This is what I found useful from the 2022 Practical Deep Learning for Coders course offered by [fast.ai](<https://course.fast.ai/>).
+Here's what I found useful from the 2022 offering of [Practical Deep Learning for Coders](<https://course.fast.ai/>) by fasti.ai.
 
 ## Getting started
 
 ### The significance of the XOR affair
 
-Minksy's *Perceptrons* (1969) known for infamously claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn't actually true. But the book has become a symbol of a certain side of a debate about AI.
+Minksy's *Perceptrons* (1969) is infamous for claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn't exactly accurate. But the book has become a symbol of a certain side of the AI debate.
 
 The dispute is about logic.
 
-Today logic is not that important. We don't care what a model does as long as it is useful. But this was not always the case. Stemming off very intense movements in philosophy and other disciplines[^1], logic in the last century was seen by some as the very fabric of reality. It is in this environment that computers, prized as first and foremost for being *logical* machines, were invented.
+Today logic is not that important. We don't care what a model does as long as it is useful. But this was not always the case. Stemming off very intense movements in philosophy and other disciplines[^1], logic in the last century was seen by many as the very fabric of reality. It is in this environment that computers, prized as first and foremost for being *logical* machines, were invented.
 
-[^1]: Cf. the Vienna circle, Hilbert's Entscheidungsproblem, and American Pragmatism. These movements participate in the idea that logic and mathematics are the sole fabric of reality.
+[^1]: cf. The Vienna Circle, Hilbert's Entscheidungsproblem, and American Pragmatism. 
 
 Minsky's problem with neural networks, then, was that they were not logical structured. Unlike a computer, which is built from the ground up using determinate Boolean operations, neural networks instead use calculus and numerical optimization to fit curves.
 
