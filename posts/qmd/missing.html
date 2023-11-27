@@ -184,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#vim-operates-in-different-modes" id="toc-vim-operates-in-different-modes" class="nav-link" data-scroll-target="#vim-operates-in-different-modes"><span class="header-section-number">3.1</span> Vim operates in different modes</a></li>
   <li><a href="#movement-around-swiftly-using-keyboard-shortcuts" id="toc-movement-around-swiftly-using-keyboard-shortcuts" class="nav-link" data-scroll-target="#movement-around-swiftly-using-keyboard-shortcuts"><span class="header-section-number">3.2</span> Movement around swiftly using keyboard shortcuts</a></li>
   <li><a href="#edit-text-efficiently-with-commands" id="toc-edit-text-efficiently-with-commands" class="nav-link" data-scroll-target="#edit-text-efficiently-with-commands"><span class="header-section-number">3.3</span> Edit text efficiently with commands</a></li>
-  <li><a href="#modifiers" id="toc-modifiers" class="nav-link" data-scroll-target="#modifiers"><span class="header-section-number">3.4</span> Modifiers</a></li>
+  <li><a href="#modifiers-select-text-within-blocks" id="toc-modifiers-select-text-within-blocks" class="nav-link" data-scroll-target="#modifiers-select-text-within-blocks"><span class="header-section-number">3.4</span> Modifiers select text within blocks</a></li>
   <li><a href="#find" id="toc-find" class="nav-link" data-scroll-target="#find"><span class="header-section-number">3.5</span> Find</a></li>
   </ul></li>
   <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling"><span class="header-section-number">4</span> Data wrangling</a>
@@ -196,6 +196,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#manage-multiple-processes-using-job-control" id="toc-manage-multiple-processes-using-job-control" class="nav-link" data-scroll-target="#manage-multiple-processes-using-job-control"><span class="header-section-number">5.1</span> Manage multiple processes using job control</a></li>
   <li><a href="#multiplexers-enable-multitasking-within-a-single-session" id="toc-multiplexers-enable-multitasking-within-a-single-session" class="nav-link" data-scroll-target="#multiplexers-enable-multitasking-within-a-single-session"><span class="header-section-number">5.2</span> Multiplexers enable multitasking within a single session</a></li>
+  </ul></li>
+  <li><a href="#version-control-git" id="toc-version-control-git" class="nav-link" data-scroll-target="#version-control-git"><span class="header-section-number">6</span> Version control (Git)</a>
+  <ul class="collapse">
+  <li><a href="#git-tracks-data-efficiently-using-hashing" id="toc-git-tracks-data-efficiently-using-hashing" class="nav-link" data-scroll-target="#git-tracks-data-efficiently-using-hashing"><span class="header-section-number">6.1</span> Git tracks data efficiently using hashing</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -609,8 +613,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Editing commands can modified via movement commands, e.g.&nbsp;<code>dw</code> will delete a word, and <code>d[n]w</code> will delete n words.</p>
 <p>Quickly duplicate a line with <code>yy p</code>.</p>
 </section>
-<section id="modifiers" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="modifiers"><span class="header-section-number">3.4</span> Modifiers</h3>
+<section id="modifiers-select-text-within-blocks" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="modifiers-select-text-within-blocks"><span class="header-section-number">3.4</span> Modifiers select text within blocks</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -825,6 +829,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+<p><code>&lt;ctrl&gt;-z</code> followed by <code>bg</code> will send a currently running process to execute in the background.</p>
 </section>
 <section id="multiplexers-enable-multitasking-within-a-single-session" class="level3" data-number="5.2">
 <h3 data-number="5.2" class="anchored" data-anchor-id="multiplexers-enable-multitasking-within-a-single-session"><span class="header-section-number">5.2</span> Multiplexers enable multitasking within a single session</h3>
@@ -836,6 +841,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Once a session is started (<code>tmux new -s NAME</code>) commands are bound to <code>&lt;ctrl&gt;-b</code> (though a common modification is to remap to <code>&lt;ctrl&gt;-a</code>).</p>
 <p>Then you can create new windows and rearrange panes. Use <code>&lt;ctrl&gt;-b + ?</code> for a list of options.</p>
+<p>Also feel free to consult this <a href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">tutorial</a> and its <a href="https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">followup</a> on customization.</p>
+</section>
+</section>
+<section id="version-control-git" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="version-control-git"><span class="header-section-number">6</span> Version control (Git)</h2>
+<section id="git-tracks-data-efficiently-using-hashing" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="git-tracks-data-efficiently-using-hashing"><span class="header-section-number">6.1</span> Git tracks data efficiently using hashing</h3>
+<p>If you press <code>git log</code> you will find that each commit has a long, random-looking string next to it. This string is called a hash and it links each commit to the data it represents.</p>
+<p>A hash is a unique string generated by the content of a file. If the file changes, so does the hash. Git uses this fact to store files efficiently: only the files that have changed between get a new hash, while old files can still be accessed using the same hash value.</p>
+<p>Commits contain the hash values of the root directory. The root directory itself points, via hash, to its contents and so on. This way, only the tree of references is updated and Git avoids having to copy the same files over and over again for each commit. This underlying hash-based data table is called content-addressed storage (CAS).</p>
+<p>Use <code>git cat-file -p [commit hash]</code> to explore your commits!</p>
 
 
 </section>
