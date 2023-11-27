@@ -208,6 +208,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#debuggers-help-you-fix-code-interactively" id="toc-debuggers-help-you-fix-code-interactively" class="nav-link" data-scroll-target="#debuggers-help-you-fix-code-interactively"><span class="header-section-number">7.2</span> Debuggers help you fix code interactively</a></li>
   <li><a href="#static-analyzers-fix-programming-errors-and-formatting-issues" id="toc-static-analyzers-fix-programming-errors-and-formatting-issues" class="nav-link" data-scroll-target="#static-analyzers-fix-programming-errors-and-formatting-issues"><span class="header-section-number">7.3</span> Static analyzers fix programming errors and formatting issues</a></li>
   </ul></li>
+  <li><a href="#building-and-versioning" id="toc-building-and-versioning" class="nav-link" data-scroll-target="#building-and-versioning"><span class="header-section-number">8</span> Building and versioning</a>
+  <ul class="collapse">
+  <li><a href="#build-systems-produce-an-output-by-managing-dependencies" id="toc-build-systems-produce-an-output-by-managing-dependencies" class="nav-link" data-scroll-target="#build-systems-produce-an-output-by-managing-dependencies"><span class="header-section-number">8.1</span> Build systems produce an output by managing dependencies</a></li>
+  <li><a href="#semantic-versioning-enables-dependency-management" id="toc-semantic-versioning-enables-dependency-management" class="nav-link" data-scroll-target="#semantic-versioning-enables-dependency-management"><span class="header-section-number">8.2</span> Semantic versioning enables dependency management</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -257,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2"></a>  mkir -p "$1"</span>
 <span id="cb1-3"><a href="#cb1-3"></a>  cd "$1"</span>
 <span id="cb1-4"><a href="#cb1-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>$1</code> refers to the first positional argument the function recieves. Putting double quotations around it ensures that names that contain a space don’t accidently get truncated.</p>
+<p><code>$1</code> refers to the first positional argument the function receives. Putting double quotations around it ensures that names that contain a space don’t accidentally get truncated.</p>
 <p>If you load this function into the terminal with <code>source mcd.sh</code> you can run it using <code>mcd [dirname]</code>.</p>
 <p>Some more variable names:</p>
 <table class="table">
@@ -973,6 +978,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Linters check code for logical issues such as referencing an undefined variable. They will typically not edit code but instead highlight the issue for the programmer to fix. Examples include <code>pyflakes</code>, and <code>flake8</code>.</p>
 <p>Formatters standardize code and ensure compliance with style guides such as <a href="https://peps.python.org/pep-0008/">PEP</a>. They usually edit the file for you. Examples include <code>autopep8</code>, <code>black</code>, and <code>isort</code>.</p>
 <p><code>ruff</code><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> is a new linter and formatter offering 10-100x faster performance.</p>
+</section>
+</section>
+<section id="building-and-versioning" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="building-and-versioning"><span class="header-section-number">8</span> Building and versioning</h2>
+<section id="build-systems-produce-an-output-by-managing-dependencies" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="build-systems-produce-an-output-by-managing-dependencies"><span class="header-section-number">8.1</span> Build systems produce an output by managing dependencies</h3>
+<p>Builders manage the entire process to create a target file by recursively generating every dependency that is required. It’s a powerful idea that allows you to execute an entire workflow in a single command<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
+<p>The most popular builder is <code>make</code>. It looks for a file called <code>Makefile</code> which contains instructions on how to build each file in the process:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>[target]: [dependencies]</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  [bash commands to produce the target based on dependencies]</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>[dependency]: [subdependencies]</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  [bash command to produce dependency based on subdependencies]</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>There are <a href="https://makefiletutorial.com/">great tutorials</a> on how to write a good makefile.</p>
+<p>It’s a good idea to have <code>make</code> manage the high-level workflow and delegate the creation of particular files to domain-specific builders. This prevents the makefile from becoming too complicated.</p>
+</section>
+<section id="semantic-versioning-enables-dependency-management" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="semantic-versioning-enables-dependency-management"><span class="header-section-number">8.2</span> Semantic versioning enables dependency management</h3>
+<p>Semantic versioning is a popular form of program versioning that allows you to tell at a glance whether a version is compatible for your software:</p>
+<pre><code>version = major.minor.patch</code></pre>
+<ul>
+<li><code>patch</code> updates do not change the API.</li>
+<li><code>minor</code> updates add to the API and are backwards compatible.</li>
+<li><code>major</code> updates change the API in a non-backwards-compatible way.</li>
+</ul>
+<p>This framework allows dependency managers ensure program stability by accepting minor updates, for instance, and rejecting major updates until the code is refactored.</p>
+<p>Python uses semantic versioning. It is why Python 2 scripts are not compatible with Python 3, and vice-versa.</p>
 
 
 </section>
@@ -989,6 +1023,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li id="fn5"><p>cf.&nbsp;<a href="https://docs.python.org/3/library/logging.html#logging-levels">Python’s severity levels</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p><a href="https://github.com/gotcha/ipdb" class="uri">https://github.com/gotcha/ipdb</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p><a href="https://github.com/astral-sh/ruff" class="uri">https://github.com/astral-sh/ruff</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>For instance, you could build a pipeline to run an experiment and automatically report the results in a LaTeX-rendered report, or to build, test, and publish a programming package, or to render and ship a website.. the possibilities are endless!<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
