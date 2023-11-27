@@ -57,7 +57,7 @@ mcd () {
 }
 ```
 
-`$1` refers to the first positional argument the function recieves. Putting double quotations around it ensures that names that contain a space don't accidently get truncated.
+`$1` refers to the first positional argument the function receives. Putting double quotations around it ensures that names that contain a space don't accidentally get truncated.
 
 If you load this function into the terminal with `source mcd.sh` you can run it using `mcd [dirname]`.
 
@@ -370,3 +370,29 @@ Formatters standardize code and ensure compliance with style guides such as [PEP
 `ruff`[^7] is a new linter and formatter offering 10-100x faster performance.
 
 [^7]: <https://github.com/astral-sh/ruff>
+
+## Building and versioning
+
+### Build systems produce an output by managing dependencies
+
+Builders manage the entire process to create a target file by recursively generating every dependency that is required. It's a powerful idea that allows you to execute an entire workflow in a single command[^8].
+
+[^8]: For instance, you could build a pipeline to run an experiment and automatically report the results in a LaTeX-rendered report, or to build, test, and publish a programming package, or to render and ship a website.. the possibilities are endless!
+
+The most popular builder is `make`. It looks for a file called `Makefile` which contains instructions on how to build each file in the process:
+
+```{{bash}}
+[target]: [dependencies]
+  [bash commands to produce the target based on dependencies]
+
+[dependency]: [subdependencies]
+  [bash command to produce dependency based on subdependencies]
+
+...
+```
+
+There are [great tutorials](https://makefiletutorial.com/) on how to write a good makefile.
+
+It's a good idea to have `make` manage the high-level workflow and delegate the creation of particular files to domain-specific builders. This prevents the makefile from becoming too complicated.
+
+
