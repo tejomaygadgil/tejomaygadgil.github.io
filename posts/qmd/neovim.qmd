@@ -33,6 +33,10 @@ For Data Science / programming / note-taking / publishing I recommend the [Quart
 |`.`|Pastes the previous edit.|
 |`zb/zz/zt`|Adjust the screen to the bottom/middle/top without moving the cursor.|
 |`<ctrl>-i/o`|Go forward/backward in cursor position.|
+|`d/[string]`|Delete until string.|
 
+TODO
 
+- Vim macros
+- Vim marks
 
