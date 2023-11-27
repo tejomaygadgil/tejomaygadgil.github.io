@@ -10,7 +10,7 @@ format:
 image: ../img/missing.png
 ---
 
-This some fun stuff from the 2020 offering of the fantastic [./missing-semester](https://missing.csail.mit.edu/) class at MIT.
+Here's some fun / useful stuff I found from the 2020 offering of the excellent [./missing-semester](https://missing.csail.mit.edu/) course.
 
 Enjoy!
 
@@ -32,13 +32,15 @@ Enjoy!
 
 ### sudo
 
-`sudo` stands for "super user do".
+`sudo` stands for "super user do"[^2].
+
+[^2]: Obligatory: <https://xkcd.com/149/>.
 
 ## Shell tools and scripting
 
 ### Save values by setting variables
 
-Set variable using `x=[value]` with no spaces between anything.
+Set variable using `x=[value]` with no spaces around the equals sign.
 
 Access it with `echo $x`.
 
@@ -66,9 +68,9 @@ Some more variable names:
 |`$_`|Last argument of the last command. So we could have changed line 3 above to `cd "$_"`.|
 |`$#`|Number of arguments passed in.|
 |`!!`|Reruns the previous command. Useful for redoing things that failed due to permissions: `sudo !!`.|
-|`$?`|Exit code of the previous command. You can use it to catch errors with `||` and `&&`[^2].|
+|`$?`|Exit code of the previous command. You can use it to catch errors with `||` and `&&`[^3].|
 
-[^2]: <https://www.gnu.org/software/bash/manual/bash.html#Lists>
+[^3]: <https://www.gnu.org/software/bash/manual/bash.html#Lists>
 
 ### Command substitution saves output to a variable
 
@@ -99,7 +101,7 @@ For instance, `x=(pwd)` will save your working directory into `x`.
 find . -name '*.tmp' -exec rm {} \;
 ```
 
-### Alternatives to `find` for extra functionality
+### Alternatives to `find` with extra functionality
 
 |Command|Benefit|
 |---|---|
@@ -109,7 +111,7 @@ find . -name '*.tmp' -exec rm {} \;
 |`rg` (ripgrep)|Faster, modernized `grep`.|
 |`rga`|Use `rg` on PDFs, and other documents.|
 
-### Avoid re-typing commands using `history`
+### Use `history` to avoid re-typing commands
 
 |Command|Description|
 |---|---|
@@ -148,7 +150,7 @@ Hopefully it makes sense to you based on what you've read so far!
 |`V-BLOCK`|`<ctrl>-v`|
 |`COMMAND-LINE`|`:`|
 
-### Movement around swiftly using keyboard shortcuts
+### Movement around using keyboard shortcuts
 
 |Command|Description|
 |---|---|
@@ -254,9 +256,9 @@ ls *.pdf | sed -E 's/^(.+).pdf$/\1/'
 
 ### Manage multiple processes using job control
 
-You can control processes via standardized POSIX signals[^3] that interrupt, pause, background start, etc. programs: 
+You can control processes via standardized POSIX signals[^4] that interrupt, pause, background start, etc. programs: 
 
-[^3]: Look up `man signal` for a comprehensive list of every signal.
+[^4]: Look up `man signal` for a comprehensive list of every signal.
 
 |Shortcut|Description|
 |---|---|
