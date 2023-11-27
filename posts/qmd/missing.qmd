@@ -6,16 +6,17 @@ format:
     code-line-numbers: true
     number-sections: true
     toc: true
+    toc-title: Lectures
 image: ../img/missing.png
 ---
 
-This some fun stuff I picked up from the 2020 offering of the fantastic [./missing-semester](https://missing.csail.mit.edu/) class at MIT. 
+This some fun stuff from the 2020 offering of the fantastic [./missing-semester](https://missing.csail.mit.edu/) class at MIT.
 
 Enjoy!
 
 ## Shell basics
 
-### Redirection and piping
+### Use redirection and piping to link commands together
 
 - `>` and `<` redirect output from and to a file or stream.
 - `x < y` redirects `y` as input to `x`. 
@@ -35,13 +36,13 @@ Enjoy!
 
 ## Shell tools and scripting
 
-### Setting variables
+### Save values by setting variables
 
 Set variable using `x=[value]` with no spaces between anything.
 
 Access it with `echo $x`.
 
-### Bash scripts
+### How to write bash scripts
 
 We can write a bash script by copying the following into `mcd.sh`:
 
@@ -69,15 +70,13 @@ Some more variable names:
 
 [^2]: <https://www.gnu.org/software/bash/manual/bash.html#Lists>
 
-### Command substitution
+### Command substitution saves output to a variable
 
-You can store the output of a command into a variable using parentheses. For instance, `x=(pwd)` will save your working directory into `x`.
+For instance, `x=(pwd)` will save your working directory into `x`.
 
 **Process substitution** lets you pass command output into commands that expect a file instead of STDIN: `cat <(ls) <(ls ..)` will concatenate the contents of the current directory with that of its parent directory.
 
-### Globbing
-
-Grab files names using patterns with wildcards:
+### Grab files names using patterns with globbing wildcards
 
 |Wildcard|Description|
 |---|---|
@@ -85,7 +84,7 @@ Grab files names using patterns with wildcards:
 |`*`|Matches multiple positions: `x*` matches `x1` and `x10`.|
 |`{}`|Perform expansion of all values. Use multiple for Cartesian product; e.g. `echo {1,2}{3,4}` returns `13 14 23 24`. Use `{x..y..i}` to go from `x` to `y` with increment `i`.|
 
-### Useful shell commands
+### Useful misc. shell commands
 
 |Command|Description|Example|
 |---|---|---|
@@ -100,9 +99,7 @@ Grab files names using patterns with wildcards:
 find . -name '*.tmp' -exec rm {} \;
 ```
 
-### Alternatives to `find`
-
-Here are some options for extra functionality:
+### Alternatives to `find` for extra functionality
 
 |Command|Benefit|
 |---|---|
@@ -112,9 +109,7 @@ Here are some options for extra functionality:
 |`rg` (ripgrep)|Faster, modernized `grep`.|
 |`rga`|Use `rg` on PDFs, and other documents.|
 
-### Finding shell commands
-
-Use `history` to avoid re-typing commands:
+### Avoid re-typing commands using `history`
 
 |Command|Description|
 |---|---|
@@ -131,9 +126,7 @@ cat $(rg README <(apt show fzf) | cut -d ' ' -f 3)
 
 Hopefully it makes sense to you based on what you've read so far! 
 
-### Directory navigation
-
-Commands to view files:
+### Directory navigation commands
 
 |Command|Description|
 |---|---|
@@ -143,9 +136,7 @@ Commands to view files:
 
 ## Editors (Vim)
 
-### Modes 
-
-Vim is based on different _modes_: 
+### Vim operates in different modes 
 
 |Mode|How to enter|
 |---|---|
@@ -157,9 +148,7 @@ Vim is based on different _modes_:
 |`V-BLOCK`|`<ctrl>-v`|
 |`COMMAND-LINE`|`:`|
 
-### Movement
-
-Move around quickly using these commands:
+### Movement around swiftly using keyboard shortcuts
 
 |Command|Description|
 |---|---|
@@ -178,9 +167,7 @@ Move around quickly using these commands:
 
 You can do a lot of the movement commands n times, e.g. `[n]w` to go forward n words.
 
-### Editing
-
-These are the basic editing commands:
+### Edit text efficiently with commands
 
 |Command|Description|
 |---|---|
@@ -217,9 +204,7 @@ Find things with `/` followed by what you are looking for. Pressing `<enter>` wi
 
 ## Data wrangling
 
-### Stream editing
-
-Streams are sequences of elements that come in one at a time.
+### Stream editing processes sequences of elements
   
 There are a number of commands you can use to process streams:
 
@@ -237,9 +222,9 @@ Also worth mentioning:
 * `head`/`tail`
 * `bc` (calculator! Use with `-l` to read STDIN).
 
-### Regex
+### Regex is a language to capture text patterns
 
-Regular expressions is a language for expressing text patterns. Here are some common building blocks:
+Here are some common building blocks:
 
 |Expression|Description|
 |---|---|
@@ -267,5 +252,43 @@ ls *.pdf | sed -E 's/^(.+).pdf$/\1/'
 
 ## Command-line environment
 
-###
+### Manage multiple processes using job control
+
+You can control processes via standardized POSIX signals[^3] that interrupt, pause, background start, etc. programs: 
+
+[^3]: Look up `man signal` for a comprehensive list of every signal.
+
+|Shortcut|Description|
+|---|---|
+`<ctrl>-c`|`SIGINT`, interrupts the current process.
+|`<ctrl>-\`|`SIGQUIT`, quits the process similar to `SIGINT`.|
+|`<ctrl>-z`|`SIGSTOP`, suspends the current process.|
+
+You can catch these signals to add functionality like saving program state when interrupted for instance.
+
+There are also commands to manage unfinished processes:
+
+|Command|Description|
+|---|---|
+|`jobs`|View unfinished jobs. `-l` to list PID (Process ID), `-p` only list PID, etc. (cf. `tldr jobs`).|
+|`ps`|Get a snapshot of processes. Similar to `jobs`.|
+|`bg %n/PID`|Continue unfinished job in the background using `%n` position in `jobs` queue or PID.|
+|`fg %n\PID`|Bring a background process to the foreground and resume it if it was paused.|
+|`kill %n/PID`|Terminate job.|
+|`nohup`|Continue job even if terminal session is closed by by ignoring `SIGHUP` hangup signal.|
+|`disown %n/PID`|`nohup` already running jobs from current session.|
+|`[process] &`| Start command in background (will print to STDOUT unless redirected).|
+
+### Multiplexers enable multitasking within a single session
+
+`tmux`, a popular multiplexer provides the following hierarchy:
+
+* **Sessions** are an independent workspace.
+* **Windows** are like tabs within a workspace.
+* **Panes** are individual splits within a window.
+
+Once a session is started (`tmux new -s NAME`) commands are bound to `<ctrl>-b` (though a common modification is to remap to `<ctrl>-a`).
+
+Then you can create new windows and rearrange panes. Use `<ctrl>-b + ?` for a list of options.
+
 
