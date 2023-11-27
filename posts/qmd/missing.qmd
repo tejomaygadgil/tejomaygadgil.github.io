@@ -10,7 +10,9 @@ format:
 image: ../img/missing.png
 ---
 
-Here's some fun / useful stuff I found from the 2020 offering of the excellent [./missing-semester](https://missing.csail.mit.edu/) course.
+Here's what I picked up on from the 2020 offering of the excellent [./missing-semester](https://missing.csail.mit.edu/) course.
+
+The document is written as a reference so the discussion should be relatively self-contained.
 
 Enjoy!
 
