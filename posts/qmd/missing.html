@@ -98,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -157,19 +157,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Lectures</h2>
+   
+  <ul>
+  <li><a href="#shell-basics" id="toc-shell-basics" class="nav-link active" data-scroll-target="#shell-basics"><span class="header-section-number">1</span> Shell basics</a>
+  <ul class="collapse">
+  <li><a href="#use-redirection-and-piping-to-link-commands-together" id="toc-use-redirection-and-piping-to-link-commands-together" class="nav-link" data-scroll-target="#use-redirection-and-piping-to-link-commands-together"><span class="header-section-number">1.1</span> Use redirection and piping to link commands together</a></li>
+  <li><a href="#use-single-quotations-to-nullify-meaning" id="toc-use-single-quotations-to-nullify-meaning" class="nav-link" data-scroll-target="#use-single-quotations-to-nullify-meaning"><span class="header-section-number">1.2</span> Use single quotations to nullify meaning</a></li>
+  <li><a href="#sudo" id="toc-sudo" class="nav-link" data-scroll-target="#sudo"><span class="header-section-number">1.3</span> sudo</a></li>
+  </ul></li>
+  <li><a href="#shell-tools-and-scripting" id="toc-shell-tools-and-scripting" class="nav-link" data-scroll-target="#shell-tools-and-scripting"><span class="header-section-number">2</span> Shell tools and scripting</a>
+  <ul class="collapse">
+  <li><a href="#save-values-by-setting-variables" id="toc-save-values-by-setting-variables" class="nav-link" data-scroll-target="#save-values-by-setting-variables"><span class="header-section-number">2.1</span> Save values by setting variables</a></li>
+  <li><a href="#how-to-write-bash-scripts" id="toc-how-to-write-bash-scripts" class="nav-link" data-scroll-target="#how-to-write-bash-scripts"><span class="header-section-number">2.2</span> How to write bash scripts</a></li>
+  <li><a href="#command-substitution-saves-output-to-a-variable" id="toc-command-substitution-saves-output-to-a-variable" class="nav-link" data-scroll-target="#command-substitution-saves-output-to-a-variable"><span class="header-section-number">2.3</span> Command substitution saves output to a variable</a></li>
+  <li><a href="#grab-files-names-using-patterns-with-globbing-wildcards" id="toc-grab-files-names-using-patterns-with-globbing-wildcards" class="nav-link" data-scroll-target="#grab-files-names-using-patterns-with-globbing-wildcards"><span class="header-section-number">2.4</span> Grab files names using patterns with globbing wildcards</a></li>
+  <li><a href="#useful-misc.-shell-commands" id="toc-useful-misc.-shell-commands" class="nav-link" data-scroll-target="#useful-misc.-shell-commands"><span class="header-section-number">2.5</span> Useful misc. shell commands</a></li>
+  <li><a href="#alternatives-to-find-for-extra-functionality" id="toc-alternatives-to-find-for-extra-functionality" class="nav-link" data-scroll-target="#alternatives-to-find-for-extra-functionality"><span class="header-section-number">2.6</span> Alternatives to <code>find</code> for extra functionality</a></li>
+  <li><a href="#avoid-re-typing-commands-using-history" id="toc-avoid-re-typing-commands-using-history" class="nav-link" data-scroll-target="#avoid-re-typing-commands-using-history"><span class="header-section-number">2.7</span> Avoid re-typing commands using <code>history</code></a></li>
+  <li><a href="#directory-navigation-commands" id="toc-directory-navigation-commands" class="nav-link" data-scroll-target="#directory-navigation-commands"><span class="header-section-number">2.8</span> Directory navigation commands</a></li>
+  </ul></li>
+  <li><a href="#editors-vim" id="toc-editors-vim" class="nav-link" data-scroll-target="#editors-vim"><span class="header-section-number">3</span> Editors (Vim)</a>
+  <ul class="collapse">
+  <li><a href="#vim-operates-in-different-modes" id="toc-vim-operates-in-different-modes" class="nav-link" data-scroll-target="#vim-operates-in-different-modes"><span class="header-section-number">3.1</span> Vim operates in different modes</a></li>
+  <li><a href="#movement-around-swiftly-using-keyboard-shortcuts" id="toc-movement-around-swiftly-using-keyboard-shortcuts" class="nav-link" data-scroll-target="#movement-around-swiftly-using-keyboard-shortcuts"><span class="header-section-number">3.2</span> Movement around swiftly using keyboard shortcuts</a></li>
+  <li><a href="#edit-text-efficiently-with-commands" id="toc-edit-text-efficiently-with-commands" class="nav-link" data-scroll-target="#edit-text-efficiently-with-commands"><span class="header-section-number">3.3</span> Edit text efficiently with commands</a></li>
+  <li><a href="#modifiers" id="toc-modifiers" class="nav-link" data-scroll-target="#modifiers"><span class="header-section-number">3.4</span> Modifiers</a></li>
+  <li><a href="#find" id="toc-find" class="nav-link" data-scroll-target="#find"><span class="header-section-number">3.5</span> Find</a></li>
+  </ul></li>
+  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling"><span class="header-section-number">4</span> Data wrangling</a>
+  <ul class="collapse">
+  <li><a href="#stream-editing-processes-sequences-of-elements" id="toc-stream-editing-processes-sequences-of-elements" class="nav-link" data-scroll-target="#stream-editing-processes-sequences-of-elements"><span class="header-section-number">4.1</span> Stream editing processes sequences of elements</a></li>
+  <li><a href="#regex-is-a-language-to-capture-text-patterns" id="toc-regex-is-a-language-to-capture-text-patterns" class="nav-link" data-scroll-target="#regex-is-a-language-to-capture-text-patterns"><span class="header-section-number">4.2</span> Regex is a language to capture text patterns</a></li>
+  </ul></li>
+  <li><a href="#command-line-environment" id="toc-command-line-environment" class="nav-link" data-scroll-target="#command-line-environment"><span class="header-section-number">5</span> Command-line environment</a>
+  <ul class="collapse">
+  <li><a href="#manage-multiple-processes-using-job-control" id="toc-manage-multiple-processes-using-job-control" class="nav-link" data-scroll-target="#manage-multiple-processes-using-job-control"><span class="header-section-number">5.1</span> Manage multiple processes using job control</a></li>
+  <li><a href="#multiplexers-enable-multitasking-within-a-single-session" id="toc-multiplexers-enable-multitasking-within-a-single-session" class="nav-link" data-scroll-target="#multiplexers-enable-multitasking-within-a-single-session"><span class="header-section-number">5.2</span> Multiplexers enable multitasking within a single session</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p>This some fun stuff I picked up from the 2020 offering of the fantastic <a href="https://missing.csail.mit.edu/">./missing-semester</a> class at MIT.</p>
+<p>This some fun stuff from the 2020 offering of the fantastic <a href="https://missing.csail.mit.edu/">./missing-semester</a> class at MIT.</p>
 <p>Enjoy!</p>
 <section id="shell-basics" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="shell-basics"><span class="header-section-number">1</span> Shell basics</h2>
-<section id="redirection-and-piping" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="redirection-and-piping"><span class="header-section-number">1.1</span> Redirection and piping</h3>
+<section id="use-redirection-and-piping-to-link-commands-together" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="use-redirection-and-piping-to-link-commands-together"><span class="header-section-number">1.1</span> Use redirection and piping to link commands together</h3>
 <ul>
 <li><code>&gt;</code> and <code>&lt;</code> redirect output from and to a file or stream.</li>
 <li><code>x &lt; y</code> redirects <code>y</code> as input to <code>x</code>.</li>
@@ -191,13 +233,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="shell-tools-and-scripting" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="shell-tools-and-scripting"><span class="header-section-number">2</span> Shell tools and scripting</h2>
-<section id="setting-variables" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="setting-variables"><span class="header-section-number">2.1</span> Setting variables</h3>
+<section id="save-values-by-setting-variables" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="save-values-by-setting-variables"><span class="header-section-number">2.1</span> Save values by setting variables</h3>
 <p>Set variable using <code>x=[value]</code> with no spaces between anything.</p>
 <p>Access it with <code>echo $x</code>.</p>
 </section>
-<section id="bash-scripts" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="bash-scripts"><span class="header-section-number">2.2</span> Bash scripts</h3>
+<section id="how-to-write-bash-scripts" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="how-to-write-bash-scripts"><span class="header-section-number">2.2</span> How to write bash scripts</h3>
 <p>We can write a bash script by copying the following into <code>mcd.sh</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>mcd () {</span>
 <span id="cb1-2"><a href="#cb1-2"></a>  mkir -p "$1"</span>
@@ -241,14 +283,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="command-substitution" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="command-substitution"><span class="header-section-number">2.3</span> Command substitution</h3>
-<p>You can store the output of a command into a variable using parentheses. For instance, <code>x=(pwd)</code> will save your working directory into <code>x</code>.</p>
+<section id="command-substitution-saves-output-to-a-variable" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="command-substitution-saves-output-to-a-variable"><span class="header-section-number">2.3</span> Command substitution saves output to a variable</h3>
+<p>For instance, <code>x=(pwd)</code> will save your working directory into <code>x</code>.</p>
 <p><strong>Process substitution</strong> lets you pass command output into commands that expect a file instead of STDIN: <code>cat &lt;(ls) &lt;(ls ..)</code> will concatenate the contents of the current directory with that of its parent directory.</p>
 </section>
-<section id="globbing" class="level3" data-number="2.4">
-<h3 data-number="2.4" class="anchored" data-anchor-id="globbing"><span class="header-section-number">2.4</span> Globbing</h3>
-<p>Grab files names using patterns with wildcards:</p>
+<section id="grab-files-names-using-patterns-with-globbing-wildcards" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="grab-files-names-using-patterns-with-globbing-wildcards"><span class="header-section-number">2.4</span> Grab files names using patterns with globbing wildcards</h3>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -276,8 +317,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="useful-shell-commands" class="level3" data-number="2.5">
-<h3 data-number="2.5" class="anchored" data-anchor-id="useful-shell-commands"><span class="header-section-number">2.5</span> Useful shell commands</h3>
+<section id="useful-misc.-shell-commands" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="useful-misc.-shell-commands"><span class="header-section-number">2.5</span> Useful misc. shell commands</h3>
 <table class="table">
 <colgroup>
 <col style="width: 33%">
@@ -313,9 +354,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a># Delete all files with .tmp extension</span>
 <span id="cb2-2"><a href="#cb2-2"></a>find . -name '*.tmp' -exec rm {} \;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="alternatives-to-find" class="level3" data-number="2.6">
-<h3 data-number="2.6" class="anchored" data-anchor-id="alternatives-to-find"><span class="header-section-number">2.6</span> Alternatives to <code>find</code></h3>
-<p>Here are some options for extra functionality:</p>
+<section id="alternatives-to-find-for-extra-functionality" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="alternatives-to-find-for-extra-functionality"><span class="header-section-number">2.6</span> Alternatives to <code>find</code> for extra functionality</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -347,9 +387,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="finding-shell-commands" class="level3" data-number="2.7">
-<h3 data-number="2.7" class="anchored" data-anchor-id="finding-shell-commands"><span class="header-section-number">2.7</span> Finding shell commands</h3>
-<p>Use <code>history</code> to avoid re-typing commands:</p>
+<section id="avoid-re-typing-commands-using-history" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="avoid-re-typing-commands-using-history"><span class="header-section-number">2.7</span> Avoid re-typing commands using <code>history</code></h3>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -384,9 +423,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>cat $(rg README &lt;(apt show fzf) | cut -d ' ' -f 3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Hopefully it makes sense to you based on what you’ve read so far!</p>
 </section>
-<section id="directory-navigation" class="level3" data-number="2.8">
-<h3 data-number="2.8" class="anchored" data-anchor-id="directory-navigation"><span class="header-section-number">2.8</span> Directory navigation</h3>
-<p>Commands to view files:</p>
+<section id="directory-navigation-commands" class="level3" data-number="2.8">
+<h3 data-number="2.8" class="anchored" data-anchor-id="directory-navigation-commands"><span class="header-section-number">2.8</span> Directory navigation commands</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -413,9 +451,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="editors-vim" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="editors-vim"><span class="header-section-number">3</span> Editors (Vim)</h2>
-<section id="modes" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="modes"><span class="header-section-number">3.1</span> Modes</h3>
-<p>Vim is based on different <em>modes</em>:</p>
+<section id="vim-operates-in-different-modes" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="vim-operates-in-different-modes"><span class="header-section-number">3.1</span> Vim operates in different modes</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -455,9 +492,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="movement" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="movement"><span class="header-section-number">3.2</span> Movement</h3>
-<p>Move around quickly using these commands:</p>
+<section id="movement-around-swiftly-using-keyboard-shortcuts" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="movement-around-swiftly-using-keyboard-shortcuts"><span class="header-section-number">3.2</span> Movement around swiftly using keyboard shortcuts</h3>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -522,9 +558,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p>You can do a lot of the movement commands n times, e.g.&nbsp;<code>[n]w</code> to go forward n words.</p>
 </section>
-<section id="editing" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="editing"><span class="header-section-number">3.3</span> Editing</h3>
-<p>These are the basic editing commands:</p>
+<section id="edit-text-efficiently-with-commands" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="edit-text-efficiently-with-commands"><span class="header-section-number">3.3</span> Edit text efficiently with commands</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -605,9 +640,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="data-wrangling" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="data-wrangling"><span class="header-section-number">4</span> Data wrangling</h2>
-<section id="stream-editing" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="stream-editing"><span class="header-section-number">4.1</span> Stream editing</h3>
-<p>Streams are sequences of elements that come in one at a time.</p>
+<section id="stream-editing-processes-sequences-of-elements" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="stream-editing-processes-sequences-of-elements"><span class="header-section-number">4.1</span> Stream editing processes sequences of elements</h3>
 <p>There are a number of commands you can use to process streams:</p>
 <table class="table">
 <colgroup>
@@ -649,9 +683,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>bc</code> (calculator! Use with <code>-l</code> to read STDIN).</li>
 </ul>
 </section>
-<section id="regex" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="regex"><span class="header-section-number">4.2</span> Regex</h3>
-<p>Regular expressions is a language for expressing text patterns. Here are some common building blocks:</p>
+<section id="regex-is-a-language-to-capture-text-patterns" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="regex-is-a-language-to-capture-text-patterns"><span class="header-section-number">4.2</span> Regex is a language to capture text patterns</h3>
+<p>Here are some common building blocks:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -714,6 +748,94 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Create a <strong>capture group</strong> around an expression using parentheses <code>()</code>. Then you can select it positionally in a replace statement using <code>\n</code> to indicate the nth group:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a># Return just the filenames from a list of PDFs.</span>
 <span id="cb4-2"><a href="#cb4-2"></a>ls *.pdf | sed -E 's/^(.+).pdf$/\1/'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="command-line-environment" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="command-line-environment"><span class="header-section-number">5</span> Command-line environment</h2>
+<section id="manage-multiple-processes-using-job-control" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="manage-multiple-processes-using-job-control"><span class="header-section-number">5.1</span> Manage multiple processes using job control</h3>
+<p>You can control processes via standardized POSIX signals<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> that interrupt, pause, background start, etc. programs:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&lt;ctrl&gt;-c</code></td>
+<td><code>SIGINT</code>, interrupts the current process.</td>
+</tr>
+<tr class="even">
+<td><code>&lt;ctrl&gt;-\</code></td>
+<td><code>SIGQUIT</code>, quits the process similar to <code>SIGINT</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;ctrl&gt;-z</code></td>
+<td><code>SIGSTOP</code>, suspends the current process.</td>
+</tr>
+</tbody>
+</table>
+<p>You can catch these signals to add functionality like saving program state when interrupted for instance.</p>
+<p>There are also commands to manage unfinished processes:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>jobs</code></td>
+<td>View unfinished jobs. <code>-l</code> to list PID (Process ID), <code>-p</code> only list PID, etc. (cf.&nbsp;<code>tldr jobs</code>).</td>
+</tr>
+<tr class="even">
+<td><code>ps</code></td>
+<td>Get a snapshot of processes. Similar to <code>jobs</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>bg %n/PID</code></td>
+<td>Continue unfinished job in the background using <code>%n</code> position in <code>jobs</code> queue or PID.</td>
+</tr>
+<tr class="even">
+<td><code>fg %n\PID</code></td>
+<td>Bring a background process to the foreground and resume it if it was paused.</td>
+</tr>
+<tr class="odd">
+<td><code>kill %n/PID</code></td>
+<td>Terminate job.</td>
+</tr>
+<tr class="even">
+<td><code>nohup</code></td>
+<td>Continue job even if terminal session is closed by by ignoring <code>SIGHUP</code> hangup signal.</td>
+</tr>
+<tr class="odd">
+<td><code>disown %n/PID</code></td>
+<td><code>nohup</code> already running jobs from current session.</td>
+</tr>
+<tr class="even">
+<td><code>[process] &amp;</code></td>
+<td>Start command in background (will print to STDOUT unless redirected).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="multiplexers-enable-multitasking-within-a-single-session" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="multiplexers-enable-multitasking-within-a-single-session"><span class="header-section-number">5.2</span> Multiplexers enable multitasking within a single session</h3>
+<p><code>tmux</code>, a popular multiplexer provides the following hierarchy:</p>
+<ul>
+<li><strong>Sessions</strong> are an independent workspace.</li>
+<li><strong>Windows</strong> are like tabs within a workspace.</li>
+<li><strong>Panes</strong> are individual splits within a window.</li>
+</ul>
+<p>Once a session is started (<code>tmux new -s NAME</code>) commands are bound to <code>&lt;ctrl&gt;-b</code> (though a common modification is to remap to <code>&lt;ctrl&gt;-a</code>).</p>
+<p>Then you can create new windows and rearrange panes. Use <code>&lt;ctrl&gt;-b + ?</code> for a list of options.</p>
 
 
 </section>
@@ -725,6 +847,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol>
 <li id="fn1"><p><a href="https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html" class="uri">https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p><a href="https://www.gnu.org/software/bash/manual/bash.html#Lists" class="uri">https://www.gnu.org/software/bash/manual/bash.html#Lists</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Look up <code>man signal</code> for a comprehensive list of every signal.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
