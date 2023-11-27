@@ -307,4 +307,14 @@ Commits contain the hash values of the root directory. The root directory itself
 
 Use `git cat-file -p [commit hash]` to explore your commits!
 
+### Useful Git commands
+
+|Command|Description|
+|---|---|
+|`git clone --depth=1`|Clone a git repository without the commit history.|
+|`git add -p [file]`|Select lines of code within a file to add (patch).|
+|`git blame [file]`|See who and which commit authored each line of a file.|
+|`git show [commit]`|Display what changed in each commit.|
+
+[How to write good commits](https://cbea.ms/git-commit/).
 
