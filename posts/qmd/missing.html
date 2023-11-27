@@ -175,14 +175,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#command-substitution-saves-output-to-a-variable" id="toc-command-substitution-saves-output-to-a-variable" class="nav-link" data-scroll-target="#command-substitution-saves-output-to-a-variable"><span class="header-section-number">2.3</span> Command substitution saves output to a variable</a></li>
   <li><a href="#grab-files-names-using-patterns-with-globbing-wildcards" id="toc-grab-files-names-using-patterns-with-globbing-wildcards" class="nav-link" data-scroll-target="#grab-files-names-using-patterns-with-globbing-wildcards"><span class="header-section-number">2.4</span> Grab files names using patterns with globbing wildcards</a></li>
   <li><a href="#useful-misc.-shell-commands" id="toc-useful-misc.-shell-commands" class="nav-link" data-scroll-target="#useful-misc.-shell-commands"><span class="header-section-number">2.5</span> Useful misc. shell commands</a></li>
-  <li><a href="#alternatives-to-find-for-extra-functionality" id="toc-alternatives-to-find-for-extra-functionality" class="nav-link" data-scroll-target="#alternatives-to-find-for-extra-functionality"><span class="header-section-number">2.6</span> Alternatives to <code>find</code> for extra functionality</a></li>
-  <li><a href="#avoid-re-typing-commands-using-history" id="toc-avoid-re-typing-commands-using-history" class="nav-link" data-scroll-target="#avoid-re-typing-commands-using-history"><span class="header-section-number">2.7</span> Avoid re-typing commands using <code>history</code></a></li>
+  <li><a href="#alternatives-to-find-with-extra-functionality" id="toc-alternatives-to-find-with-extra-functionality" class="nav-link" data-scroll-target="#alternatives-to-find-with-extra-functionality"><span class="header-section-number">2.6</span> Alternatives to <code>find</code> with extra functionality</a></li>
+  <li><a href="#use-history-to-avoid-re-typing-commands" id="toc-use-history-to-avoid-re-typing-commands" class="nav-link" data-scroll-target="#use-history-to-avoid-re-typing-commands"><span class="header-section-number">2.7</span> Use <code>history</code> to avoid re-typing commands</a></li>
   <li><a href="#directory-navigation-commands" id="toc-directory-navigation-commands" class="nav-link" data-scroll-target="#directory-navigation-commands"><span class="header-section-number">2.8</span> Directory navigation commands</a></li>
   </ul></li>
   <li><a href="#editors-vim" id="toc-editors-vim" class="nav-link" data-scroll-target="#editors-vim"><span class="header-section-number">3</span> Editors (Vim)</a>
   <ul class="collapse">
   <li><a href="#vim-operates-in-different-modes" id="toc-vim-operates-in-different-modes" class="nav-link" data-scroll-target="#vim-operates-in-different-modes"><span class="header-section-number">3.1</span> Vim operates in different modes</a></li>
-  <li><a href="#movement-around-swiftly-using-keyboard-shortcuts" id="toc-movement-around-swiftly-using-keyboard-shortcuts" class="nav-link" data-scroll-target="#movement-around-swiftly-using-keyboard-shortcuts"><span class="header-section-number">3.2</span> Movement around swiftly using keyboard shortcuts</a></li>
+  <li><a href="#movement-around-using-keyboard-shortcuts" id="toc-movement-around-using-keyboard-shortcuts" class="nav-link" data-scroll-target="#movement-around-using-keyboard-shortcuts"><span class="header-section-number">3.2</span> Movement around using keyboard shortcuts</a></li>
   <li><a href="#edit-text-efficiently-with-commands" id="toc-edit-text-efficiently-with-commands" class="nav-link" data-scroll-target="#edit-text-efficiently-with-commands"><span class="header-section-number">3.3</span> Edit text efficiently with commands</a></li>
   <li><a href="#modifiers-select-text-within-blocks" id="toc-modifiers-select-text-within-blocks" class="nav-link" data-scroll-target="#modifiers-select-text-within-blocks"><span class="header-section-number">3.4</span> Modifiers select text within blocks</a></li>
   <li><a href="#find" id="toc-find" class="nav-link" data-scroll-target="#find"><span class="header-section-number">3.5</span> Find</a></li>
@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>This some fun stuff from the 2020 offering of the fantastic <a href="https://missing.csail.mit.edu/">./missing-semester</a> class at MIT.</p>
+<p>Here’s some fun / useful stuff I found from the 2020 offering of the excellent <a href="https://missing.csail.mit.edu/">./missing-semester</a> course.</p>
 <p>Enjoy!</p>
 <section id="shell-basics" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="shell-basics"><span class="header-section-number">1</span> Shell basics</h2>
@@ -233,14 +233,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sudo" class="level3" data-number="1.3">
 <h3 data-number="1.3" class="anchored" data-anchor-id="sudo"><span class="header-section-number">1.3</span> sudo</h3>
-<p><code>sudo</code> stands for “super user do”.</p>
+<p><code>sudo</code> stands for “super user do”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 </section>
 </section>
 <section id="shell-tools-and-scripting" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="shell-tools-and-scripting"><span class="header-section-number">2</span> Shell tools and scripting</h2>
 <section id="save-values-by-setting-variables" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="save-values-by-setting-variables"><span class="header-section-number">2.1</span> Save values by setting variables</h3>
-<p>Set variable using <code>x=[value]</code> with no spaces between anything.</p>
+<p>Set variable using <code>x=[value]</code> with no spaces around the equals sign.</p>
 <p>Access it with <code>echo $x</code>.</p>
 </section>
 <section id="how-to-write-bash-scripts" class="level3" data-number="2.2">
@@ -283,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><code>$?</code></td>
-<td>Exit code of the previous command. You can use it to catch errors with <code>||</code> and <code>&amp;&amp;</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</td>
+<td>Exit code of the previous command. You can use it to catch errors with <code>||</code> and <code>&amp;&amp;</code><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</td>
 </tr>
 </tbody>
 </table>
@@ -359,8 +359,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {{bash}} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a># Delete all files with .tmp extension</span>
 <span id="cb2-2"><a href="#cb2-2"></a>find . -name '*.tmp' -exec rm {} \;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="alternatives-to-find-for-extra-functionality" class="level3" data-number="2.6">
-<h3 data-number="2.6" class="anchored" data-anchor-id="alternatives-to-find-for-extra-functionality"><span class="header-section-number">2.6</span> Alternatives to <code>find</code> for extra functionality</h3>
+<section id="alternatives-to-find-with-extra-functionality" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="alternatives-to-find-with-extra-functionality"><span class="header-section-number">2.6</span> Alternatives to <code>find</code> with extra functionality</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -392,8 +392,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="avoid-re-typing-commands-using-history" class="level3" data-number="2.7">
-<h3 data-number="2.7" class="anchored" data-anchor-id="avoid-re-typing-commands-using-history"><span class="header-section-number">2.7</span> Avoid re-typing commands using <code>history</code></h3>
+<section id="use-history-to-avoid-re-typing-commands" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="use-history-to-avoid-re-typing-commands"><span class="header-section-number">2.7</span> Use <code>history</code> to avoid re-typing commands</h3>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -497,8 +497,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="movement-around-swiftly-using-keyboard-shortcuts" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="movement-around-swiftly-using-keyboard-shortcuts"><span class="header-section-number">3.2</span> Movement around swiftly using keyboard shortcuts</h3>
+<section id="movement-around-using-keyboard-shortcuts" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="movement-around-using-keyboard-shortcuts"><span class="header-section-number">3.2</span> Movement around using keyboard shortcuts</h3>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -759,7 +759,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="5" class="anchored" data-anchor-id="command-line-environment"><span class="header-section-number">5</span> Command-line environment</h2>
 <section id="manage-multiple-processes-using-job-control" class="level3" data-number="5.1">
 <h3 data-number="5.1" class="anchored" data-anchor-id="manage-multiple-processes-using-job-control"><span class="header-section-number">5.1</span> Manage multiple processes using job control</h3>
-<p>You can control processes via standardized POSIX signals<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> that interrupt, pause, background start, etc. programs:</p>
+<p>You can control processes via standardized POSIX signals<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> that interrupt, pause, background start, etc. programs:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -897,8 +897,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <ol>
 <li id="fn1"><p><a href="https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html" class="uri">https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://www.gnu.org/software/bash/manual/bash.html#Lists" class="uri">https://www.gnu.org/software/bash/manual/bash.html#Lists</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Look up <code>man signal</code> for a comprehensive list of every signal.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Obligatory: <a href="https://xkcd.com/149/" class="uri">https://xkcd.com/149/</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://www.gnu.org/software/bash/manual/bash.html#Lists" class="uri">https://www.gnu.org/software/bash/manual/bash.html#Lists</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Look up <code>man signal</code> for a comprehensive list of every signal.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
