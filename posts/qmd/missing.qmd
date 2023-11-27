@@ -185,7 +185,7 @@ Editing commands can modified via movement commands, e.g. `dw` will delete a wor
 
 Quickly duplicate a line with `yy p`.
 
-### Modifiers
+### Modifiers select text within blocks
 
 |Modifier|Description|
 |---|---|
@@ -228,7 +228,7 @@ Here are some common building blocks:
 
 |Expression|Description|
 |---|---|
-|`.`|Any character.|](https://missing.csail.mit.edu/2020/editors/)
+|`.`|Any character.|
 |`[...]`|A set of characters.|
 |`[^...]`|The opposite of the set.|
 |`(x|y|...)`|A set of strings.|
@@ -279,6 +279,8 @@ There are also commands to manage unfinished processes:
 |`disown %n/PID`|`nohup` already running jobs from current session.|
 |`[process] &`| Start command in background (will print to STDOUT unless redirected).|
 
+`<ctrl>-z` followed by `bg` will send a currently running process to execute in the background.
+
 ### Multiplexers enable multitasking within a single session
 
 `tmux`, a popular multiplexer provides the following hierarchy:
@@ -290,5 +292,7 @@ There are also commands to manage unfinished processes:
 Once a session is started (`tmux new -s NAME`) commands are bound to `<ctrl>-b` (though a common modification is to remap to `<ctrl>-a`).
 
 Then you can create new windows and rearrange panes. Use `<ctrl>-b + ?` for a list of options.
+
+Also feel free to consult this [tutorial](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) and its [followup](https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/) on customization.
 
 
