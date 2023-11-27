@@ -395,4 +395,19 @@ There are [great tutorials](https://makefiletutorial.com/) on how to write a goo
 
 It's a good idea to have `make` manage the high-level workflow and delegate the creation of particular files to domain-specific builders. This prevents the makefile from becoming too complicated.
 
+### Semantic versioning enables dependency management
+
+Semantic versioning is a popular form of program versioning that allows you to tell at a glance whether a version is compatible for your software:
+
+```
+version = major.minor.patch
+```
+
+* `patch` updates do not change the API.
+* `minor` updates add to the API and are backwards compatible.
+* `major` updates change the API in a non-backwards-compatible way.
+
+This framework allows dependency managers ensure program stability by accepting minor updates, for instance, and rejecting major updates until the code is refactored.
+
+Python uses semantic versioning. It is why Python 2 scripts are not compatible with Python 3, and vice-versa.
 
