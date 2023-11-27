@@ -323,7 +323,7 @@ Use `git cat-file -p [commit hash]` to explore your commits!
 
 Guide: [how to write good commits](https://cbea.ms/git-commit/).
 
-## Debugging and profiling
+## Debugging
 
 ### Loggers collect print statements for later analysis
 
@@ -339,9 +339,9 @@ Logs let you inspect runs to track and resolve issues over time. This strategy p
 
 ### Debuggers help you fix code interactively
 
-Debuggers are programs that let you step through code interactively and re-run sections so you can figure out what the code is doing.
+Debuggers are programs that let you step through code interactively so you can figure out what it is doing.
 
-`ipdb`[^6] is like Python's built-in `pdb` but includes niceties such as colored output, tab completion and so on. You start `ipdb` by running `python -m ipdb [script]`.
+`ipdb`[^6] is Python's built-in `pdb` with niceties such as colored output, tab completion and so on. You start it by running `python -m ipdb [script]`.
 
 [^6]: <https://github.com/gotcha/ipdb>
 
@@ -361,4 +361,12 @@ These are some useful commands for `pdb`/`ipdb`:
 
 General debuggers like `gdb` work on any language and provide low-level information on hardware registers etc..
 
+### Static analyzers fix programming errors and formatting issues
 
+Linters check code for logical issues such as referencing an undefined variable. They will typically not edit code but instead highlight the issue for the programmer to fix. Examples include `pyflakes`, and `flake8`. 
+
+Formatters standardize code and ensure compliance with style guides such as [PEP](https://peps.python.org/pep-0008/). They usually edit the file for you. Examples include `autopep8`, `black`, and `isort`.
+
+`ruff`[^7] is a new linter and formatter offering 10-100x faster performance.
+
+[^7]: <https://github.com/astral-sh/ruff>
