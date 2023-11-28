@@ -1,6 +1,6 @@
 ---
 title: Introduction to Aristotle's *Categories*
-subtitle: The introduction of a difficulty, and the difficlties of an introduction
+subtitle: The introduction of a difficulty, and the difficulty of an introduction
 date: "2023-11-07"
 format:
   html:
