@@ -25,10 +25,19 @@ page-layout: full
 title-block-banner: true
 ---
 
+## Resources
+
+Concise summaries of Data Science tools and courses.
+
+:::{#resources}
+:::
+
+
 ## Writings
+
+In my spare time I enjoy studying language and philosophy.
+
 :::{#posts}
 :::
 
-## Notes and resources
-:::{#resources}
-:::
+
