@@ -1,6 +1,6 @@
 ---
 title: Introduction to Aristotle's *Categories*
-subtitle: Understand the most importantly inscrutable essay in the history of philosophy.
+subtitle: Get drawn into the most remarkable essay in the history of philosophy.
 date: "2023-11-07"
 format:
   html:
@@ -41,9 +41,9 @@ Utterances (τὰ λεγόμενα) can be interwoven or not: the former makes s
 
 Beings (τὰ ὄντα) can distinguished in two ways: as predicates, or as properties.
 
-Predicates describe a subject (καθ' ὑποκειμένου λέγεται). Man, for instance, is the entity that characterizes a person, and tall is something that describes a redwood tree. Predicates are always generic.
+Predicates define a subject (καθ' ὑποκειμένου λέγεται). Man, for instance, is the entity that defines a person, and color defines what blue is. Predicates are always generic.
 
-Particular things are the opposite of a predicate. You cannot describe anything using a particular. Particulars cannot complete a sentence of the type "X is \_\_\_."
+Particular things are the opposite of a predicate. You cannot define anything using a particular. Particulars cannot complete a sentence of the type "X is \_\_\_."
 
 Consider your phone. It is a particular entity. *Your phone could never describe another entity*; rather it can only *be* described by generic predicates such as model number, color, size, shape, and so on. Even the seeming counter-example "My favorite thing is this phone," is actually the anastrophe of the proper statement "This phone is my favorite thing", where "favorite thing" is a predicate.
 
@@ -51,7 +51,7 @@ Properties belong to a subject (ἐν ὑποκειμένῳ ἐστιν). Examp
 
 Substance (ἡ οὐσία) opposes property. And what is that, substance? Indeed, the rest of this work -- and the overall movement of philosophy itself -- will radically address this question. But for the time being, you can think of substance as *individuality*: that by which you can single out something particular as being something particular.
 
-But what about the subject? If predicates describe a subject, and properties belong in a subject, shouldn't the subject oppose them instead of particulars and substance?
+But what about the subject? If predicates define a subject, and properties belong in a subject, shouldn't the subject oppose them instead of particulars and substance?
 
 Not exactly, because predicates and properties can themselves be subjects! For the human that this man is *is itself* an animal, and for this man who wears a jacket that is green, that green *is itself* a color. Then a subject can either be a particular thing, or predicates describing that thing, properties belonging in that thing, or predicates describing those properties.
 
@@ -66,16 +66,16 @@ The two conditions by which we can distinguish beings, as predicates or as prope
 
 Here everything interlaces in a complex crossing:
 
--   **Property predicates** are generic descriptors of properties: knowledge, color, shape, and so on.
--   **Substantial predicates** are generic descriptors of particulars: human, horse, cars, and more general labels like animal, vehicle, and so on.
+-   **Property predicates** are define properties: knowledge, color, shape, and so on.
+-   **Substantial predicates** are define particulars: human, horse, car, and more general labels like animal, vehicle, and so on.
 -   **Property particulars** are specific details about particular things: the flakiness of a pastry, the specific way someone walks, the sound your car makes when it turns on.
--   Then, finally, **substantial particulars**: the individual things -- that is, everything surrounding you at all times -- in the world that can be described with predicates and that possess properties (that in turn can also be described). But they never themselves describe or belong to anything else.
+-   Then, finally, **substantial particulars**: the individual things everything surrounding you at all times. They can be defined and have properties but themselves never define or belong to anything else.
 
 From this a certain *ordering* about the nature of the world has been implanted: there is a sense in which ideas, concepts, descriptions, generic terms, and possibly language itself *come second* to the particular things we encounter around us.
 
-## Genera also describe things
+## Genera also define things
 
-In the language of Aristotle, predicates that describe actual things are "species." Predicates of these predicates are "genera."
+In the language of Aristotle, predicates that define actual things are "species." Predicates of these predicates are "genera."
 
 Genera apply downward to the particulars. So if a man is a human, and humans are animals, then that man is also an animal.
 
@@ -104,48 +104,50 @@ Every word (uncombined utterance) ultimately refers to one of the following:
 
 **Insofar as speech consists of words, these ten categories constitute the meaning of speech in general.**
 
-**Insofar as speech refers to actual things, any being whatsoever must fall into one of these ten categories.**
+**Insofar as words refers to actual things, these ten categories parameterize any being whatsoever.**
 
 Here also Aristotle notes here that only combined utterances, statements, strictly speaking, be true or false.
 
 ## Substance {#sec-substance}
 
-There are two kinds of substance (ἡ οὐσία), first and second.
+Of substance (ἡ οὐσία), there are two kinds: first and second.
 
 ### First substance
 
-First substance refers to *actual things*: these are the particulars we discussed above.
+First substance refers to _actual things_: particular entities that we can point to.
 
-First substances is truly the *first word* in that it did not exist, there would be nothing else to talk about. The rest -- species, genera, differentiae, and properties -- would have no referent, and therefore could not be otherwise.
+Aristotle calls first substance the "first utterance" because if it did not exist, species, genera, differentiae, and properties would have no referent.
+
+_**Without first substance there would be nothing to say**_.
 
 ### Second substance
 
-Secondary substances are the substantial predicates: species, genera, and differentiae that describe what actual things are.
+Secondary substance define particulars.
 
-Only second substance describes actual things synonymously. So if this man is a man, then the definition of man, animal, applies to him. On the other hand, properties of a man -- his skin tone -- do not proceed to define him as that genus -- a color. Therefore they are is homonymous.
+This makes them predicate synonymously: if this man is a man, then he is also the definition of man, animal. But properties are homonymous: a man's having a certain skin shade does not imply he is a color.
 
-Species is more substantial than genre:
+Species is more like substance than genre:
 
--   It is "nearer" to substance in that it is a more natural substitute: it is more sensible to refer to this man a man than it does to call him an animal.
--   It also behaves more similarly in that it has less capacity for description than genre. (First substance, recall, cannot describe anything at all.)
+- It is "nearer" to substance in that it is a better substitute: it is more fitting to call to this man a man than to call him an animal.
+- Species has less capacity for description than genre. Therefore it is behaves closer to first substance which, you will recall, is predicated of nothing.
 
 Despite being predicates, second substances are still truly substances:
 
--   They alone *define* first substance. As noted above, you can measure whatever property you like about a man -- his height, his knowledge, age, posture, and so on -- but none of these will tell what what he actually is.
--   They can be described just like first substance. So if this man walks on two legs and has knowledge, then man and animal can be described similarly.
--   Species and genre are never also properties belonging to a subject. Properties, as established above, name the subject homonymously, but secondary substances do so synonymously. For if this pen is a pen, that also makes it an artificial device.
+- They alone *define* first substance. No property of a man -- his height, knowledge, age, posture -- answers what he is: a man.
+- They possess properties. If this man walks on two legs and has knowledge, so do man and animal.
+- The are not properties because they predicate synonymously (see above).
 
 ### Defining substance
 
-What is substance? Let us ask again.
+What is substance? Let us think through it a bit more carefully.
 
 #### First substance
 
-We only seem, as we saw, to talk about substance, either by way of description or by property.
+Individiual entities are substance. They are defined by predicates.
 
-This is why defining substance by itself becomes tricky: without descriptions, we literally run out of words to describe it.
 
-**All substance can possibly denote, then, is its *very ability to be pointed out*.**
+
+**All substance can possibly refer to, then, is its _very ability to be referenced_.**
 
 This is what Aristotle means by his famous claim that substance appears to mark τόδε τι, "a this."
 
@@ -166,7 +168,7 @@ This means any utterance, no matter how, what, where, or why it is said, must ul
 
 This is exactly the definition Aristotle gives for primary substance: *something that has been pointed out* (τόδε τι).
 
-Substance never does any pointing: it never stands in for another entity. Instead substance is that which in every case is *pointed to*: clarified by predicates or described by properties. It is the seat of all possible signification.
+Substance never does any pointing: it never stands in for another entity. Instead substance is that which in every case is *pointed to*: clarified by predicates or defined by properties. It is the seat of all possible signification.
 
 For this reason substance itself cannot be defined as anything but the *mere act of pointing*
 
