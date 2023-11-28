@@ -26,5 +26,3 @@ I hold a Masters from NYU's Center for Data Science where I built models to comb
 
 Previously I was a Public Policy researcher at [MDRC](https://www.mdrc.org/) and the [University of Chicago](https://urbanlabs.uchicago.edu/).
 
-Before that I studied Economics and Statistics at UC Berkeley.
-
