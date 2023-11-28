@@ -5,7 +5,7 @@ listing:
   contents: 
   - qmd/categories.qmd
   type: grid
-  fields: [image, title, subtitle, reading-time, date]
+  fields: [image, title, reading-time, date]
   sort: "date asc"
   categories: false
   sort-ui: false

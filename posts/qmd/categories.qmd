@@ -1,6 +1,6 @@
 ---
 title: Introduction to Aristotle's *Categories*
-subtitle: Get drawn into the most remarkable essay in the history of philosophy.
+subtitle: The introduction of a difficulty, and the difficlties of an introduction
 date: "2023-11-07"
 format:
   html:
@@ -41,7 +41,7 @@ Utterances (τὰ λεγόμενα) can be interwoven or not: the former makes s
 
 Beings (τὰ ὄντα) can distinguished in two ways: as predicates, or as properties.
 
-Predicates define a subject (καθ' ὑποκειμένου λέγεται). Man, for instance, is the entity that defines a person, and color defines what blue is. Predicates are always generic.
+Predicates define a subject (καθ' ὑποκειμένου λέγεται). Human defines an individual person, and color defines what blue is. Predicates are always generic.
 
 Particular things are the opposite of a predicate. You cannot define anything using a particular. Particulars cannot complete a sentence of the type "X is \_\_\_."
 
@@ -61,7 +61,7 @@ The two conditions by which we can distinguish beings, as predicates or as prope
 
 |                                       | **Not a predicate**<br>**(Particular things)** | **Predicate** |
 |------------------------|------------------------------|------------------|
-| **Not a property**<br>**(Substance)** | This man                                       | Man           |
+| **Not a property**<br>**(Substance)** | This man                                       | Human           |
 | **Property**                          | This knowledge                                 | Knowledge     |
 
 Here everything interlaces in a complex crossing:
@@ -124,16 +124,16 @@ _**Without first substance there would be nothing to say**_.
 
 Secondary substance define particulars.
 
-This makes them predicate synonymously: if this man is a man, then he is also the definition of man, animal. But properties are homonymous: a man's having a certain skin shade does not imply he is a color.
+This makes them predicate synonymously: if this man is a human, then he is also the definition of human, animal. But properties are homonymous: a man's having a certain skin shade does not imply he is a color.
 
 Species is more like substance than genre:
 
-- It is "nearer" to substance in that it is a better substitute: it is more fitting to call to this man a man than to call him an animal.
+- It is "nearer" to substance in that it is a better substitute: it is more fitting to call to this man a human than to call him an animal.
 - Species has less capacity for description than genre. Therefore it is behaves closer to first substance which, you will recall, is predicated of nothing.
 
 Despite being predicates, second substances are still truly substances:
 
-- They alone *define* first substance. No property of a man -- his height, knowledge, age, posture -- answers what he is: a man.
+- They alone *define* first substance. No property of a man -- his height, knowledge, age, posture -- answers what he is: human.
 - They possess properties. If this man walks on two legs and has knowledge, so do man and animal.
 - The are not properties because they predicate synonymously (see above).
 
