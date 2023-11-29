@@ -18,7 +18,7 @@ about:
 
 Welcome!
 
-I'm Tejomay, a Data Scientist based in the SF Bay Area. 
+I'm Tejomay, a Data Scientist based in the Bay Area. 
 
 I am passionate about engineering large-scale ML systems, particularly in NLP and Demand Forecasting.
 
