@@ -144,7 +144,7 @@
     "href": "posts/missing.html",
     "title": "One-pager on MIT’s ./missing-semester",
     "section": "",
-    "text": "[]\nI summarized the 2020 “Missing Semester” course from MIT into one handy reference document.\nThe content is self-contained so you can either use it as a guide for the course, or refer to it on its own.\nFeel free to drop a comment below if you have any questions or feedback.\nEnjoy!"
+    "text": "[]\nI summarized the 2020 “Missing Semester” course from MIT into one handy reference document.\nThe content is self-contained so you can either use it as a guide for the course, or refer to it on its own.\nFeel free to drop a comment (or pull request!) for any questions or feedback.\nEnjoy!"
   },
   {
     "objectID": "posts/missing.html#shell-basics",
