@@ -1,8 +1,11 @@
 ---
-title: "One-pager on ./missing-semester"
-subtitle: A self-contained summary of MIT's "Missing Semester of Your CS Education" course.
+title: "One-pager on MIT's ./missing-semester"
+subtitle: A self-contained summary of the "Missing Semester of Your CS Education" course.
 format: 
   html:
+    comments:
+      utterances:
+        repo: tejomaygadgil/tejomaygadgil.github.io
     code-line-numbers: true
     number-sections: true
     toc: true
@@ -10,11 +13,13 @@ format:
 image: img/missing.png
 ---
 
-![](img/missing.png){fig-align="left" width=90%}
+[![](img/missing.png){fig-align="left" width=90%}]
 
-I summarized the 2020 `./missing-semester` course from MIT into one handy reference document.
+I summarized the 2020 ["Missing Semester"](https://missing.csail.mit.edu/) course from MIT into one handy reference document.
 
-The content is self-contained^[BTW I couldn't cover every topic due to time. Pull requests are welcome!] so you can either use it as a guide for the course, or refer to it on its own.
+The content is self-contained so you can either use it as a guide for the course, or refer to it on its own.
+
+Feel free to drop a comment below if you have any questions or feedback. 
 
 Enjoy!
 
