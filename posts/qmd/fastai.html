@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -271,7 +305,66 @@ ul.task-list li input[type="checkbox"] {
 <li>Author identification returns the author that wrote the document.</li>
 <li>Legal discovery returns whether a document is relevant for a trial or not.</li>
 </ul>
-<p>Related to classification is <em>document similarity</em>: are two documents about the same thing? We can convert this into a classification problem by concatenating the two documents and mapping the resulting string to the categories “different”, “similar,” and “identical.”</p>
+<p>Related to classification is <em>document similarity</em>: are two documents about the same thing? We can convert this into a classification problem by concatenating the two documents into onto one string trying to predict it using the categories “different”, “similar,” and “identical.”</p>
+</section>
+<section id="misc.-tips" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="misc.-tips"><span class="header-section-number">4.3</span> Misc. tips</h3>
+<ul>
+<li>IPython <a href="https://ipython.readthedocs.io/en/stable/interactive/python-ipython-diff.html#shell-assignment">shell</a> and <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">magic</a> commands work inside conditionals and accept Python variables with <code>{}</code>:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.exists(path):  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">!</span> mkdir {path}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Plot out a <em>subset</em> of large datasets to get a feel for the data. You usually don’t need more than 1,000 points.</p></li>
+<li><p>It’s often-times better to learn the characteristics of a metric by <em>seeing what it looks like</em> instead of diving into theory (or blog posts). Ultimately we are more concerned about how it behaves than what it is, and seeing how it responds to outliers, truncated data, non-linearities, etc. will provide more insight than studying the shape of its formula.</p></li>
+<li><p><strong>Never discard outliers</strong>. Asking why they exist teaches you about your data: different groups that should be analyze separately, edge cases, problems in data quality / collection, and so on. Always ask, “where did this come from?”</p></li>
+</ul>
+</section>
+<section id="processing-text" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="processing-text"><span class="header-section-number">4.4</span> Processing text</h3>
+<p>Neural networks work on numbers. We convert text to numbers by splitting them into chunks called tokens and converting those tokens into numbers using a map called a vocabulary. We will save the vocbulary so we can convert the numbers back into words and process incoming text when we make predictions.</p>
+<p>Tokens are typically smaller than words. Some models use the characters as their token, meaning those models have a vocabulary of 26 plus punctuation marks. Larger vocabulary capture more patterns, but require more data and are more computationally expensive to train.</p>
+</section>
+<section id="underfitting-and-overfitting" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="underfitting-and-overfitting"><span class="header-section-number">4.5</span> Underfitting and overfitting</h3>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Explanation</th>
+<th>Symptoms</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Underfitting</td>
+<td>The model is not complex enough to capture the patterns in the data.</td>
+<td>Training error: high.<br>Test error: high.</td>
+</tr>
+<tr class="even">
+<td>Overfitting</td>
+<td>The model is too complex and starts fitting to noise instead of data.</td>
+<td>Training error: low.<br>Test error: high.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="training-and-validation-sets" class="level3" data-number="4.6">
+<h3 data-number="4.6" class="anchored" data-anchor-id="training-and-validation-sets"><span class="header-section-number">4.6</span> Training and validation sets</h3>
+<p>To leaking data from the test set we use a validation set, which is a <a href="https://rachel.fast.ai/posts/2017-11-13-validation-sets/">well-chosen</a> subset of the training set we hold aside to test our models on.</p>
+<p>We can use the validation set to compare the performance of different models and hyperparameters, but doing so means validation performance is no longer unbiased. Therefore we should only use the validation set to pick the final model, and run it on the test set to get an unbiased estimate of performance.</p>
+</section>
+<section id="metrics-vs.-objective-functions" class="level3" data-number="4.7">
+<h3 data-number="4.7" class="anchored" data-anchor-id="metrics-vs.-objective-functions"><span class="header-section-number">4.7</span> Metrics vs.&nbsp;objective functions</h3>
+<p>Metrics are an overall measure of model performance. This is not the same as the loss function that the model actually optimizes for.</p>
+<p>This is because we want the loss function to be smooth and have non-zero gradients, while that may not be the case with the metric.</p>
 
 
 </section>
