@@ -2,10 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/qmd/categories.html",
-      "/posts/qmd/fastai.html",
-      "/posts/qmd/neovim.html",
-      "/posts/qmd/missing.html"
+      "/posts/categories.html",
+      "/posts/fastai.html",
+      "/posts/neovim.html",
+      "/posts/missing.html"
     ]
   }
 ]

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tejomay’s blog - Course notes: fast.ai Deep Learning</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Tejomay’s blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tejomaygadgil/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/tejomaygadgil/" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Course notes: fast.ai Deep Learning</h1>
+            <p class="subtitle lead">Insights from fast.ai’s 2022 offering of Practical Deep Learning for Coders.</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><img src="img/fastai.webp" class="img-fluid"></p>
+<p>Here’s what I found useful from the 2022 offering of <a href="https://course.fast.ai/">Practical Deep Learning for Coders</a> by fasti.ai.</p>
+<section id="getting-started" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">1</span> Getting started</h2>
+<section id="the-significance-of-the-xor-affair" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="the-significance-of-the-xor-affair"><span class="header-section-number">1.1</span> The significance of the XOR affair</h3>
+<p>Minksy’s <em>Perceptrons</em> (1969) is infamous for claiming that neural networks cannot learn logic. AI history is very complex so perhaps this isn’t exactly accurate. But the book has become a symbol of a certain side of the AI debate.</p>
+<p>The dispute is about logic.</p>
+<p>Today logic is not that important. We don’t care what a model does as long as it is useful. But this was not always the case. Stemming off very intense movements in philosophy and other disciplines<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, logic in the last century was seen by many as the very fabric of reality. It is in this environment that computers, prized as first and foremost for being <em>logical</em> machines, were invented.</p>
+<p>Minsky’s problem with neural networks, then, was that they were not logical structured. Unlike a computer, which is built from the ground up using determinate Boolean operations, neural networks instead use calculus and numerical optimization to fit curves.</p>
+<p>It is against this background that Minsky’s actual argument, that a single neuron cannot not compute a basic <em>logical</em> function called “exclusive or” (XOR for short), makes any sense. Otherwise he comes off as nitpicking. Perhaps, but this misses the stakes of the argument: the disputation between what is <em>true</em> and what is <em>useful</em>.</p>
+<section id="appendix" class="level4" data-number="1.1.1">
+<h4 data-number="1.1.1" class="anchored" data-anchor-id="appendix"><span class="header-section-number">1.1.1</span> Appendix</h4>
+<p>For reference XOR looks like this:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>False</th>
+<th>True</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>False</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Minsky’s basic argument is that a Perceptron (a single neuron) cannot learn this function because it is not linearly separable: in other words you cannot draw a straight line to separate the 0s from the 1s. In fact XOR is the only such logical function that is not linearly separable, which is probably why Minsky chose it for his analysis.</p>
+<p>For reference AND looks like this:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>False</th>
+<th>True</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>False</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>True</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>You can draw a straight line to separate the 0s and 1s for AND, but you cannot do it for XOR.</p>
+<p>It would take the introduction of non-linear transformations (ReLU) to enable neural networks to draw the squiggly lines that can solve these types of problems. But in the eyes of the logicists, this would be just another hack to a fundamentally unsound technology.</p>
+</section>
+</section>
+</section>
+<section id="deployment" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="deployment"><span class="header-section-number">2</span> Deployment</h2>
+<section id="the-drivetrain-framework-helps-you-build-useful-ml-products" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="the-drivetrain-framework-helps-you-build-useful-ml-products"><span class="header-section-number">2.1</span> The Drivetrain framework helps you build useful ML products</h3>
+<p>The Drivetrain approach to ML product design helps you produce <em>actionable outcomes</em> for a useful task instead of getting stuck building models. It has four stages.</p>
+<p>The first stage is to clearly define the product <em>objective</em>. For instance, for a search engine the main user objective is to find a useful answer to their query. Therefore the objective of the product becomes: “find the most relevant result for a given query.”</p>
+<p>Next consider which possible <em>levers</em> can achieve this objective. In our case it is the <em>ordering of the results</em>: a well-ranked list of results is useful and satisfies the user objective, while a poorly ranked list does the opposite.</p>
+<p>After defining levers think about which <em>data</em> can power them. The very graph structure of the internet can be harnessed to produce good rankings, as sites containing higher quality results will invariably be linked to more often by other sites.</p>
+<p>Finally we turn to <em>modeling</em>, which is the process to produce the most effective mapping from inputs (data) to the outputs (levers) that satisfy the objective. If done right a high performance model will produce high performance outcomes by driving <em>action</em>.</p>
+<p>Another example: recommendation systems.</p>
+<p>Objective: People buy what they like. Therefore we drive sales by linking users to other products they will enjoy or find useful (user taste).</p>
+<p>Levers: Rank all products by user taste and return the top 5 or 10.</p>
+<p>Data: Purchase history contains the taste of each user. Matching users to other users would enable the system to recommend products the user has not tried yet, or even recommend to new users.</p>
+<p>Model: A useful model will take a user’s purchase history (or answers to a quick quiz for new users) and use it to produce a ranked list of products the user will like.</p>
+</section>
+<section id="always-train-a-model-before-looking-at-your-data" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="always-train-a-model-before-looking-at-your-data"><span class="header-section-number">2.2</span> Always train a model <em>before</em> looking at your data</h3>
+<p>Train a model before touching your data will help you figure out where to focus your efforts.</p>
+<p>For instance looking at examples the model struggled on will inform extra data you may need to collect, or suggest architecture choices to consider.</p>
+<p>Flipping through misclassified / high loss examples can also help you find systematic biases in the data, or weed out mislabeled or corrupt examples.</p>
+<p>Use <code>ImageClassifierCleaner</code> from <code>fastai.vision.widgets</code> for an automated GUI to expedite this process.</p>
+</section>
+<section id="model-deployment-does-not-require-a-gpu" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="model-deployment-does-not-require-a-gpu"><span class="header-section-number">2.3</span> Model deployment does not require a GPU</h3>
+<p>Generating a prediction is far less expensive than training and so does not require a GPU.</p>
+<p>Also GPUs are only good at batch processing, which is probably not necessary or helpful for a small scale app.</p>
+<p>Lastly managing GPU servers is very complex and expensive. You are better off delaying it until server traffic merits it.</p>
+</section>
+<section id="models-rarely-work-as-expected-in-deployment" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="models-rarely-work-as-expected-in-deployment"><span class="header-section-number">2.4</span> Models rarely work as expected in deployment</h3>
+<p>The training set rarely reflects real-world conditions, leading to a few common issues:</p>
+<ol type="1">
+<li><p>The predictions data does not match the training data (<em>training-serving skew</em>). An example is a classifier that was trained on well-lit, professional images from the internet but is used in practice to predict on grainy images taken on mobile phone cameras. This new type of images will have to be incorporated into the model.</p></li>
+<li><p>The nature of the process being modeled changes (<em>domain shift</em>). As norms and rules of a society evolve certain data relationships no longer hold, leading the model to make bad predictions based on false assumptions.</p></li>
+</ol>
+<p>The very flexibility that lets neural networks learn very complex mappings is also what makes them difficult to interpret and to fix when something goes wrong.</p>
+<p>Therefore the best strategy for deployment has two aspects:</p>
+<ol type="1">
+<li><p>Roll out any model gradually, first in parallel with whatever pre-existing process it is replacing, then in a limited scope with plenty of supervision, finally expanding to more areas as the model gains trust.</p></li>
+<li><p>Grapple with the implications of two questions: <em>1. what could go wrong, and 2. what happens in the best case scenario?</em> The former will help you build the correct reporting structure around deployment to catch and address any issues, and the latter will force you to confront any possible <em>feedback loops</em>: that is, unintended changes in user behavior or outcomes as a consequence of deployment.</p></li>
+</ol>
+</section>
+</section>
+<section id="neural-network-foundations" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="neural-network-foundations"><span class="header-section-number">3</span> Neural network foundations</h2>
+<section id="ml-explained-simply" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="ml-explained-simply"><span class="header-section-number">3.1</span> ML explained simply</h3>
+<p>Machine learning is fundamentally about fitting a function to data. Then we can use the function instead of data to make predictions.</p>
+<p>A model defines the function shape. After that, all we have to do is find the weights that minimize the difference between the model output and the actual data.</p>
+<p>We can find optimal weights by starting with random values and nudging them slowly in the direction that seems to minimize this difference. If we do this long enough with the right nudging strategy then we will arrive at the best weights for the model we chose.</p>
+</section>
+<section id="start-with-simple-models" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="start-with-simple-models"><span class="header-section-number">3.2</span> Start with simple models</h3>
+<p>Protip: start with very simple models (i.e.&nbsp;ResNet18 or 34). You’ll be able to iterate quickly at the beginning to figure out data augmentation and cleaning strategies. When you have those nailed down you can train on a bigger, more expensive model to see if it is worth the time and cost.</p>
+</section>
+<section id="neural-networks-explained-simply" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="neural-networks-explained-simply"><span class="header-section-number">3.3</span> Neural networks explained simply</h3>
+<p>Neural networks represent data by using simple shapes like squiggles and angles to build more complicated curves. This allows the network to slowly piecing things together like a jigsaw puzzle.</p>
+<p>The activation function defines the basic shape. For instance, the ReLU function generates a simple angular kink that can be moved around, stretched, and rotated by the network using the weights it has learned. The network uses many of these kinks at once to represent a complex silhouette.</p>
+<p>What makes neural networks “deep” is that outputs of one layer become inputs for the next layer. This allows the network to <em>fashion its own jigsaw pieces</em> based on what seems most useful for approximating the final curve.</p>
+</section>
+</section>
+<section id="nlp" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="nlp"><span class="header-section-number">4</span> NLP</h2>
+<section id="fine-tuning" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="fine-tuning"><span class="header-section-number">4.1</span> Fine-tuning</h3>
+<p>Fine-tuning lets you use a more general model to accomplish a more specific task.</p>
+<p>For instance, many language models are generally trained on a very large corpus such as Wikipedia or Reddit. They understand the patterns of language but do not necessarily perform a useful task. You can use the knowledge (i.e.&nbsp;learned weights) of these models to accomplish a more specific task such as sentiment classification for user reviews.</p>
+<p>Fine tuning works by throwing away the last layer that actually produces the output and replacing it with a new random matrix for the new task we are trying to learn.</p>
+</section>
+<section id="nlp-tasks" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="nlp-tasks"><span class="header-section-number">4.2</span> NLP tasks</h3>
+<p>The most popular task for NLP is <em>classification</em>, assigning a document into categories.</p>
+<ul>
+<li>Sentiment categorizes documents as having positive or negative emotional content.</li>
+<li>Author identification returns the author that wrote the document.</li>
+<li>Legal discovery returns whether a document is relevant for a trial or not.</li>
+</ul>
+<p>Related to classification is <em>document similarity</em>: are two documents about the same thing? We can convert this into a classification problem by concatenating the two documents into onto one string trying to predict it using the categories “different”, “similar,” and “identical.”</p>
+</section>
+<section id="misc.-tips" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="misc.-tips"><span class="header-section-number">4.3</span> Misc. tips</h3>
+<ul>
+<li>IPython <a href="https://ipython.readthedocs.io/en/stable/interactive/python-ipython-diff.html#shell-assignment">shell</a> and <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">magic</a> commands work inside conditionals and accept Python variables with <code>{}</code>:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.exists(path):  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">!</span> mkdir {path}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Plot out a <em>subset</em> of large datasets to get a feel for the data. You usually don’t need more than 1,000 points.</p></li>
+<li><p>It’s often-times better to learn the characteristics of a metric by <em>seeing what it looks like</em> instead of diving into theory (or blog posts). Ultimately we are more concerned about how it behaves than what it is, and seeing how it responds to outliers, truncated data, non-linearities, etc. will provide more insight than studying the shape of its formula.</p></li>
+<li><p><strong>Never discard outliers</strong>. Asking why they exist teaches you about your data: different groups that should be analyze separately, edge cases, problems in data quality / collection, and so on. Always ask, “where did this come from?”</p></li>
+</ul>
+</section>
+<section id="processing-text" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="processing-text"><span class="header-section-number">4.4</span> Processing text</h3>
+<p>Neural networks work on numbers. We convert text to numbers by splitting them into chunks called tokens and converting those tokens into numbers using a map called a vocabulary. We will save the vocbulary so we can convert the numbers back into words and process incoming text when we make predictions.</p>
+<p>Tokens are typically smaller than words. Some models use the characters as their token, meaning those models have a vocabulary of 26 plus punctuation marks. Larger vocabulary capture more patterns, but require more data and are more computationally expensive to train.</p>
+</section>
+<section id="underfitting-and-overfitting" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="underfitting-and-overfitting"><span class="header-section-number">4.5</span> Underfitting and overfitting</h3>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Explanation</th>
+<th>Symptoms</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Underfitting</td>
+<td>The model is not complex enough to capture the patterns in the data.</td>
+<td>Training error: high.<br>Test error: high.</td>
+</tr>
+<tr class="even">
+<td>Overfitting</td>
+<td>The model is too complex and starts fitting to noise instead of data.</td>
+<td>Training error: low.<br>Test error: high.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="training-and-validation-sets" class="level3" data-number="4.6">
+<h3 data-number="4.6" class="anchored" data-anchor-id="training-and-validation-sets"><span class="header-section-number">4.6</span> Training and validation sets</h3>
+<p>To leaking data from the test set we use a validation set, which is a <a href="https://rachel.fast.ai/posts/2017-11-13-validation-sets/">well-chosen</a> subset of the training set we hold aside to test our models on.</p>
+<p>We can use the validation set to compare the performance of different models and hyperparameters, but doing so means validation performance is no longer unbiased. Therefore we should only use the validation set to pick the final model, and run it on the test set to get an unbiased estimate of performance.</p>
+</section>
+<section id="metrics-vs.-objective-functions" class="level3" data-number="4.7">
+<h3 data-number="4.7" class="anchored" data-anchor-id="metrics-vs.-objective-functions"><span class="header-section-number">4.7</span> Metrics vs.&nbsp;objective functions</h3>
+<p>Metrics are an overall measure of model performance. This is not the same as the loss function that the model actually optimizes for.</p>
+<p>This is because we want the loss function to be smooth and have non-zero gradients, while that may not be the case with the metric.</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>cf.&nbsp;The Vienna Circle, Hilbert’s Entscheidungsproblem, and American Pragmatism.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
