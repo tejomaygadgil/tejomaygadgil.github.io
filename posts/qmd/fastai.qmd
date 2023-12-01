@@ -2,6 +2,7 @@
 title: "Course notes: fast.ai Deep Learning"
 subtitle: Insights from fast.ai's 2022 offering of Practical Deep Learning for Coders.
 format: html
+highlight-syntax: github
 number-sections: true
 image: ../img/fastai.webp
 ---
@@ -146,6 +147,48 @@ The most popular task for NLP is _classification_, assigning a document into cat
 * Author identification returns the author that wrote the document.
 * Legal discovery returns whether a document is relevant for a trial or not.
 
-Related to classification is _document similarity_: are two documents about the same thing? We can convert this into a classification problem by concatenating the two documents and mapping the resulting string to the categories "different", "similar," and "identical."
+Related to classification is _document similarity_: are two documents about the same thing? We can convert this into a classification problem by concatenating the two documents into onto one string trying to predict it using the categories "different", "similar," and "identical."
+
+### Misc. tips
+
+* IPython [shell](https://ipython.readthedocs.io/en/stable/interactive/python-ipython-diff.html#shell-assignment) and [magic](https://ipython.readthedocs.io/en/stable/interactive/magics.html) commands work inside conditionals and accept Python variables with `{}`:
+
+```{{python}}
+if not os.path.exists(path):  
+  ! mkdir {path}
+```
+
+
+* Plot out a _subset_ of large datasets to get a feel for the data. You usually don't need more than 1,000 points.
+
+* It's often-times better to learn the characteristics of a metric by _seeing what it looks like_ instead of diving into theory (or blog posts). Ultimately we are more concerned about how it behaves than what it is, and seeing how it responds to outliers, truncated data, non-linearities, etc. will provide more insight than studying the shape of its formula.
+
+* **Never discard outliers**. Asking why they exist teaches you about your data: different groups that should be analyze separately, edge cases, problems in data quality / collection, and so on. Always ask, "where did this come from?"
+
+
+### Processing text
+
+Neural networks work on numbers. We convert text to numbers by splitting them into chunks called tokens and converting those tokens into numbers using a map called a vocabulary. We will save the vocbulary so we can convert the numbers back into words and process incoming text when we make predictions.
+
+Tokens are typically smaller than words. Some models use the characters as their token, meaning those models have a vocabulary of 26 plus punctuation marks. Larger vocabulary capture more patterns, but require more data and are more computationally expensive to train.
+
+### Underfitting and overfitting
+
+|Problem|Explanation|Symptoms|
+|---|---|---|
+|Underfitting|The model is not complex enough to capture the patterns in the data.|Training error: high.<br>Test error: high.|
+|Overfitting|The model is too complex and starts fitting to noise instead of data.|Training error: low.<br>Test error: high.|
+
+### Training and validation sets
+
+To leaking data from the test set we use a validation set, which is a [well-chosen](https://rachel.fast.ai/posts/2017-11-13-validation-sets/) subset of the training set we hold aside to test our models on.
+
+We can use the validation set to compare the performance of different models and hyperparameters, but doing so means validation performance is no longer unbiased. Therefore we should only use the validation set to pick the final model, and run it on the test set to get an unbiased estimate of performance.
+
+### Metrics vs. objective functions
+
+Metrics are an overall measure of model performance. This is not the same as the loss function that the model actually optimizes for.
+
+This is because we want the loss function to be smooth and have non-zero gradients, while that may not be the case with the metric.
 
 
