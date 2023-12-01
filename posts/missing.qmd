@@ -1,18 +1,20 @@
 ---
-title: "Tips from ./missing-semester"
-subtitle: My takeaways from MIT's "Missing Semester of Your CS Education" course.
+title: "One-pager on ./missing-semester"
+subtitle: A self-contained summary of MIT's "Missing Semester of Your CS Education" course.
 format: 
   html:
     code-line-numbers: true
     number-sections: true
     toc: true
     toc-title: Lectures
-image: ../img/missing.png
+image: img/missing.png
 ---
 
-Here's what I picked up on from the 2020 offering of the excellent [./missing-semester](https://missing.csail.mit.edu/) course.
+![](img/missing.png){fig-align="left" width=90%}
 
-This document is written to be a reference so the discussion should be relatively self-contained.
+I summarized the 2020 `./missing-semester` course from MIT into one handy reference document.
+
+The content is self-contained^[BTW I couldn't cover every topic due to time. Pull requests are welcome!] so you can either use it as a guide for the course, or refer to it on its own.
 
 Enjoy!
 

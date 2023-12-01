@@ -4,10 +4,10 @@ subtitle: Insights from fast.ai's 2022 offering of Practical Deep Learning for C
 format: html
 highlight-syntax: github
 number-sections: true
-image: ../img/fastai.webp
+image: img/fastai.webp
 ---
 
-![](../img/fastai.webp)
+![](img/fastai.webp)
 
 Here's what I found useful from the 2022 offering of [Practical Deep Learning for Coders](<https://course.fast.ai/>) by fasti.ai.
 

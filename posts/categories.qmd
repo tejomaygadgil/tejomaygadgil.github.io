@@ -10,10 +10,10 @@ format:
     number-sections: true
     toc: true
     toc-title: Sections
-image: ../img/categories.png
+image: img/categories.png
 ---
 
-![A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.](../img/categories.png){cap-align="center"}
+![A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.](img/categories.png){cap-align="center"}
 
 Few essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for *being* inscrutable as Aristotle's *Categories*.
 
@@ -110,13 +110,13 @@ Here also Aristotle notes here that only combined utterances, statements, strict
 
 ## Substance {#sec-substance}
 
-Of substance (ἡ οὐσία), there are two kinds: first and second.
+Of substance (ἡ οὐσία) there are two kinds: first and second.
 
 ### First substance
 
 First substance refers to _actual things_: particular entities that we can point to.
 
-Aristotle calls first substance the "first utterance" because if it did not exist, species, genera, differentiae, and properties would have no referent.
+Aristotle calls first substance the "first utterance" because if it did not exist, species, genera, differentiae, and properties would have no referent:
 
 _**Without first substance there would be nothing to say**_.
 

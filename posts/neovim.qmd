@@ -2,14 +2,14 @@
 title: Neovim resources
 subtitle: An ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.
 format: html
-image: ../img/neovim.png
+image: img/neovim.png
 ---
 
 ## Configuration
 
 For Data Science / programming / note-taking / publishing I recommend the [Quarto kickstarter](https://github.com/jmbuhr/quarto-nvim-kickstarter). The shortcuts below are written with this configuration installed so YMMV.
 
-![Quarto lets you work in code cells and publish documents (like this website!).](../img/neovim.png)
+![Quarto lets you work in code cells and publish documents (like this website!).](img/neovim.png)
 
 ## Shortcuts 
 

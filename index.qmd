@@ -3,7 +3,7 @@ title: Posts
 listing:
 - id: posts
   contents: 
-  - qmd/categories.qmd
+  - posts/categories.qmd
   type: grid
   fields: [image, title, reading-time, date]
   sort: "date asc"
@@ -12,9 +12,9 @@ listing:
   filter-ui: false
 - id: resources
   contents: 
-  - qmd/fastai.qmd
-  - qmd/neovim.qmd
-  - qmd/missing.qmd
+  - posts/fastai.qmd
+  - posts/neovim.qmd
+  - posts/missing.qmd
   type: grid
   fields: [image, title, subtitle, date]
   sort: "date asc"
