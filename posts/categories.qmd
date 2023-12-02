@@ -8,8 +8,8 @@ format:
       utterances:
         repo: tejomaygadgil/tejomaygadgil.github.io
     number-sections: true
-    toc: true
-    toc-title: Sections
+    mermaid:
+      theme: neutral
 image: img/categories.png
 ---
 
@@ -17,15 +17,15 @@ image: img/categories.png
 
 Few essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for *being* inscrutable as Aristotle's *Categories*.
 
-The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else entirely?
+The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else?
 
-Introducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while factual "hors d'oeuvres," no matter how well presented, fail to introduce the actual *work* in question.
+Introducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while a few factual "hors d'oeuvres," no matter how well presented, fail to introduce the actual *work* in question.
 
 Summary cannot introduce us to the *Categories*. Instead we must interpret it.
 
-To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening the offset between ourselves and what we were trying to understand is what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is fundamentally *productive*.
+To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening of the offset between ourselves and the work is the essence of what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is _productive_.
 
-This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering the words on the page.
+This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering, apparently, the words onto the page.
 
 ## Things can have a common name for different reasons
 
@@ -45,17 +45,13 @@ Predicates define a subject (καθ' ὑποκειμένου λέγεται). Hu
 
 Particular things are the opposite of a predicate. You cannot define anything using a particular. Particulars cannot complete a sentence of the type "X is \_\_\_."
 
-Consider your phone. It is a particular entity. *Your phone could never describe another entity*; rather it can only *be* described by generic predicates such as model number, color, size, shape, and so on. Even the seeming counter-example "My favorite thing is this phone," is actually the anastrophe of the proper statement "This phone is my favorite thing", where "favorite thing" is a predicate.
-
 Properties belong to a subject (ἐν ὑποκειμένῳ ἐστιν). Examples include colors, height, length, location, and so on: you will never encounter "blue" or "tall" on its own, but only as an attribute of a pre-existing thing.
 
-Substance (ἡ οὐσία) opposes property. And what is that, substance? Indeed, the rest of this work -- and the overall movement of philosophy itself -- will radically address this question. But for the time being, you can think of substance as *individuality*: that by which you can single out something particular as being something particular.
+Substance (ἡ οὐσία) opposes property. And what is that, substance? Indeed, the rest of this work -- and the overall movement of philosophy itself -- will radically address this question. But for the time being, you can think of substance as *individuality*: that by which you can point to something as a particular entity.
 
 But what about the subject? If predicates define a subject, and properties belong in a subject, shouldn't the subject oppose them instead of particulars and substance?
 
 Not exactly, because predicates and properties can themselves be subjects! For the human that this man is *is itself* an animal, and for this man who wears a jacket that is green, that green *is itself* a color. Then a subject can either be a particular thing, or predicates describing that thing, properties belonging in that thing, or predicates describing those properties.
-
-Draw it out: according to what we have discussed so far, everything we say about anything, *speech itself*, appears to spiral out of what we call particulars, and particularly what we call substance.
 
 The two conditions by which we can distinguish beings, as predicates or as properties, in turn produce a table with four categories:
 
@@ -64,18 +60,16 @@ The two conditions by which we can distinguish beings, as predicates or as prope
 | **Not a property**<br>**(Substance)** | This man                                       | Human           |
 | **Property**                          | This knowledge                                 | Knowledge     |
 
-Here everything interlaces in a complex crossing:
-
 -   **Property predicates** are define properties: knowledge, color, shape, and so on.
 -   **Substantial predicates** are define particulars: human, horse, car, and more general labels like animal, vehicle, and so on.
 -   **Property particulars** are specific details about particular things: the flakiness of a pastry, the specific way someone walks, the sound your car makes when it turns on.
 -   Then, finally, **substantial particulars**: the individual things everything surrounding you at all times. They can be defined and have properties but themselves never define or belong to anything else.
 
-From this a certain *ordering* about the nature of the world has been implanted: there is a sense in which ideas, concepts, descriptions, generic terms, and possibly language itself *come second* to the particular things we encounter around us.
+From this a certain *ordering* about the nature of the world has been implanted: there is a sense in which definitions, concepts, descriptions, and possibly language itself *come second* to the particular things we encounter around us.
 
 ## Genera also define things
 
-In the language of Aristotle, predicates that define actual things are "species." Predicates of these predicates are "genera."
+In the language of Aristotle, predicates of actual things are "species." Predicates of these predicates are "genera."
 
 Genera apply downward to the particulars. So if a man is a human, and humans are animals, then that man is also an animal.
 
@@ -87,7 +81,7 @@ But differentiae of a genus can apply downward: the bird genus, underneath anima
 
 ## The categories
 
-Every word (uncombined utterance) ultimately refers to one of the following:
+Every word (τὰ μηδεμίαν συμπλοκὴν λεγόμενα) ultimately refers to one of the following:
 
 | English   | Greek   | Section        |
 |-----------|---------|----------------|
@@ -104,7 +98,7 @@ Every word (uncombined utterance) ultimately refers to one of the following:
 
 **Insofar as speech consists of words, these ten categories constitute the meaning of speech in general.**
 
-**Insofar as words refers to actual things, these ten categories parameterize any being whatsoever.**
+**Insofar as words refers to actual things, these ten categories catalog any being whatsoever.**
 
 Here also Aristotle notes here that only combined utterances, statements, strictly speaking, be true or false.
 
@@ -145,8 +139,12 @@ What is substance? Let us think through it a bit more carefully.
 
 Individiual entities are substance. They are defined by predicates.
 
+```{mermaid}
+flowchart LR
+  A[Predicates] --> B[Actual things] --> C[Substance] --> D[...]
+```
 
-
+<br>
 **All substance can possibly refer to, then, is its _very ability to be referenced_.**
 
 This is what Aristotle means by his famous claim that substance appears to mark τόδε τι, "a this."

@@ -1,7 +1,10 @@
 ---
 title: "Course notes: fast.ai Deep Learning"
 subtitle: Insights from fast.ai's 2022 offering of Practical Deep Learning for Coders.
-format: html
+format: 
+  html:
+    toc: true
+    toc-title: Lectures
 highlight-syntax: github
 number-sections: true
 image: img/fastai.webp
