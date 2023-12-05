@@ -13,9 +13,9 @@ format:
 image: img/missing.png
 ---
 
-[![](img/missing.png){fig-align="left" width=90%}]
+[![](img/missing.png){fig-align="left" width=90%}](https://missing.csail.mit.edu/)
 
-I summarized the 2020 ["Missing Semester"](https://missing.csail.mit.edu/) course from MIT into one handy reference document.
+I summarized the 2020 `./missing-semester` course from MIT into one handy reference document.
 
 The content is self-contained so you can either use it as a guide for the course, or refer to it on its own.
 
