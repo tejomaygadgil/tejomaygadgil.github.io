@@ -13,9 +13,9 @@ format:
 image: img/categories.png
 ---
 
-**Work in progress**
-
 ![A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.](img/categories.png){cap-align="center"}
+
+**Work in progress*
 
 Few essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for *being* inscrutable as Aristotle's *Categories*.
 
