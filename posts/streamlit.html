@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tejomay’s blog - Neovim resources</title>
+<title>Tejomay’s blog - Notes on streamlit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -71,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Tejomay’s blog</span>
     </a>
   </div>
@@ -82,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
+    <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -106,8 +140,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Neovim resources</h1>
-            <p class="subtitle lead">An ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.</p>
+      <h1 class="title">Notes on <code>streamlit</code></h1>
                       </div>
   </div>
     
@@ -130,113 +163,111 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="configuration" class="level2">
-<h2 class="anchored" data-anchor-id="configuration">Configuration</h2>
-<p>For Data Science / programming / note-taking / publishing I recommend the <a href="https://github.com/jmbuhr/quarto-nvim-kickstarter">Quarto kickstarter</a>. The shortcuts below are written with this configuration installed so YMMV.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img/neovim.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Quarto lets you work in code cells and publish documents (like this website!).</figcaption>
-</figure>
-</div>
+<p><a href="https://docs.streamlit.io/library/cheatsheet">Streamlit cheatsheet</a></p>
+<section id="main-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="main-concepts">Main concepts</h2>
+<section id="basic-flow" class="level3">
+<h3 class="anchored" data-anchor-id="basic-flow">Basic flow</h3>
+<p>By default Streamlit runs your Python script from top to bottom every time something must be updated on the screen.</p>
+<p>You can modify this behavior by using <code>on_change</code> and <code>on_click</code> parameters, or the <code>@st.cache_data</code> decorator.</p>
 </section>
-<section id="shortcuts" class="level2">
-<h2 class="anchored" data-anchor-id="shortcuts">Shortcuts</h2>
+<section id="magic" class="level3">
+<h3 class="anchored" data-anchor-id="magic">Magic</h3>
+<p>Any bare call will automatically be sent to <code>st.write()</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x  <span class="co"># This will be printed onto the canvas as if you had written st.write(x)!</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="widgets" class="level3">
+<h3 class="anchored" data-anchor-id="widgets">Widgets</h3>
+<p>You can create interactive elements such as:</p>
+<section id="sliders" class="level4">
+<h4 class="anchored" data-anchor-id="sliders">Sliders</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> st.slider(<span class="st">"Multiplicative factor"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">*=</span> x</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="text-input" class="level4">
+<h4 class="anchored" data-anchor-id="text-input">Text input</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> st.text_input(<span class="st">"Your name"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>st.write(<span class="ss">f"Hello </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="checkboxes" class="level4">
+<h4 class="anchored" data-anchor-id="checkboxes">Checkboxes</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> st.checkbox(<span class="st">"Log input data"</span>):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  data <span class="op">=</span> np.log(data)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="selectboxes" class="level4">
+<h4 class="anchored" data-anchor-id="selectboxes">Selectboxes</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> st.selectbox(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Which model would you like to run?"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Neural network"</span>, <span class="st">"Random forest"</span>, <span class="st">"SVM"</span>]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>st.write(<span class="ss">f"Running </span><span class="sc">{</span>model<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="layout" class="level3">
+<h3 class="anchored" data-anchor-id="layout">Layout</h3>
+<p><code>st.sidebar.[widget]</code> will pin interactive commands to the left.</p>
+<p>Create custom columns using <code>st.column</code>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> st.columns(num_columns)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Populate column i</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> column[i]:</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  ... </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="api-elements" class="level2">
+<h2 class="anchored" data-anchor-id="api-elements">API elements</h2>
 <table class="table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Command</th>
+<th>Element</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>u</code></td>
-<td>Undo.</td>
+<td><a href="https://docs.streamlit.io/library/api-reference/data/st.column_config"><code>st.column_config</code></a></td>
+<td>Extensive options for column formatting, from color coding to displaying plots, images, and progress bars!</td>
 </tr>
 <tr class="even">
-<td><code>&lt;ctrl&gt;+r</code></td>
-<td>Redo.</td>
+<td><a href="https://docs.streamlit.io/library/api-reference/data/st.metric"><code>st.metric</code></a></td>
+<td>Display a metric in big bold font. Works great with <code>st.columns</code>.</td>
 </tr>
 <tr class="odd">
-<td><code>&lt;shift&gt;-k</code></td>
-<td>Look up function definition.</td>
+<td><a href="https://docs.streamlit.io/library/api-reference/widgets">Input widgets</a></td>
+<td>Dozens of ways to add interactive inputs and outputs.</td>
 </tr>
 <tr class="even">
-<td><code>&lt;shift&gt;-h</code></td>
-<td>Flip back and forth through buffers (tabs) on nvim.</td>
+<td><a href="https://docs.streamlit.io/library/api-reference/layout">Layout options</a></td>
+<td>Configure complex page layouts using columns, tabs, containers, and empty space.</td>
 </tr>
 <tr class="odd">
-<td><code>&lt;shift&gt;-l</code></td>
-<td>Flip back and forth through buffers (tabs) on nvim.</td>
+<td><a href="https://docs.streamlit.io/library/api-reference/utilities/st.echo"><code>st.echo</code></a></td>
+<td>Display the code that generates output – similar to code cells!</td>
 </tr>
 <tr class="even">
-<td><code>&lt;ctrl&gt;-w</code></td>
-<td>Open window options.</td>
-</tr>
-<tr class="odd">
-<td><code>&lt;ctrl&gt;-w + v</code></td>
-<td>Vertical split.</td>
-</tr>
-<tr class="even">
-<td><code>&lt;ctrl&gt;-w + s</code></td>
-<td>Horizontal split.</td>
-</tr>
-<tr class="odd">
-<td><code>&lt;ctrl&gt;-w + &lt;shift&gt;-j</code></td>
-<td>Switch between vertical and horizontal splits.</td>
-</tr>
-<tr class="even">
-<td><code>&lt;ctrl&gt;-w + s</code></td>
-<td>Horizontal split.</td>
-</tr>
-<tr class="odd">
-<td><code>:tabnew</code></td>
-<td>New tab.</td>
-</tr>
-<tr class="even">
-<td><code>&lt;leader&gt;-f + d</code></td>
-<td>Open buffers.</td>
-</tr>
-<tr class="odd">
-<td><code>&lt;shift&gt;-g</code></td>
-<td>End of the file.</td>
-</tr>
-<tr class="even">
-<td><code>gg</code></td>
-<td>Beginning of the file.</td>
-</tr>
-<tr class="odd">
-<td><code>&lt;leader&gt; + c + O/o + p</code></td>
-<td>New python cell above/below.</td>
-</tr>
-<tr class="even">
-<td><code>.</code></td>
-<td>Pastes the previous edit.</td>
-</tr>
-<tr class="odd">
-<td><code>zb/zz/zt</code></td>
-<td>Adjust the screen to the bottom/middle/top without moving the cursor.</td>
-</tr>
-<tr class="even">
-<td><code>&lt;ctrl&gt;-i/o</code></td>
-<td>Go forward/backward in cursor position.</td>
-</tr>
-<tr class="odd">
-<td><code>d/[string]</code></td>
-<td>Delete until string.</td>
+<td><a href="https://docs.streamlit.io/library/api-reference/connections">Connections</a></td>
+<td>Connect Streamlit to databases like Snowflake and SQL.</td>
 </tr>
 </tbody>
 </table>
-<p>TODO</p>
-<ul>
-<li>Vim macros</li>
-<li>Vim marks</li>
-</ul>
 
 
 </section>

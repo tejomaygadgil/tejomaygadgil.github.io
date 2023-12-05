@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tejomaygadgil.github.io/about.html</loc>
-    <lastmod>2023-12-02T07:04:28.869Z</lastmod>
+    <lastmod>2023-12-05T16:30:56.830Z</lastmod>
   </url>
   <url>
     <loc>https://tejomaygadgil.github.io/posts/fastai.html</loc>
-    <lastmod>2023-12-02T07:04:28.013Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tejomaygadgil.github.io/posts/test_post.html</loc>
-    <lastmod>2023-12-02T07:04:25.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tejomaygadgil.github.io/posts/categories.html</loc>
-    <lastmod>2023-12-02T07:04:24.465Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tejomaygadgil.github.io/posts/neovim.html</loc>
-    <lastmod>2023-12-02T07:04:24.869Z</lastmod>
+    <lastmod>2023-12-05T16:30:55.398Z</lastmod>
   </url>
   <url>
     <loc>https://tejomaygadgil.github.io/posts/missing.html</loc>
-    <lastmod>2023-12-02T07:04:27.245Z</lastmod>
+    <lastmod>2023-12-05T16:30:53.730Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tejomaygadgil.github.io/posts/neovim.html</loc>
+    <lastmod>2023-12-05T16:30:50.394Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tejomaygadgil.github.io/posts/categories.html</loc>
+    <lastmod>2023-12-05T16:30:49.878Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tejomaygadgil.github.io/posts/c.html</loc>
+    <lastmod>2023-12-05T16:30:50.830Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tejomaygadgil.github.io/posts/streamlit.html</loc>
+    <lastmod>2023-12-05T16:30:54.442Z</lastmod>
   </url>
   <url>
     <loc>https://tejomaygadgil.github.io/index.html</loc>
-    <lastmod>2023-12-02T07:04:28.565Z</lastmod>
+    <lastmod>2023-12-05T16:30:56.294Z</lastmod>
   </url>
 </urlset>
