@@ -10,8 +10,8 @@ website:
         file: about.qmd
       - icon: github
         href: https://github.com/tejomaygadgil/
-      - icon: twitter
-        href: https://twitter.com/tejomaygadgil/
+      - icon: linkedin
+        href: https://linkedin.com/in/tejomay-gadgil/
 format:
   html:
     theme: cosmo
