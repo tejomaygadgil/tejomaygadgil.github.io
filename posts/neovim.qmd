@@ -1,5 +1,4 @@
 ---
-
 title: Neovim resources
 subtitle: An ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.
 format: html
