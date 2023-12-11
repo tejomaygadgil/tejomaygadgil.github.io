@@ -5,7 +5,7 @@ listing:
   contents: 
   - posts/categories.qmd
   type: grid
-  fields: [image, title, reading-time, date]
+  fields: [image, title, subtitle]
   sort: "date asc"
   categories: false
   sort-ui: false
@@ -16,7 +16,7 @@ listing:
   - posts/neovim.qmd
   - posts/missing.qmd
   type: grid
-  fields: [image, title, subtitle, date]
+  fields: [image, title, subtitle]
   sort: "date asc"
   categories: false
   sort-ui: false
@@ -27,15 +27,11 @@ title-block-banner: true
 
 ## Resources
 
-Concise summaries of Data Science tools and courses.
-
 :::{#resources}
 :::
 
 
 ## Writings
-
-In my spare time I enjoy studying language and philosophy.
 
 :::{#posts}
 :::
