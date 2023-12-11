@@ -34,6 +34,8 @@ For Data Science / programming / note-taking / publishing I recommend the [Quart
 |`zb/zz/zt`|Adjust the screen to the bottom/middle/top without moving the cursor.|
 |`<ctrl>-i/o`|Go forward/backward in cursor position.|
 |`d/[string]`|Delete until string.|
+|`:sav`|Save a copy and switch to it.|
+|`nvim.cmd.Ex`|Run command using `vim.keymap.set` in configs|
 
 TODO
 
