@@ -4,12 +4,12 @@ image: profile.jpg
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/tejomaygadgil/
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/tejomay-gadgil
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/tejomaygadgil/
     - icon: github
       text: Github
       href: https://github.com/tejomaygadgil/
