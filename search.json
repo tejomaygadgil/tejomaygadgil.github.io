@@ -51,21 +51,21 @@
   {
     "objectID": "posts/neovim.html",
     "href": "posts/neovim.html",
-    "title": "Tejomay's blog",
+    "title": "Neovim resources",
     "section": "",
-    "text": "title: Neovim resources subtitle: An ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim. format: html image: img/neovim.png —"
+    "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
   },
   {
     "objectID": "posts/neovim.html#configuration",
     "href": "posts/neovim.html#configuration",
-    "title": "Tejomay's blog",
-    "section": "Configuration",
-    "text": "Configuration\nFor Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
+    "title": "Neovim resources",
+    "section": "",
+    "text": "For Data Science / programming / note-taking / publishing I recommend the Quarto kickstarter. The shortcuts below are written with this configuration installed so YMMV.\n\n\n\nQuarto lets you work in code cells and publish documents (like this website!)."
   },
   {
     "objectID": "posts/neovim.html#shortcuts",
     "href": "posts/neovim.html#shortcuts",
-    "title": "Tejomay's blog",
+    "title": "Neovim resources",
     "section": "Shortcuts",
     "text": "Shortcuts\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\nu\nUndo.\n\n\n&lt;ctrl&gt;+r\nRedo.\n\n\n&lt;shift&gt;-k\nLook up function definition.\n\n\n&lt;shift&gt;-h\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;shift&gt;-l\nFlip back and forth through buffers (tabs) on nvim.\n\n\n&lt;ctrl&gt;-w\nOpen window options.\n\n\n&lt;ctrl&gt;-w + v\nVertical split.\n\n\n&lt;ctrl&gt;-w + s\nHorizontal split.\n\n\n&lt;ctrl&gt;-w + &lt;shift&gt;-j\nSwitch between vertical and horizontal splits.\n\n\n&lt;ctrl&gt;-w + s\nHorizontal split.\n\n\n:tabnew\nNew tab.\n\n\n&lt;leader&gt;-f + d\nOpen buffers.\n\n\n&lt;shift&gt;-g\nEnd of the file.\n\n\ngg\nBeginning of the file.\n\n\n&lt;leader&gt; + c + O/o + p\nNew python cell above/below.\n\n\n.\nPastes the previous edit.\n\n\nzb/zz/zt\nAdjust the screen to the bottom/middle/top without moving the cursor.\n\n\n&lt;ctrl&gt;-i/o\nGo forward/backward in cursor position.\n\n\nd/[string]\nDelete until string.\n\n\n:sav\nSave a copy and switch to it.\n\n\nnvim.cmd.Ex\nRun command using vim.keymap.set in configs\n\n\n&lt;ctrl&gt;-g/t\nGo forward/backward when searching using /\n\n\nset cpoptions+=x\nDon’t jump back when exiting search.\n\n\n\nTODO\n\nVim macros\nVim marks"
   },
@@ -74,7 +74,7 @@
     "href": "posts/categories.html",
     "title": "Introduction to Aristotle’s Categories",
     "section": "",
-    "text": "A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.\nWork in progress\nFew essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for being inscrutable as Aristotle’s Categories.\nThe central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else?\nIntroducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while a few factual “hors d’oeuvres,” no matter how well presented, fail to introduce the actual work in question.\nSummary cannot introduce us to the Categories. Instead we must interpret it.\nTo interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening of the offset between ourselves and the work is the essence of what we call being “introduced.” Interpretation is always difficult, not just because it is “hard,” but because it is productive.\nThis introduction, therefore, is nothing other than a plain English interpretation of the Categories, where “plain” hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering, apparently, the words onto the page."
+    "text": "A 16th century diagram of categorical relations by Aristotelian scholiast Julius Pacius.\nWork in progress\nFew essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for being inscrutable as Aristotle’s Categories.\nThe central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for twenty-five centuries over what it is actually about. Language? Logic? Metaphysics? Something else?\nIntroducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while a few factual “hors d’oeuvres,” no matter how well presented, fail to introduce the actual work in question.\nSummary cannot introduce us to the Categories. Instead we must interpret it.\nTo interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening of the offset between ourselves and the work is the essence of what we call being “introduced.” Interpretation is always difficult, not just because it is “hard,” but because it is productive.\nThis introduction, therefore, is nothing other than a plain English interpretation of the Categories, where “plain” hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering, as it does, the words onto the page."
   },
   {
     "objectID": "posts/categories.html#things-can-have-a-common-name-for-different-reasons",
@@ -207,20 +207,20 @@
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "Concise summaries of Data Science tools and courses.\n\n\n\n\n\n\n\n\n\n\n\nInsights from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA self-contained summary of the “Missing Semester of Your CS Education” course.\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Insights from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA self-contained summary of the “Missing Semester of Your CS Education” course.\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#resources",
     "href": "index.html#resources",
     "title": "Posts",
     "section": "",
-    "text": "Concise summaries of Data Science tools and courses.\n\n\n\n\n\n\n\n\n\n\n\nInsights from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA self-contained summary of the “Missing Semester of Your CS Education” course.\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Insights from fast.ai’s 2022 offering of Practical Deep Learning for Coders.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAn ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA self-contained summary of the “Missing Semester of Your CS Education” course.\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#writings",
     "href": "index.html#writings",
     "title": "Posts",
     "section": "Writings",
-    "text": "Writings\nIn my spare time I enjoy studying language and philosophy.\n\n\n\n\n\n\n\n\n\n\nIntroduction to Aristotle’s Categories\n\n\n9 min\n\n\n\nNov 7, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Writings\n\n\n\n\n\n\n\n\n\n\nIntroduction to Aristotle’s Categories\n\n\nThe core essay on the nature of language.\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
