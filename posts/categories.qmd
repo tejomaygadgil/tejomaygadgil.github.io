@@ -1,6 +1,6 @@
 ---
 title: Introduction to Aristotle's *Categories*
-subtitle: The introduction of a difficulty, and the difficulty of an introduction
+subtitle: The core essay on the nature of language.
 date: "2023-11-07"
 format:
   html:
@@ -8,6 +8,8 @@ format:
       utterances:
         repo: tejomaygadgil/tejomaygadgil.github.io
     number-sections: true
+    toc: true
+    toc-title: Sections
     mermaid:
       theme: neutral
 image: img/categories.png
@@ -19,7 +21,7 @@ image: img/categories.png
 
 Few essays in the history of philosophy are as impactful, less as inscrutable, and none as impactful for *being* inscrutable as Aristotle's *Categories*.
 
-The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for over twenty-five centuries as to what it is actually about. Language? Logic? Metaphysics? Something else?
+The central tension of this work between utterance (τὰ λεγόμενα) and beings (τὰ ὄντα) has divided readers for twenty-five centuries over what it is actually about. Language? Logic? Metaphysics? Something else?
 
 Introducing such an evasive text is impossible: the full account of its meaning and history is scarcely imaginable, while a few factual "hors d'oeuvres," no matter how well presented, fail to introduce the actual *work* in question.
 
@@ -27,7 +29,7 @@ Summary cannot introduce us to the *Categories*. Instead we must interpret it.
 
 To interpret something means to put it in your own words. In interpretation the barrier between the work being interpreted and the work of interpretation begins to sway. This softening of the offset between ourselves and the work is the essence of what we call being "introduced." Interpretation is always difficult, not just because it is "hard," but because it is _productive_.
 
-This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering, apparently, the words onto the page.
+This introduction, therefore, is nothing other than a plain English interpretation of the *Categories*, where "plain" hardly means easy or simple. Decisions have been made and points have been rendered in order to practically engage the reader with the material ordering, as it does, the words onto the page.
 
 ## Things can have a common name for different reasons
 
