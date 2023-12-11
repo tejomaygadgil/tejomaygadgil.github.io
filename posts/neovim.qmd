@@ -1,4 +1,5 @@
 ---
+
 title: Neovim resources
 subtitle: An ongoing list of tips, shortcuts, and tricks I find useful to navigating the world of Neovim.
 format: html
@@ -36,6 +37,8 @@ For Data Science / programming / note-taking / publishing I recommend the [Quart
 |`d/[string]`|Delete until string.|
 |`:sav`|Save a copy and switch to it.|
 |`nvim.cmd.Ex`|Run command using `vim.keymap.set` in configs|
+|`<ctrl>-g/t`|Go forward/backward when searching using `/`|
+|`set cpoptions+=x`|Don't jump back when exiting search.|
 
 TODO
 
