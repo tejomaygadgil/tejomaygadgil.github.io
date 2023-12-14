@@ -1,29 +1,47 @@
 ---
 title: Posts
 listing:
-- id: posts
-  contents: 
-  - posts/categories.qmd
-  type: grid
-  fields: [image, title, subtitle]
-  sort: "date asc"
-  categories: false
-  sort-ui: false
-  filter-ui: false
-- id: resources
-  contents: 
-  - posts/fastai.qmd
-  - posts/neovim.qmd
-  - posts/missing.qmd
-  type: grid
-  fields: [image, title, subtitle]
-  sort: "date asc"
-  categories: false
-  sort-ui: false
-  filter-ui: false
+  - id: projects
+    contents:
+    - path: https://ancient-greek-pos-tagger.streamlit.app/
+      image: /posts/img/cgpos.png
+      title: "Part-of-Speech Tagging Classical Greek"
+      subtitle: "I trained an NLP model to give full the part-of-speech for any Ancient Greek word."
+      date: "2023-06-20"
+      categories: [Quarto, Extension, HTML]
+    type: grid
+    fields: [image, title, subtitle]
+    sort: "date asc"
+    categories: false
+    sort-ui: false
+    filter-ui: false
+  - id: posts
+    contents: 
+      - posts/categories.qmd
+    type: grid
+    fields: [image, title, subtitle]
+    sort: "date asc"
+    categories: false
+    sort-ui: false
+    filter-ui: false
+  - id: resources
+    contents: 
+        - posts/fastai.qmd
+        - posts/neovim.qmd
+        - posts/missing.qmd
+    type: grid
+    fields: [image, title, subtitle]
+    sort: "date asc"
+    categories: false
+    sort-ui: false
+    filter-ui: false
 page-layout: full
 title-block-banner: true
 ---
+
+## Projects
+:::{#projects}
+:::
 
 ## Resources
 
