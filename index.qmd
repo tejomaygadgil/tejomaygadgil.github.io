@@ -3,12 +3,14 @@ title: Posts
 listing:
   - id: projects
     contents:
+    - path: https://github.com/tejomaygadgil/wozu
+      image: /posts/img/wozu.png
+      title: "Wozu: 'Graphical' Productivity Interface"
+      subtitle: "I built an app to display all your tasks in as a network. This is extremely useful. Try it out!"
     - path: https://ancient-greek-pos-tagger.streamlit.app/
       image: /posts/img/cgpos.png
-      title: "Part-of-Speech Tagging Classical Greek"
-      subtitle: "I trained an NLP model to give full the part-of-speech for any Ancient Greek word."
-      date: "2023-06-20"
-      categories: [Quarto, Extension, HTML]
+      title: "Part of Speech Tagger for Ancient Greek"
+      subtitle: "I developed an NLP model to accurately give part of speech for any Ancient Greek word."
     type: grid
     fields: [image, title, subtitle]
     sort: "date asc"
@@ -40,6 +42,7 @@ title-block-banner: true
 ---
 
 ## Projects
+
 :::{#projects}
 :::
 
@@ -47,7 +50,6 @@ title-block-banner: true
 
 :::{#resources}
 :::
-
 
 ## Writings
 
