@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-path","listing-image","listing-title","listing-subtitle","listing-date","listing-categories"],
+      searchColumns: ["listing-path","listing-image","listing-title","listing-subtitle"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -217,7 +217,24 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="projects">Projects</h2>
 <div id="listing-projects" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Quarto,Extension,HTML" data-listing-date-sort="1687244400000">
+<div class="g-col-1" data-index="0">
+<a href="https://github.com/tejomaygadgil/wozu" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/img/wozu.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Wozu: ‘Graphical’ Productivity Interface
+</h5>
+<div class="card-subtitle listing-subtitle">
+I built an app to display all your tasks in as a network. This is extremely useful. Try it out!
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1">
 <a href="https://ancient-greek-pos-tagger.streamlit.app/" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -225,10 +242,10 @@ ul.task-list li input[type="checkbox"] {
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Part-of-Speech Tagging Classical Greek
+Part of Speech Tagger for Ancient Greek
 </h5>
 <div class="card-subtitle listing-subtitle">
-I trained an NLP model to give full the part-of-speech for any Ancient Greek word.
+I developed an NLP model to accurately give part of speech for any Ancient Greek word.
 </div>
 </div>
 </div>

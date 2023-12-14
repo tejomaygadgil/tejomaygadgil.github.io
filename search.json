@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "Tejomay Gadgil",
     "section": "",
-    "text": "Welcome!\nI’m Tejomay, a Data Scientist based in the Bay Area.\nI am passionate about engineering large-scale ML systems, particularly in NLP and Demand Forecasting.\nI hold a Masters from NYU’s Center for Data Science where I built models to combat misinformation at CSMaP.\nPreviously I was a Public Policy researcher at MDRC and University of Chicago."
+    "text": "Welcome!\nI’m Tejomay, a Data Scientist based in the Bay Area.\nI am passionate about engineering large-scale ML systems, particularly for NLP and Graph Processing.\nI hold a Masters from NYU’s Center for Data Science where I built models to combat misinformation at CSMaP.\nPreviously I was a Public Policy researcher at MDRC and University of Chicago."
   },
   {
     "objectID": "posts/fastai.html",
@@ -207,14 +207,14 @@
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "I trained an NLP model to give full the part-of-speech for any Ancient Greek word.\n\n\n\n\n\n\n\nNo matching items"
+    "text": "I built an app to display all your tasks in as a network. This is extremely useful. Try it out!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI developed an NLP model to accurately give part of speech for any Ancient Greek word.\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#projects",
     "href": "index.html#projects",
     "title": "Posts",
     "section": "",
-    "text": "I trained an NLP model to give full the part-of-speech for any Ancient Greek word.\n\n\n\n\n\n\n\nNo matching items"
+    "text": "I built an app to display all your tasks in as a network. This is extremely useful. Try it out!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI developed an NLP model to accurately give part of speech for any Ancient Greek word.\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#resources",
